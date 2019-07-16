@@ -1,13 +1,12 @@
-﻿<Window x:Class="La_Bakéry.Add_Employee"
+﻿<Window x:Class="La_Bakéry.Receipts"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:La_Bakéry"
         mc:Ignorable="d"
-        Title="Add_Employee" Height="450" Width="800">
-    <Grid x:Name="Add_Employee1" Margin="10,0,0,0">
-        <GroupBox Header="GroupBox" HorizontalAlignment="Left" Height="265" Margin="10,27,0,0" VerticalAlignment="Top" Width="241"/>
+        Title="Receipts" Height="450" Width="800">
+    <Grid>
+        
     </Grid>
-
 </Window>
