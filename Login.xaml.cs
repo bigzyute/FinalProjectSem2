@@ -42,7 +42,7 @@ namespace La_Bakéry
         {
             if(e.Key == Key.Enter)
             {
-                
+                loginSubmitButton.IsDefault = true;
             }
         }
     }
