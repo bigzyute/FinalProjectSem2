@@ -5,14 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:La_Bakéry"
         mc:Ignorable="d"
-        Title="Login" Height="694.286" Width="539.89" Background="#FFBD00FF" BorderBrush="#FFBD00FF" ResizeMode="NoResize">
-    <Grid>
-        <DockPanel HorizontalAlignment="Left" Height="70" LastChildFill="False" Margin="50,440,0,0" VerticalAlignment="Top" Width="434" RenderTransformOrigin="0.5,0.5">
-            <TextBox x:Name="username" TextWrapping="Wrap" Text="TextBox" DockPanel.Dock="Top" Margin="0" VerticalAlignment="Top" MinWidth="433.6" MinHeight="70" Background="{x:Null}" BorderBrush="#FFFF5C00" FontFamily="Segoe UI Semibold" FontSize="36">
-                <TextBox.Effect>
-                    <DropShadowEffect/>
-                </TextBox.Effect>
-            </TextBox>
-        </DockPanel>
-    </Grid>
+        Title="Login" Height="694.286" Width="539.89" Background="#FFDF9F9E" BorderBrush="#FFBD00FF" ResizeMode="NoResize" WindowStyle="ToolWindow">
+    <Border Background="#FFBB5769" CornerRadius="20" Margin="40">
+        <Border.Effect>
+            <DropShadowEffect Color="#FF844257" BlurRadius="15" ShadowDepth="10"/>
+        </Border.Effect>
+        <StackPanel x:Name="loginPanel" Margin="40" >
+            <StackPanel.Effect>
+                <DropShadowEffect Color="#FF844257" BlurRadius="15"/>
+            </StackPanel.Effect>
+            <Label x:Name="labelLogin" Content="LOGIN" FontFamily="Comic Sans MS" FontSize="48" Foreground="White" HorizontalContentAlignment="Center"/>
+        </StackPanel>
+    </Border>
 </Window>
