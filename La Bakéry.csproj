@@ -124,5 +124,10 @@
   <ItemGroup>
     <None Include="Properties\login1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\login1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

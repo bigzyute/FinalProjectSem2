@@ -5,12 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:La_Bakéry"
         mc:Ignorable="d"
-        Title="Login" Height="694.286" Width="539.89" Background="#FFDF9F9E" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Foreground="{x:Null}" Loaded="LoginPage_Loaded" KeyDown="LoginPage_KeyDown">
+        Title="Login" Height="767.929" Width="539.89" Background="#FFDF9F9E" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Foreground="{x:Null}" Loaded="LoginPage_Loaded" KeyDown="LoginPage_KeyDown">
     <Border Background="#FFBB5769" CornerRadius="20" Margin="40">
         <Border.Effect>
             <DropShadowEffect Color="#FF844257" BlurRadius="15" ShadowDepth="10"/>
         </Border.Effect>
         <StackPanel x:Name="loginPanel" Margin="40" >
+            <Image x:Name="loginImage" Height="188" Margin="0,0,-0.4,0" Source="pack://siteoforigin:,,,/images/login1.png">
+                <Image.Effect>
+                    <DropShadowEffect ShadowDepth="15" Opacity="0.3" Direction="270"/>
+                </Image.Effect>
+            </Image>
             <Label x:Name="labelLogin" Content="LOGIN" FontFamily="Comic Sans MS" FontSize="48" Foreground="White" HorizontalContentAlignment="Center" Height="64" Margin="0,0,-0.4,15"/>
             <Separator Margin="10,20,9.6,20" Background="#FF6E6E6E" Height="22"/>
             <Label x:Name="labelUsername" Content="Username" FontFamily="Segoe UI Black" Foreground="White" FontSize="22" Margin="0,0,-0.4,0"/>
