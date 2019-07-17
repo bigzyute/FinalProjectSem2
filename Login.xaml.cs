@@ -31,5 +31,19 @@ namespace La_Bakéry
             mainWindow.Show();
             this.Hide();
         }
+
+        private void LoginPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtBoxUsername.Focus();
+            txtBoxUsername.SelectAll();
+        }
+
+        private void LoginPage_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                
+            }
+        }
     }
 }

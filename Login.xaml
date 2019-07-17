@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:La_Bakéry"
         mc:Ignorable="d"
-        Title="Login" Height="694.286" Width="539.89" Background="#FFDF9F9E" ResizeMode="NoResize" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen" Foreground="{x:Null}">
+        Title="Login" Height="694.286" Width="539.89" Background="#FFDF9F9E" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Foreground="{x:Null}" Loaded="LoginPage_Loaded" KeyDown="LoginPage_KeyDown">
     <Border Background="#FFBB5769" CornerRadius="20" Margin="40">
         <Border.Effect>
             <DropShadowEffect Color="#FF844257" BlurRadius="15" ShadowDepth="10"/>
