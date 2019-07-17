@@ -11,10 +11,13 @@
             <DropShadowEffect Color="#FF844257" BlurRadius="15" ShadowDepth="10"/>
         </Border.Effect>
         <StackPanel x:Name="loginPanel" Margin="40" >
-            <StackPanel.Effect>
-                <DropShadowEffect Color="#FF844257" BlurRadius="15"/>
-            </StackPanel.Effect>
             <Label x:Name="labelLogin" Content="LOGIN" FontFamily="Comic Sans MS" FontSize="48" Foreground="White" HorizontalContentAlignment="Center"/>
+            <Separator Height="100" Margin="0,0,-0.4,0" Background="#FF6E6E6E"/>
+            <Label x:Name="labelUsername" Content="Username" FontFamily="Segoe UI Black" Foreground="White" FontSize="22" Margin="0,0,-0.4,0"/>
+            <TextBox x:Name="txtBoxUsername" TextWrapping="Wrap" BorderBrush="#FF6E6E6E" Foreground="White" FontSize="18" Background="#FF844257" Height="41" Margin="0,0,-0.4,0" SelectionBrush="#FFE881A2"/>
+            <Label x:Name="labelPassword" Content="Password" FontFamily="Segoe UI Black" Foreground="White" FontSize="22" Margin="0,0,-0.4,0"/>
+            <PasswordBox x:Name="loginPasswordBox" Background="#FF844257" BorderBrush="#FF6E6E6E" Foreground="White" SelectionBrush="#FFE881A2" Height="41" Margin="0,0,0,30"/>
+            <Button x:Name="loginSubmitButton" Content="_SUBMIT" Margin="80,0" Height="50" FontSize="22" Background="#FF844257" Foreground="White" BorderBrush="#FF6E6E6E" TabIndex="1"/>
         </StackPanel>
     </Border>
 </Window>
