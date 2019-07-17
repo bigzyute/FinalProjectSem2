@@ -11,7 +11,7 @@
             <DropShadowEffect Color="#FF844257" BlurRadius="15" ShadowDepth="10"/>
         </Border.Effect>
         <StackPanel x:Name="loginPanel" Margin="40" >
-            <Image x:Name="loginImage" Height="188" Margin="0,0,-0.4,0" Source="pack://siteoforigin:,,,/images/login1.png">
+            <Image x:Name="loginImage" Height="188" Margin="0,0,-0.4,0" Source="images/login1.png">
                 <Image.Effect>
                     <DropShadowEffect ShadowDepth="15" Opacity="0.3" Direction="270"/>
                 </Image.Effect>
