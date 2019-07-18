@@ -15,18 +15,13 @@ using System.Windows.Shapes;
 namespace La_Bakéry
 {
     /// <summary>
-    /// Interaction logic for Add_Customer.xaml
+    /// Interaction logic for Reports.xaml
     /// </summary>
-    public partial class Add_Customer : Window
+    public partial class Reports : Window
     {
-        public Add_Customer()
+        public Reports()
         {
             InitializeComponent();
-        }
-
-        private void BtnAdd_CusExit_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
