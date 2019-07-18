@@ -26,7 +26,16 @@ namespace La_Bakéry
 
         private void BtnAdd_CusExit_Click(object sender, RoutedEventArgs e)
         {
-
+            MainWindow objMain = new MainWindow();
+            objMain.Show();
+            Hide();
+          
         }
+
+        private void BtnAdd_CusAdd_Click(object sender, RoutedEventArgs e)
+        {
+            int telephone;
+        }
+
     }
 }
