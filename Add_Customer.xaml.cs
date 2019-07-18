@@ -23,5 +23,10 @@ namespace La_Bakéry
         {
             InitializeComponent();
         }
+
+        private void BtnAdd_CusExit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
