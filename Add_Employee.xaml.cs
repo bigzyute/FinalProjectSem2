@@ -34,7 +34,7 @@ namespace La_Bakéry
 
         private void BtnAdd_CusAdd_Click(object sender, RoutedEventArgs e)
         {
-
+            int telephone;
         }
 
     }
