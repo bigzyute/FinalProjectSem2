@@ -1,13 +1,71 @@
-﻿<Window x:Class="La_Bakéry.Add_Employee"
+﻿<Window x:Class="La_Bakéry.Add_Customer"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:La_Bakéry"
         mc:Ignorable="d"
-        Title="Add_Employee" Height="450" Width="800">
-    <Grid x:Name="Add_Employee1" Margin="10,0,0,0">
-        <GroupBox Header="GroupBox" HorizontalAlignment="Left" Height="265" Margin="10,27,0,0" VerticalAlignment="Top" Width="241"/>
+        Title="Add_Customer" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFD6A0E2" Offset="0"/>
+                <GradientStop Color="#FFEE59E7" Offset="1"/>
+                <GradientStop Color="#FF2E2ECF" Offset="0.987"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid HorizontalAlignment="Left" Height="312" Margin="22,24,0,0" VerticalAlignment="Top" Width="320">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF10BEF1" Offset="0.007"/>
+                    <GradientStop Color="#FFB9ECE2" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Label Content="Personal Info" HorizontalAlignment="Left" VerticalAlignment="Top" Width="204" FontWeight="Bold"/>
+            <TextBox x:Name="txtAdd_CusFName" HorizontalAlignment="Left" Height="23" Margin="104,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <Label Content="First Name:" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.026,0.115"/>
+            <Label Content="Middle Name:" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.026,0.115"/>
+            <Label Content="Last Name:" HorizontalAlignment="Left" Margin="10,98,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.026,0.115"/>
+            <TextBox x:Name="txtAdd_CusMName" HorizontalAlignment="Left" Height="23" Margin="104,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="txtAdd_CusLName" HorizontalAlignment="Left" Height="23" Margin="104,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Date of Birth:" HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top"/>
+            <Calendar HorizontalAlignment="Left" Margin="104,130,0,0" VerticalAlignment="Top" Height="31" Width="168"/>
+            <RadioButton x:Name="rdbAdd_CusFemale" Content="Female" HorizontalAlignment="Left" Margin="104,196,0,0" VerticalAlignment="Top"/>
+            <RadioButton x:Name="rdbAdd_CusMale" Content="Male" HorizontalAlignment="Left" Margin="209,196,0,0" VerticalAlignment="Top"/>
+            <Label Content="Gender:" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top"/>
+            <Label Content="Marital Status:" HorizontalAlignment="Left" Margin="10,215,0,0" VerticalAlignment="Top"/>
+            <RadioButton x:Name="rdbAdd_CusSingle" Content="Single" HorizontalAlignment="Left" Margin="10,244,0,0" VerticalAlignment="Top"/>
+            <RadioButton x:Name="rdbAdd_CusMarried" Content="Married" HorizontalAlignment="Left" Margin="66,246,0,0" VerticalAlignment="Top"/>
+            <RadioButton x:Name="rdbAdd_CusDivorced" Content="Divorced" HorizontalAlignment="Left" Margin="138,247,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.136,0.4"/>
+            <RadioButton x:Name="rdbAdd_CusWidowed" Content="Widowed" HorizontalAlignment="Left" Margin="223,247,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.167,0.4"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="312" Margin="405,24,0,0" VerticalAlignment="Top" Width="321">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF10BEF1" Offset="0"/>
+                    <GradientStop Color="#FFB9ECE2" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Label Content="Address Info" HorizontalAlignment="Left" VerticalAlignment="Top" Width="311" FontWeight="Bold"/>
+            <Label Content="Town:" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.526,0.115"/>
+            <Label Content="P.O. Box:" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top"/>
+            <Label Content="Parish:" HorizontalAlignment="Left" Margin="10,102,0,0" VerticalAlignment="Top"/>
+            <Label Content="Telephone:" HorizontalAlignment="Left" Margin="10,133,0,0" VerticalAlignment="Top"/>
+            <Label Content="Email:" HorizontalAlignment="Left" Margin="10,164,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="lblAdd_CusTown" HorizontalAlignment="Left" Height="23" Margin="108,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"/>
+            <TextBox x:Name="lblAdd_CusPOBox" HorizontalAlignment="Left" Height="23" Margin="108,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"/>
+            <TextBox x:Name="lblAdd_CusParish" HorizontalAlignment="Left" Height="23" Margin="108,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"/>
+            <TextBox x:Name="lblAdd_CusTelephone" HorizontalAlignment="Left" Height="23" Margin="108,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"/>
+            <TextBox x:Name="lblAdd_CusEmail" HorizontalAlignment="Left" Height="23" Margin="108,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"/>
+            <TextBox x:Name="lblAdd_CusUserName" HorizontalAlignment="Left" Height="23" Margin="108,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"/>
+            <TextBox x:Name="lblAdd_CusPassword" HorizontalAlignment="Left" Height="23" Margin="108,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"/>
+            <Label Content="Username:" HorizontalAlignment="Left" Margin="10,235,0,0" VerticalAlignment="Top"/>
+            <Label Content="Password:" HorizontalAlignment="Left" Margin="10,266,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,0.115"/>
+            <Label Content="Log In Info" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.395,0.577" FontWeight="Bold"/>
+        </Grid>
+        <Button x:Name="btnAdd_CusAdd" Content="Add" HorizontalAlignment="Left" Margin="45,363,0,0" VerticalAlignment="Top" Width="80" Height="41"/>
+        <Button x:Name="btnAdd_CusUpdate" Content="Update" HorizontalAlignment="Left" Margin="225,363,0,0" VerticalAlignment="Top" Width="80" Height="41"/>
+        <Button x:Name="btnAdd_CusCancel" Content="Cancel" HorizontalAlignment="Left" Margin="427,363,0,0" VerticalAlignment="Top" Width="82" Height="41"/>
+        <Button x:Name="btnAdd_CusExit" Content="Exit" HorizontalAlignment="Left" Margin="614,363,0,0" VerticalAlignment="Top" Width="86" Height="41" RenderTransformOrigin="0.395,0.512" Click="BtnAdd_CusExit_Click"/>
     </Grid>
-
 </Window>
