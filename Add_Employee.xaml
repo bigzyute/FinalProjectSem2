@@ -32,20 +32,27 @@
             <TextBox x:Name="txtAdd_EmpMName" HorizontalAlignment="Left" Height="23" Margin="104,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             <TextBox x:Name="txtAdd_EmpLName" HorizontalAlignment="Left" Height="23" Margin="104,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             <Label Content="Date of Birth:" HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top"/>
-            <Calendar HorizontalAlignment="Left" Margin="104,130,0,0" VerticalAlignment="Top" Height="31" Width="168"/>
-            <RadioButton x:Name="rdbAdd_EmpFemale" Content="Female" HorizontalAlignment="Left" Margin="104,196,0,0" VerticalAlignment="Top"/>
-            <RadioButton x:Name="rdbAdd_EmpMale" Content="Male" HorizontalAlignment="Left" Margin="209,196,0,0" VerticalAlignment="Top"/>
-            <Label Content="Gender:" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top"/>
+            <Grid>
+                <RadioButton x:Name="grdbAdd_EmpFemale" Content="Female" HorizontalAlignment="Left" Margin="104,196,0,0" VerticalAlignment="Top"/>
+                <RadioButton x:Name="grdbAdd_EmpMale" Content="Male" HorizontalAlignment="Left" Margin="209,196,0,0" VerticalAlignment="Top"/>
+                <Label Content="Gender:" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top"/>
+            </Grid>
             <Label Content="Marital Status:" HorizontalAlignment="Left" Margin="10,215,0,0" VerticalAlignment="Top"/>
             <RadioButton x:Name="rdbAdd_EmpSingle" Content="Single" HorizontalAlignment="Left" Margin="10,244,0,0" VerticalAlignment="Top"/>
             <RadioButton x:Name="rdbAdd_EmpMarried" Content="Married" HorizontalAlignment="Left" Margin="66,246,0,0" VerticalAlignment="Top"/>
             <RadioButton x:Name="rdbAdd_EmpDivorced" Content="Divorced" HorizontalAlignment="Left" Margin="138,247,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.136,0.4"/>
             <RadioButton x:Name="rdbAdd_EmpWidowed" Content="Widowed" HorizontalAlignment="Left" Margin="223,247,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.167,0.4"/>
+            <DatePicker HorizontalAlignment="Left" Margin="104,131,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label Content="*" HorizontalAlignment="Left" Margin="238,36,0,0" VerticalAlignment="Top" Height="23" Width="22" Foreground="#FFFB0707" FontSize="16" FontWeight="Bold"/>
+            <Label Content="*" HorizontalAlignment="Left" Margin="238,71,0,0" VerticalAlignment="Top" Height="23" Width="22" RenderTransformOrigin="0.584,1.017" Foreground="#FFFB0707" FontSize="16" FontWeight="Bold"/>
+            <Label Content="*" HorizontalAlignment="Left" Margin="238,106,0,0" VerticalAlignment="Top" Height="26" Width="22" Foreground="#FFFB0707" FontSize="16" FontWeight="Bold"/>
+            <Label Content="*" HorizontalAlignment="Left" Margin="262,188,0,0" VerticalAlignment="Top" Height="24" Width="21" Foreground="#FFFB0707" FontSize="16" FontWeight="Bold"/>
+            <Label Content="*" HorizontalAlignment="Left" Margin="297,238,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.793,-0.573" Height="25" Width="21" Foreground="#FFFB0707" FontSize="18" FontWeight="Bold"/>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="312" Margin="405,24,0,0" VerticalAlignment="Top" Width="321">
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="7" Color="#FFF9EE04" ShadowDepth="7"/>
-                
+
             </Grid.Effect>
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -69,6 +76,9 @@
             <Label Content="Username:" HorizontalAlignment="Left" Margin="10,235,0,0" VerticalAlignment="Top"/>
             <Label Content="Password:" HorizontalAlignment="Left" Margin="10,266,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,0.115"/>
             <Label Content="Log In Info" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.395,0.577" FontWeight="Bold"/>
+            <Label Content="*" HorizontalAlignment="Left" Margin="263,235,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.002,0.036" Foreground="#FFFB0707" FontSize="16" Height="26" Width="20" FontWeight="Bold"/>
+            <Label Content="*" HorizontalAlignment="Left" Margin="263,269,0,0" VerticalAlignment="Top" Height="28" Width="20" FontSize="16" Foreground="#FFFB0707" FontWeight="Bold"/>
+            <Label Content="*" HorizontalAlignment="Left" Margin="263,37,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.278,-0.004" FontSize="16" Height="29" Width="20" Foreground="#FFFB0707" FontWeight="Bold"/>
         </Grid>
         <Button x:Name="btnAdd_EmpAdd" Content="Add" HorizontalAlignment="Left" Margin="45,363,0,0" VerticalAlignment="Top" Width="80" Height="41" Click="BtnAdd_CusAdd_Click"/>
         <Button x:Name="btnAdd_EmpUpdate" Content="Update" HorizontalAlignment="Left" Margin="225,363,0,0" VerticalAlignment="Top" Width="80" Height="41"/>
