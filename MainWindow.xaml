@@ -6,9 +6,15 @@
         xmlns:local="clr-namespace:La_Bakéry"
         mc:Ignorable="d"
         Title="Home" Height="768" Width="1366" Background="#FFF2F6F5" Foreground="{DynamicResource {x:Static SystemColors.DesktopBrushKey}}" Padding="10,0" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen">
-    <Grid HorizontalAlignment="Left" Margin="0,0,0,2.4" Width="296" Background="#FFC8DAD3">
-        <Grid.Effect>
-            <DropShadowEffect Opacity="0.5"/>
-        </Grid.Effect>
-    </Grid>
+    <StackPanel x:Name="navPanel" HorizontalAlignment="Left" Margin="0,0,0,-29.6" Width="250" Background="#FFC8DAD3">
+        <StackPanel.Effect>
+            <DropShadowEffect Opacity="0.5" RenderingBias="Quality"/>
+        </StackPanel.Effect>
+        <Border CornerRadius="50"/>
+        <Ellipse x:Name="userImage" Height="100" Width="100" Margin="0,10,0,0" Fill="White">
+            <Ellipse.Stroke>
+                <ImageBrush/>
+            </Ellipse.Stroke>
+        </Ellipse>
+    </StackPanel>
 </Window>
