@@ -5,4 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:La_Bakéry"
         mc:Ignorable="d"
-        Title="Home" Height="768" Width="1366" Background="#FFB8D8FF" Foreground="{DynamicResource {x:Static SystemColors.DesktopBrushKey}}" Padding="10,0" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen"/>
+        Title="Home" Height="768" Width="1366" Background="#FFF2F6F5" Foreground="{DynamicResource {x:Static SystemColors.DesktopBrushKey}}" Padding="10,0" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen">
+    <Grid HorizontalAlignment="Left" Margin="0,0,0,2.4" Width="296" Background="#FFC8DAD3">
+        <Grid.Effect>
+            <DropShadowEffect Opacity="0.5"/>
+        </Grid.Effect>
+    </Grid>
+</Window>
