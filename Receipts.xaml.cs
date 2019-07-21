@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace La_Bakéry
 {
     /// <summary>
-    /// Interaction logic for Add_Employee.xaml
+    /// Interaction logic for Receipts.xaml
     /// </summary>
-    public partial class Add_Employee : Window
+    public partial class Receipts : Window
     {
-        public Add_Employee()
+        public Receipts()
         {
             InitializeComponent();
         }
