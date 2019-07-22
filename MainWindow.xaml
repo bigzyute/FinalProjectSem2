@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:La_Bakéry"
         mc:Ignorable="d"
-        Title="Home" Height="768" Width="1366" Background="#FFF2F6F5" Foreground="{DynamicResource {x:Static SystemColors.DesktopBrushKey}}" Padding="10,0" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen" MinWidth="683" MinHeight="384">
+        Title="Home" Height="768" Width="1366" Background="#FFCCEAFF" Foreground="{DynamicResource {x:Static SystemColors.DesktopBrushKey}}" Padding="10,0" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen" MinWidth="683" MinHeight="384">
     <Grid>
+        <Grid.Effect>
+            <DropShadowEffect Opacity="0.5" ShadowDepth="10" BlurRadius="15"/>
+        </Grid.Effect>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="63*"/>
             <ColumnDefinition Width="277*"/>
         </Grid.ColumnDefinitions>
         <StackPanel x:Name="navPanel" HorizontalAlignment="Left" Margin="0,0,0,0.4" Width="250" Background="#FFC8DAD3">
-            <StackPanel.Effect>
-                <DropShadowEffect Opacity="0.5" RenderingBias="Quality"/>
-            </StackPanel.Effect>
             <Border CornerRadius="50"/>
             <Ellipse x:Name="imgCurrentUser" Height="100" Width="100" Margin="0,10,0,2" Cursor="Hand">
                 <Ellipse.Effect>
