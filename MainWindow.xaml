@@ -20,10 +20,26 @@
             </Ellipse.Fill>
         </Ellipse>
         <Label x:Name="lblCurrentUser" Content="Current User" Margin="0" HorizontalAlignment="Center" Cursor="Hand" VerticalAlignment="Center"/>
-        <Separator Height="19" Margin="15,0,14.6,0" Background="#FF63707E" BorderBrush="#FF63707E" Foreground="#FF63707E">
+        <Separator Height="19" Margin="15" Background="#FF63707E" BorderBrush="#FF63707E" Foreground="#FF63707E">
             <Separator.Effect>
                 <DropShadowEffect Opacity="0.5" ShadowDepth="2.5" BlurRadius="10"/>
             </Separator.Effect>
         </Separator>
+        <Button x:Name="btnCustomer" Height="40" Margin="20,0" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="#FF93B5B3">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="16" Foreground="White" Margin="10,0,0,0">
+                    Customer
+                </TextBlock>
+                <Image x:Name="imgCustIcon" Height="30" Width="30" Source="images/customer_icon.png" Margin="85,0,0,0"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="btnEmployee" Height="40" Margin="20,0" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="#FF93B5B3">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="16" Foreground="White" Margin="10,0,0,0">
+                    Employee
+                </TextBlock>
+                <Image x:Name="imhEmpIcon" Height="30" Width="30" Source="images/employee_icon.png" Margin="85,0,0,0"/>
+            </StackPanel>
+        </Button>
     </StackPanel>
 </Window>
