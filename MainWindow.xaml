@@ -6,56 +6,78 @@
         xmlns:local="clr-namespace:La_Bakéry"
         mc:Ignorable="d"
         Title="Home" Height="768" Width="1366" Background="#FFF2F6F5" Foreground="{DynamicResource {x:Static SystemColors.DesktopBrushKey}}" Padding="10,0" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen" MinWidth="683" MinHeight="384">
-    <StackPanel x:Name="navPanel" HorizontalAlignment="Left" Margin="0,0,0,0.4" Width="250" Background="#FFC8DAD3">
-        <StackPanel.Effect>
-            <DropShadowEffect Opacity="0.5" RenderingBias="Quality"/>
-        </StackPanel.Effect>
-        <Border CornerRadius="50"/>
-        <Ellipse x:Name="imgCurrentUser" Height="100" Width="100" Margin="0,10,0,2" Cursor="Hand">
-            <Ellipse.Effect>
-                <DropShadowEffect Direction="265" Color="#FF63707E" Opacity="0.5"/>
-            </Ellipse.Effect>
-            <Ellipse.Fill>
-                <ImageBrush ImageSource="images/default_user.png"/>
-            </Ellipse.Fill>
-        </Ellipse>
-        <Label x:Name="lblCurrentUser" Content="Current User" Margin="0" HorizontalAlignment="Center" Cursor="Hand" VerticalAlignment="Center"/>
-        <Separator Height="19" Margin="15" Background="#FF63707E" BorderBrush="#FF63707E" Foreground="#FF63707E">
-            <Separator.Effect>
-                <DropShadowEffect Opacity="0.5" ShadowDepth="2.5" BlurRadius="10"/>
-            </Separator.Effect>
-        </Separator>
-        <Button x:Name="btnCustomer" Height="50" Margin="20,0,20,5" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="#FF93B5B3">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock FontSize="16" Foreground="White" Margin="10,0,0,0" VerticalAlignment="Center">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="63*"/>
+            <ColumnDefinition Width="277*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel x:Name="navPanel" HorizontalAlignment="Left" Margin="0,0,0,0.4" Width="250" Background="#FFC8DAD3">
+            <StackPanel.Effect>
+                <DropShadowEffect Opacity="0.5" RenderingBias="Quality"/>
+            </StackPanel.Effect>
+            <Border CornerRadius="50"/>
+            <Ellipse x:Name="imgCurrentUser" Height="100" Width="100" Margin="0,10,0,2" Cursor="Hand">
+                <Ellipse.Effect>
+                    <DropShadowEffect Direction="265" Color="#FF63707E" Opacity="0.5"/>
+                </Ellipse.Effect>
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="images/default_user.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <StackPanel Orientation="Horizontal" Margin="61,0,19.6,0" HorizontalAlignment="Center" Width="169">
+                <Label x:Name="lblCurrentUser" Content="Current User" Margin="0,0,5,0" Cursor="Hand" VerticalAlignment="Top" Foreground="White" HorizontalContentAlignment="Center" HorizontalAlignment="Left">
+                    <Label.Effect>
+                        <DropShadowEffect ShadowDepth="1" BlurRadius="15" Opacity="0.5"/>
+                    </Label.Effect>
+                </Label>
+                <Expander Width="88">
+                    <Button x:Name="btnLogout" Height="35" BorderBrush="{x:Null}" Background="#FF93B5B3" Click="BtnLogout_Click">
+                        <StackPanel Orientation="Horizontal" Height="30" Width="70">
+                            <Label Content="Logout" Foreground="White">
+
+                            </Label>
+                            <Image x:Name="imgLogoutIcon" Height="25" Width="25" Source="images/logout_icon.png"/>
+                        </StackPanel>
+                    </Button>
+                </Expander>
+            </StackPanel>
+            <Separator Height="19" Margin="15" Background="#FF63707E" BorderBrush="#FF63707E" Foreground="#FF63707E">
+                <Separator.Effect>
+                    <DropShadowEffect Opacity="0.5" ShadowDepth="2.5" BlurRadius="10"/>
+                </Separator.Effect>
+            </Separator>
+            <Button x:Name="btnCustomer" Height="50" Margin="20,0,20,5" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="#FF93B5B3">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="16" Foreground="White" Margin="10,0,0,0" VerticalAlignment="Center">
                     Customer
-                </TextBlock>
-                <Image x:Name="imgCustIcon" Height="45" Width="45" Source="images/customer_icon.png" Margin="75,0,0,0"/>
-            </StackPanel>
-        </Button>
-        <Button x:Name="btnEmployee" Height="50" Margin="20,0,20,5" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="#FF93B5B3">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock FontSize="16" Foreground="White" Margin="10,0,0,0">
+                    </TextBlock>
+                    <Image x:Name="imgCustIcon" Height="45" Width="45" Source="images/customer_icon.png" Margin="75,0,0,0"/>                    
+                </StackPanel>
+            </Button>
+            <Button x:Name="btnEmployee" Height="50" Margin="20,0,20,5" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="#FF93B5B3">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="16" Foreground="White" Margin="10,0,0,0">
                     Employee
-                </TextBlock>
-                <Image x:Name="imhEmpIcon" Height="45" Width="45" Source="images/employee_icon.png" Margin="75,0,0,0"/>
-            </StackPanel>
-        </Button>
-        <Button x:Name="btnProduct" Height="50" Margin="20,0,20,5" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="#FF93B5B3">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock FontSize="16" Foreground="White" Margin="10,0,0,0">
+                    </TextBlock>
+                    <Image x:Name="imhEmpIcon" Height="45" Width="45" Source="images/employee_icon.png" Margin="75,0,0,0"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btnProduct" Height="50" Margin="20,0,20,5" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="#FF93B5B3">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="16" Foreground="White" Margin="10,0,0,0">
                     Product
-                </TextBlock>
-                <Image x:Name="imgProdIcon" Height="45" Width="45" Source="images/product_icon.png" Margin="90,0,0,0"/>
-            </StackPanel>
-        </Button>
-        <Button x:Name="btnReport" Height="50" Margin="20,0,20,5" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="#FF93B5B3">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock FontSize="16" Foreground="White" Margin="10,0,0,0">
+                    </TextBlock>
+                    <Image x:Name="imgProdIcon" Height="45" Width="45" Source="images/product_icon.png" Margin="90,0,0,0"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btnReport" Height="50" Margin="20,0,20,5" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="#FF93B5B3">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="16" Foreground="White" Margin="10,0,0,0">
                     Report
-                </TextBlock>
-                <Image x:Name="imgRepoIcon" Height="45" Width="45" Source="images/report_icon.png" Margin="100,0,0,0"/>
-            </StackPanel>
-        </Button>
-    </StackPanel>
+                    </TextBlock>
+                    <Image x:Name="imgRepoIcon" Height="45" Width="45" Source="images/report_icon.png" Margin="100,0,0,0"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+    </Grid>
 </Window>

@@ -193,5 +193,8 @@
   <ItemGroup>
     <Resource Include="images\report_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\logout_icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

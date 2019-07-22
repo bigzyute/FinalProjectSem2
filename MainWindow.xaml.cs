@@ -24,5 +24,12 @@ namespace La_Bakéry
         {
             InitializeComponent();
         }
+
+        private void BtnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            Login login = new Login();
+            this.Close();
+            login.Show();
+        }
     }
 }
