@@ -51,7 +51,7 @@
                     <TextBlock FontSize="16" Foreground="White" Margin="10,0,0,0" VerticalAlignment="Center">
                     Customer
                     </TextBlock>
-                    <Image x:Name="imgCustIcon" Height="45" Width="45" Source="images/customer_icon.png" Margin="75,0,0,0"/>                    
+                    <Image x:Name="imgCustIcon" Height="45" Width="45" Source="images/customer_icon.png" Margin="75,0,0,0"/>
                 </StackPanel>
             </Button>
             <Button x:Name="btnEmployee" Height="50" Margin="20,0,20,5" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="#FF93B5B3">
@@ -79,5 +79,23 @@
                 </StackPanel>
             </Button>
         </StackPanel>
+        <Grid x:Name="gridCustomer" Grid.Column="1" HorizontalAlignment="Left" Height="718" Margin="10,10,0,0" VerticalAlignment="Top" Width="1088">
+            <Grid x:Name="gridAddCutomer" HorizontalAlignment="Left" Height="404" Margin="0,128,0,0" VerticalAlignment="Top" Width="352">
+                <Button x:Name="btnAddCustomer" Background="#FF39DAD1" BorderBrush="{x:Null}">
+                    <StackPanel>
+                        <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">Add Cutomer</Label>
+                        <Image Source="images\add_customer.png"/>
+                    </StackPanel>
+                </Button>
+            </Grid>
+            <Grid x:Name="gridRemoveCutomer" HorizontalAlignment="Left" Height="404" Margin="372,128,0,0" VerticalAlignment="Top" Width="352">
+                <Button x:Name="btnRemoveCustomer" Background="#FF39DAD1" BorderBrush="{x:Null}">
+                    <StackPanel>
+                        <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">Remove Cutomer</Label>
+                        <Image Source="images\remove_customer.png"/>
+                    </StackPanel>
+                </Button>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>

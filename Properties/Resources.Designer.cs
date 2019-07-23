@@ -63,6 +63,16 @@ namespace La_Bakéry.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_customer {
+            get {
+                object obj = ResourceManager.GetObject("add_customer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap customer_icon {
             get {
                 object obj = ResourceManager.GetObject("customer_icon", resourceCulture);
@@ -126,6 +136,16 @@ namespace La_Bakéry.Properties {
         internal static System.Drawing.Bitmap product_icon {
             get {
                 object obj = ResourceManager.GetObject("product_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap remove_customer {
+            get {
+                object obj = ResourceManager.GetObject("remove_customer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
