@@ -31,5 +31,25 @@ namespace La_Bakéry
             this.Close();
             login.Show();
         }
+
+        private void BtnEmployee_Click(object sender, RoutedEventArgs e)
+        {
+            gridCustomer.Visibility = Visibility.Hidden;
+        }
+
+        private void BtnProduct_Click(object sender, RoutedEventArgs e)
+        {
+            gridCustomer.Visibility = Visibility.Hidden;
+        }
+
+        private void BtnReport_Click(object sender, RoutedEventArgs e)
+        {
+            gridCustomer.Visibility = Visibility.Hidden;
+        }
+
+        private void BtnCustomer_Click(object sender, RoutedEventArgs e)
+        {
+            gridCustomer.Visibility = Visibility.Visible;
+        }
     }
 }
