@@ -80,7 +80,7 @@
             </Button>
         </StackPanel>
         <Grid x:Name="gridCustomer" Grid.Column="1" HorizontalAlignment="Left" Height="718" Margin="10,10,0,0" VerticalAlignment="Top" Width="1088">
-            <Grid x:Name="gridAddCutomer" HorizontalAlignment="Left" Height="404" Margin="0,128,0,0" VerticalAlignment="Top" Width="352">
+            <Grid x:Name="gridAddCutomer" HorizontalAlignment="Left" Height="383.8" Margin="0,167.1" VerticalAlignment="Top" Width="334.4">
                 <Button x:Name="btnAddCustomer" Background="#FF39DAD1" BorderBrush="{x:Null}">
                     <StackPanel>
                         <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">Add Cutomer</Label>
@@ -88,11 +88,19 @@
                     </StackPanel>
                 </Button>
             </Grid>
-            <Grid x:Name="gridRemoveCutomer" HorizontalAlignment="Left" Height="404" Margin="372,128,0,0" VerticalAlignment="Top" Width="352">
+            <Grid x:Name="gridRemoveCutomer" HorizontalAlignment="Left" Height="383.8" Margin="372,167.1,0,0" VerticalAlignment="Top" Width="334.4">
                 <Button x:Name="btnRemoveCustomer" Background="#FF39DAD1" BorderBrush="{x:Null}">
                     <StackPanel>
                         <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">Remove Cutomer</Label>
                         <Image Source="images\remove_customer.png"/>
+                    </StackPanel>
+                </Button>
+            </Grid>
+            <Grid x:Name="gridViewCutomer" HorizontalAlignment="Left" Height="383.8" Margin="744,167.1,0,0" VerticalAlignment="Top" Width="334.4">
+                <Button x:Name="btnViewCustomer" Background="#FF39DAD1" BorderBrush="{x:Null}">
+                    <StackPanel>
+                        <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">View Cutomer</Label>
+                        <Image Source="images\view_customer.png"/>
                     </StackPanel>
                 </Button>
             </Grid>
