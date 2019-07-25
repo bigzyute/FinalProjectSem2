@@ -6,24 +6,11 @@
         xmlns:local="clr-namespace:La_Bakéry"
         mc:Ignorable="d"
         Title="Add_Employee" Height="450" Width="800">
-    <Grid>
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FFD6A0E2" Offset="0"/>
-                <GradientStop Color="#FFEE59E7" Offset="1"/>
-                <GradientStop Color="#FF2E2ECF" Offset="0.987"/>
-            </LinearGradientBrush>
-        </Grid.Background>
-        <Grid HorizontalAlignment="Left" Height="312" Margin="22,24,0,0" VerticalAlignment="Top" Width="320">
+    <Grid Background="#FF6E9086">
+        <Grid HorizontalAlignment="Left" Height="312" Margin="22,24,0,0" VerticalAlignment="Top" Width="320" Background="#FFFDC8B7">
             <Grid.Effect>
-                <DropShadowEffect BlurRadius="7" Color="#FFF9EE04" ShadowDepth="7"/>
+                <DropShadowEffect Color="#FF540E33" BlurRadius="7" ShadowDepth="7"/>
             </Grid.Effect>
-            <Grid.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF10BEF1" Offset="0.007"/>
-                    <GradientStop Color="#FFB9ECE2" Offset="1"/>
-                </LinearGradientBrush>
-            </Grid.Background>
             <Label Content="Personal Info" HorizontalAlignment="Left" VerticalAlignment="Top" Width="204" FontWeight="Bold"/>
             <TextBox x:Name="txtAdd_EmpFName" HorizontalAlignment="Left" Height="23" Margin="104,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             <Label Content="First Name:" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.026,0.115"/>
@@ -49,17 +36,11 @@
             <Label Content="*" HorizontalAlignment="Left" Margin="262,188,0,0" VerticalAlignment="Top" Height="24" Width="21" Foreground="#FFFB0707" FontSize="16" FontWeight="Bold"/>
             <Label Content="*" HorizontalAlignment="Left" Margin="297,238,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.793,-0.573" Height="25" Width="21" Foreground="#FFFB0707" FontSize="18" FontWeight="Bold"/>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="312" Margin="405,24,0,0" VerticalAlignment="Top" Width="321">
+        <Grid HorizontalAlignment="Left" Height="312" Margin="405,24,0,0" VerticalAlignment="Top" Width="321" Background="#FFFDC8B7">
             <Grid.Effect>
-                <DropShadowEffect BlurRadius="7" Color="#FFF9EE04" ShadowDepth="7"/>
+                <DropShadowEffect Color="#FF540E33" BlurRadius="7" ShadowDepth="7"/>
 
             </Grid.Effect>
-            <Grid.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF10BEF1" Offset="0"/>
-                    <GradientStop Color="#FFB9ECE2" Offset="1"/>
-                </LinearGradientBrush>
-            </Grid.Background>
             <Label Content="Address Info" HorizontalAlignment="Left" VerticalAlignment="Top" Width="311" FontWeight="Bold"/>
             <Label Content="Town:" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.526,0.115"/>
             <Label Content="P.O. Box:" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top"/>
@@ -80,9 +61,9 @@
             <Label Content="*" HorizontalAlignment="Left" Margin="263,269,0,0" VerticalAlignment="Top" Height="28" Width="20" FontSize="16" Foreground="#FFFB0707" FontWeight="Bold"/>
             <Label Content="*" HorizontalAlignment="Left" Margin="263,37,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.278,-0.004" FontSize="16" Height="29" Width="20" Foreground="#FFFB0707" FontWeight="Bold"/>
         </Grid>
-        <Button x:Name="btnAdd_EmpAdd" Content="Add" HorizontalAlignment="Left" Margin="45,363,0,0" VerticalAlignment="Top" Width="80" Height="41" Click="BtnAdd_CusAdd_Click"/>
-        <Button x:Name="btnAdd_EmpUpdate" Content="Update" HorizontalAlignment="Left" Margin="225,363,0,0" VerticalAlignment="Top" Width="80" Height="41"/>
-        <Button x:Name="btnAdd_EmpCancel" Content="Cancel" HorizontalAlignment="Left" Margin="427,363,0,0" VerticalAlignment="Top" Width="82" Height="41"/>
-        <Button x:Name="btnAdd_EmpExit" Content="Exit" HorizontalAlignment="Left" Margin="614,363,0,0" VerticalAlignment="Top" Width="86" Height="41" RenderTransformOrigin="0.395,0.512" Click="BtnAdd_CusExit_Click"/>
+        <Button x:Name="btnAdd_EmpAdd" Content="Add" HorizontalAlignment="Left" Margin="45,363,0,0" VerticalAlignment="Top" Width="80" Height="41" Click="BtnAdd_CusAdd_Click" Background="#FFFABC74" BorderBrush="#FF540E33"/>
+        <Button x:Name="btnAdd_EmpUpdate" Content="Update" HorizontalAlignment="Left" Margin="225,363,0,0" VerticalAlignment="Top" Width="80" Height="41" Background="#FFFABC74" BorderBrush="#FF540E33"/>
+        <Button x:Name="btnAdd_EmpCancel" Content="Cancel" HorizontalAlignment="Left" Margin="427,363,0,0" VerticalAlignment="Top" Width="82" Height="41" Background="#FFFABC74" BorderBrush="#FF540E33"/>
+        <Button x:Name="btnAdd_EmpExit" Content="Exit" HorizontalAlignment="Left" Margin="614,363,0,0" VerticalAlignment="Top" Width="86" Height="41" RenderTransformOrigin="0.395,0.512" Click="BtnAdd_CusExit_Click" Background="#FFFABC74" BorderBrush="#FF540E33"/>
     </Grid>
 </Window>
