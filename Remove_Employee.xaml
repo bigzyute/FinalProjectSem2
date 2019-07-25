@@ -6,32 +6,20 @@
         xmlns:local="clr-namespace:La_Bakéry"
         mc:Ignorable="d"
         Title="Remove_Employee" Height="450" Width="800">
-    <Grid>
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FFD6A0E2" Offset="0"/>
-                <GradientStop Color="#FF2E2ECF" Offset="1"/>
-            </LinearGradientBrush>
-        </Grid.Background>
-        <Grid HorizontalAlignment="Left" Height="306" Margin="60,61,0,0" VerticalAlignment="Top" Width="674">
+    <Grid Background="#FF6E9086">
+        <Grid HorizontalAlignment="Left" Height="306" Margin="60,61,0,0" VerticalAlignment="Top" Width="674" Background="#FFFDC8B7">
             <Grid.Effect>
-                <DropShadowEffect BlurRadius="7" Color="#FFF7F706" ShadowDepth="9"/>
+                <DropShadowEffect Color="#FF540E33" BlurRadius="7" ShadowDepth="7"/>
             </Grid.Effect>
-            <Grid.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF10BEF1" Offset="0.003"/>
-                    <GradientStop Color="#FFB9ECE2" Offset="1"/>
-                </LinearGradientBrush>
-            </Grid.Background>
             <Label Content="Enter Employee I.D. To Search" HorizontalAlignment="Center" Margin="101,35,0,0" VerticalAlignment="Top" Width="483" FontWeight="Bold" FontSize="18"/>
             <Label x:Name="lblRem_EmpId" Content="Employee I.D." HorizontalAlignment="Left" Margin="83,114,0,0" VerticalAlignment="Top" FontSize="14"/>
             <Label x:Name="lblRem_EmpResult" Content="Result" HorizontalAlignment="Left" Margin="83,163,0,0" VerticalAlignment="Top" FontSize="14"/>
             <TextBox x:Name="txtRem_EmpId" HorizontalAlignment="Left" Height="23" Margin="282,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
             <TextBox x:Name="txtRem_EmpResult" HorizontalAlignment="Left" Height="23" Margin="282,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
-            <Button x:Name="btnRem_EmpCancel" Content="Cancel" HorizontalAlignment="Left" Margin="299,225,0,0" VerticalAlignment="Top" Width="101" Height="41"/>
-            <Button x:Name="btnRem_EmpExit" Content="Exit" HorizontalAlignment="Left" Margin="522,225,0,0" VerticalAlignment="Top" Width="101" Height="41" Click="BtnRem_EmpExit_Click"/>
-            <Button x:Name="btnRem_EmpRemove" Content="Remove " HorizontalAlignment="Left" Margin="111,225,0,0" VerticalAlignment="Top" Width="101" Height="41"/>
-            <Button x:Name="btnRem_EmpSearch" Content="Search" HorizontalAlignment="Left" Margin="522,114,0,0" VerticalAlignment="Top" Width="83" Height="23"/>
+            <Button x:Name="btnRem_EmpCancel" Content="Cancel" HorizontalAlignment="Left" Margin="299,225,0,0" VerticalAlignment="Top" Width="101" Height="41" Background="#FFFABC74" BorderBrush="#FF540E33" Foreground="Black"/>
+            <Button x:Name="btnRem_EmpExit" Content="Exit" HorizontalAlignment="Left" Margin="522,225,0,0" VerticalAlignment="Top" Width="101" Height="41" Click="BtnRem_EmpExit_Click" Background="#FFFABC74" BorderBrush="#FF540E33" Foreground="Black"/>
+            <Button x:Name="btnRem_EmpRemove" Content="Remove " HorizontalAlignment="Left" Margin="111,225,0,0" VerticalAlignment="Top" Width="101" Height="41" Background="#FFFABC74" BorderBrush="#FF540E33" Foreground="Black"/>
+            <Button x:Name="btnRem_EmpSearch" Content="Search" HorizontalAlignment="Left" Margin="522,114,0,0" VerticalAlignment="Top" Width="83" Height="23" Background="#FFFABC74" BorderBrush="#FF540E33" Foreground="Black"/>
         </Grid>
 
     </Grid>
