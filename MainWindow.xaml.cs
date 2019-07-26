@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -20,9 +21,11 @@ namespace La_Bakéry
     /// </summary>
     public partial class MainWindow : Window
     {
+        BlurEffect blurEffect = new BlurEffect();
         public MainWindow()
         {
             InitializeComponent();
+            blurEffect.Radius = 0;
         }
 
         private void BtnLogout_Click(object sender, RoutedEventArgs e)
@@ -34,22 +37,42 @@ namespace La_Bakéry
 
         private void BtnEmployee_Click(object sender, RoutedEventArgs e)
         {
-            gridCustomer.Visibility = Visibility.Hidden;
+            if (gridCustomer.Visibility == Visibility.Visible)
+            {
+                gridCustomer.Visibility = Visibility.Hidden;
+                blurEffect.Radius = 0;
+            }
+            imgDashBackground.Effect = blurEffect;
         }
 
         private void BtnProduct_Click(object sender, RoutedEventArgs e)
         {
-            gridCustomer.Visibility = Visibility.Hidden;
+            if (gridCustomer.Visibility == Visibility.Visible)
+            {
+                gridCustomer.Visibility = Visibility.Hidden;
+                blurEffect.Radius = 0;
+            }
+            imgDashBackground.Effect = blurEffect;
         }
 
         private void BtnReport_Click(object sender, RoutedEventArgs e)
         {
-            gridCustomer.Visibility = Visibility.Hidden;
+            if (gridCustomer.Visibility == Visibility.Visible)
+            {
+                gridCustomer.Visibility = Visibility.Hidden;
+                blurEffect.Radius = 0;
+            }
+            imgDashBackground.Effect = blurEffect;
         }
 
         private void BtnCustomer_Click(object sender, RoutedEventArgs e)
         {
-            gridCustomer.Visibility = Visibility.Visible;
+            if (gridCustomer.Visibility == Visibility.Hidden)
+            {
+                gridCustomer.Visibility = Visibility.Visible;
+                blurEffect.Radius = 5;
+            }
+            imgDashBackground.Effect = blurEffect;
         }
     }
 }

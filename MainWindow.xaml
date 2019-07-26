@@ -7,7 +7,15 @@
         mc:Ignorable="d"
         Title="Home" Height="768" Width="1366" Foreground="{DynamicResource {x:Static SystemColors.DesktopBrushKey}}" Padding="10,0" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen" MinWidth="683" MinHeight="384">
     <Window.Background>
-        <ImageBrush ImageSource="images/dash_background.jpg" Stretch="UniformToFill"/>
+        <VisualBrush>
+            <VisualBrush.Visual>
+                <Image x:Name="imgDashBackground" Source="images/dash_background.jpg">
+                    <Image.Effect>
+                        <BlurEffect RenderingBias="Quality" Radius="0"/>
+                    </Image.Effect>
+                </Image>
+            </VisualBrush.Visual>
+        </VisualBrush>
     </Window.Background>
     <Grid>
         <Grid.Effect>
