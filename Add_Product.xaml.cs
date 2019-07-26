@@ -33,5 +33,13 @@ namespace La_Bakéry
         {
 
         }
+
+        private void BtnClear_Product_Click(object sender, RoutedEventArgs e)
+        {
+            txtProduct_Code.Clear();
+            txtProduct_Cost.Clear();
+            txtProduct_Name.Clear();
+            
+        }
     }
 }
