@@ -37,19 +37,22 @@ namespace La_Bakéry
 
         private void BtnEmployee_Click(object sender, RoutedEventArgs e)
         {
-            if (gridCustomer.Visibility == Visibility.Visible)
+            if (gridEmployee.Visibility == Visibility.Hidden)
             {
                 gridCustomer.Visibility = Visibility.Hidden;
-                blurEffect.Radius = 0;
+                gridProduct.Visibility = Visibility.Hidden;
+                gridEmployee.Visibility = Visibility.Visible;
             }
             imgDashBackground.Effect = blurEffect;
         }
 
         private void BtnProduct_Click(object sender, RoutedEventArgs e)
         {
-            if (gridCustomer.Visibility == Visibility.Visible)
+            if (gridProduct.Visibility == Visibility.Hidden)
             {
                 gridCustomer.Visibility = Visibility.Hidden;
+                gridEmployee.Visibility = Visibility.Hidden;
+                gridProduct.Visibility = Visibility.Visible;
                 blurEffect.Radius = 0;
             }
             imgDashBackground.Effect = blurEffect;
@@ -57,9 +60,11 @@ namespace La_Bakéry
 
         private void BtnReport_Click(object sender, RoutedEventArgs e)
         {
-            if (gridCustomer.Visibility == Visibility.Visible)
+            if (gridCustomer.Visibility == Visibility.Visible || gridEmployee.Visibility == Visibility.Visible || gridProduct.Visibility == Visibility.Visible)
             {
                 gridCustomer.Visibility = Visibility.Hidden;
+                gridEmployee.Visibility = Visibility.Hidden;
+                gridProduct.Visibility = Visibility.Hidden;
                 blurEffect.Radius = 0;
             }
             imgDashBackground.Effect = blurEffect;
@@ -69,6 +74,8 @@ namespace La_Bakéry
         {
             if (gridCustomer.Visibility == Visibility.Hidden)
             {
+                gridProduct.Visibility = Visibility.Hidden;
+                gridEmployee.Visibility = Visibility.Hidden;
                 gridCustomer.Visibility = Visibility.Visible;
                 blurEffect.Radius = 5;
             }
