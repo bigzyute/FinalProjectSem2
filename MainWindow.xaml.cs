@@ -30,8 +30,8 @@ namespace La_Bakéry
 
         private void BtnLogout_Click(object sender, RoutedEventArgs e)
         {
-            Login login = new Login();
             this.Close();
+            Login login = new Login();
             login.Show();
         }
 
@@ -80,6 +80,48 @@ namespace La_Bakéry
                 blurEffect.Radius = 5;
             }
             imgDashBackground.Effect = blurEffect;
+        }
+
+        private void BtnAddCustomer_Click(object sender, RoutedEventArgs e)
+        {
+            gridCustomer.IsEnabled = false;
+            Add_Customer add_Customer = new Add_Customer();
+            add_Customer.Show();
+        }
+
+        private void BtnRemoveCustomer_Click(object sender, RoutedEventArgs e)
+        {
+            gridCustomer.IsEnabled = false;
+            Remove_Customer remove_Customer = new Remove_Customer();
+            remove_Customer.Show();
+        }
+
+        private void BtnAddEmployee_Click(object sender, RoutedEventArgs e)
+        {
+            gridEmployee.IsEnabled = false;
+            Add_Employee add_Employee = new Add_Employee();
+            add_Employee.Show();
+        }
+
+        private void BtnRemoveEmployee_Click(object sender, RoutedEventArgs e)
+        {
+            gridEmployee.IsEnabled = false;
+            Remove_Employee remove_Employee = new Remove_Employee();
+            remove_Employee.Show();
+        }
+
+        private void BtnAddProduct_Click(object sender, RoutedEventArgs e)
+        {
+            gridProduct.IsEnabled = false;
+            Add_Product add_Product = new Add_Product();
+            add_Product.Show();
+        }
+
+        private void BtnRemoveProduct_Click(object sender, RoutedEventArgs e)
+        {
+            gridProduct.IsEnabled = false;
+            Remove_Product remove_Product = new Remove_Product();
+            remove_Product.Show();
         }
     }
 }
