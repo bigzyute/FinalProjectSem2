@@ -22,7 +22,7 @@
             <TextBox x:Name="txtBoxUsername" TextWrapping="Wrap" BorderBrush="#FF6E6E6E" Foreground="White" FontSize="14" Background="#FF844257" Margin="0" SelectionBrush="#FFE881A2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="25"/>
             <Label x:Name="labelPassword" Content="Password" Foreground="White" FontSize="14" Margin="0,0,-0.6,0"/>
             <PasswordBox x:Name="loginPasswordBox" Background="#FF844257" BorderBrush="#FF6E6E6E" Foreground="White" SelectionBrush="#FFE881A2" Margin="0,0,0,30" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="25"/>
-            <Button x:Name="loginSubmitButton" Content="_SUBMIT" Margin="60,0" FontSize="18" Background="#FF844257" Foreground="White" BorderBrush="#FF6E6E6E" TabIndex="1" Click="LoginSubmitButton_Click"/>
+            <Button x:Name="loginSubmitButton" Content="_SIGN IN" Margin="60,0" FontSize="18" Background="#FF844257" Foreground="White" BorderBrush="#FF6E6E6E" TabIndex="1" Click="LoginSubmitButton_Click"/>
         </StackPanel>
     </Border>
 </Window>
