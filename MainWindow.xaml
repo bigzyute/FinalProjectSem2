@@ -91,7 +91,7 @@
             </Button>
         </StackPanel>
         <Grid x:Name="gridCustomer" Grid.Column="1" HorizontalAlignment="Left" Height="718" Margin="10,10,0,0" VerticalAlignment="Top" Width="1088" Visibility="Hidden">
-            <Grid x:Name="gridAddCutomer" HorizontalAlignment="Left" Height="383.8" Margin="0,167.1" VerticalAlignment="Top" Width="334.4">
+            <Grid x:Name="gridAddCutomer" HorizontalAlignment="Left" Height="287.85" Margin="0,167.1" VerticalAlignment="Top" Width="250.8">
                 <Button x:Name="btnAddCustomer" Background="#FF39DAD1" BorderBrush="{x:Null}" Click="BtnAddCustomer_Click">
                     <StackPanel>
                         <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">
@@ -103,7 +103,7 @@
                     </StackPanel>
                 </Button>
             </Grid>
-            <Grid x:Name="gridRemoveCutomer" HorizontalAlignment="Left" Height="383.8" Margin="372,167.1,0,0" VerticalAlignment="Top" Width="334.4">
+            <Grid x:Name="gridBtnRemoveCustomer" HorizontalAlignment="Left" Height="287.85" Margin="372,167.1,0,0" VerticalAlignment="Top" Width="250.8">
                 <Button x:Name="btnRemoveCustomer" Background="#FF39DAD1" BorderBrush="{x:Null}" Click="BtnRemoveCustomer_Click">
                     <StackPanel>
                         <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">
@@ -115,8 +115,8 @@
                     </StackPanel>
                 </Button>
             </Grid>
-            <Grid x:Name="gridViewCutomer" HorizontalAlignment="Left" Height="383.8" Margin="744,167.1,0,0" VerticalAlignment="Top" Width="334.4">
-                <Button x:Name="btnViewCustomer" Background="#FF39DAD1" BorderBrush="{x:Null}">
+            <Grid x:Name="gridBtnViewCustomer" HorizontalAlignment="Left" Height="287.85" Margin="744,167.1,0,0" VerticalAlignment="Top" Width="250.8">
+                <Button x:Name="btnViewCustomer" Background="#FF39DAD1" BorderBrush="{x:Null}" Click="BtnViewCustomer_Click">
                     <StackPanel>
                         <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">
                             <Label.Effect>
@@ -129,7 +129,7 @@
             </Grid>
         </Grid>
         <Grid x:Name="gridEmployee" Grid.Column="1" HorizontalAlignment="Left" Height="718" Margin="10,10,0,0" VerticalAlignment="Top" Width="1088" Visibility="Hidden">
-            <Grid x:Name="gridAddEmployee" HorizontalAlignment="Left" Height="383.8" Margin="0,167.1" VerticalAlignment="Top" Width="334.4">
+            <Grid x:Name="gridAddEmployee" HorizontalAlignment="Left" Height="287.85" Margin="0,167.1" VerticalAlignment="Top" Width="250.8">
                 <Button x:Name="btnAddEmployee" Background="#FF39DAD1" BorderBrush="{x:Null}" Click="BtnAddEmployee_Click">
                     <StackPanel>
                         <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">
@@ -141,7 +141,7 @@
                     </StackPanel>
                 </Button>
             </Grid>
-            <Grid x:Name="gridRemoveEmployee" HorizontalAlignment="Left" Height="383.8" Margin="372,167.1,0,0" VerticalAlignment="Top" Width="334.4">
+            <Grid x:Name="gridBtnRemoveEmployee" HorizontalAlignment="Left" Height="287.85" Margin="372,167.1,0,0" VerticalAlignment="Top" Width="250.8">
                 <Button x:Name="btnRemoveEmployee" Background="#FF39DAD1" BorderBrush="{x:Null}" Click="BtnRemoveEmployee_Click">
                     <StackPanel>
                         <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">
@@ -153,7 +153,7 @@
                     </StackPanel>
                 </Button>
             </Grid>
-            <Grid x:Name="gridViewEmployee" HorizontalAlignment="Left" Height="383.8" Margin="744,167.1,0,0" VerticalAlignment="Top" Width="334.4">
+            <Grid x:Name="gridBtnViewEmployee" HorizontalAlignment="Left" Height="287.85" Margin="744,167.1,0,0" VerticalAlignment="Top" Width="250.8">
                 <Button x:Name="btnViewEmployee" Background="#FF39DAD1" BorderBrush="{x:Null}">
                     <StackPanel>
                         <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">
@@ -167,7 +167,7 @@
             </Grid>
         </Grid>
         <Grid x:Name="gridProduct" Grid.Column="1" HorizontalAlignment="Left" Height="718" Margin="10,10,0,0" VerticalAlignment="Top" Width="1088" Visibility="Hidden">
-            <Grid x:Name="gridAddProduct" HorizontalAlignment="Left" Height="383.8" Margin="0,167.1" VerticalAlignment="Top" Width="334.4">
+            <Grid x:Name="gridAddProduct" HorizontalAlignment="Left" Height="287.85" Margin="0,167.1" VerticalAlignment="Top" Width="250.8">
                 <Button x:Name="btnAddProduct" Background="#FF39DAD1" BorderBrush="{x:Null}" Click="BtnAddProduct_Click">
                     <StackPanel>
                         <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">
@@ -179,7 +179,7 @@
                     </StackPanel>
                 </Button>
             </Grid>
-            <Grid x:Name="gridRemoveProduct" HorizontalAlignment="Left" Height="383.8" Margin="372,167.1,0,0" VerticalAlignment="Top" Width="334.4">
+            <Grid x:Name="gridBtnRemoveProduct" HorizontalAlignment="Left" Height="287.85" Margin="372,167.1,0,0" VerticalAlignment="Top" Width="250.8">
                 <Button x:Name="btnRemoveProduct" Background="#FF39DAD1" BorderBrush="{x:Null}" Click="BtnRemoveProduct_Click">
                     <StackPanel>
                         <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">
@@ -191,7 +191,7 @@
                     </StackPanel>
                 </Button>
             </Grid>
-            <Grid x:Name="gridViewProduct" HorizontalAlignment="Left" Height="383.8" Margin="744,167.1,0,0" VerticalAlignment="Top" Width="334.4">
+            <Grid x:Name="gridBtnViewProduct" HorizontalAlignment="Left" Height="287.85" Margin="744,167.1,0,0" VerticalAlignment="Top" Width="250.8">
                 <Button x:Name="btnViewProduct" Background="#FF39DAD1" BorderBrush="{x:Null}">
                     <StackPanel>
                         <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">
@@ -203,6 +203,42 @@
                     </StackPanel>
                 </Button>
             </Grid>
+        </Grid>
+        <Grid x:Name="gridViewCustomer" Grid.Column="1" HorizontalAlignment="Left" Height="718" Margin="10,10,0,0" VerticalAlignment="Top" Width="1088" Visibility="Hidden">
+            <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="546" Margin="10,162,0,0" VerticalAlignment="Top" Width="1068">
+                
+                <!--Styling the grid view header-->
+                <DataGrid.Resources>
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="#FF93B5B3"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="BorderThickness" Value="1,1,2,3"/>
+                        <Setter Property="BorderBrush" Value="#FF61807E"/>
+                        <Setter Property="FontSize" Value="16"/>
+                        <Setter Property="Foreground" Value="White"/>
+                    </Style>
+                </DataGrid.Resources>
+                
+                <!--Setting header titles in the gridview-->
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="First Name"/>
+                    <DataGridTextColumn Header="Middle Name"/>
+                    <DataGridTextColumn Header="Last Name"/>
+                    <DataGridTextColumn Header="Date of Birth"/>
+                    <DataGridTextColumn Header="Gender"/>
+                    <DataGridTextColumn Header="Marital Status"/>
+                    <DataGridTextColumn Header="Town"/>
+                    <DataGridTextColumn Header="PO Box"/>
+                    <DataGridTextColumn Header="Parish"/>
+                    <DataGridTextColumn Header="Phone"/>
+                    <DataGridTextColumn Header="Email" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Label x:Name="label_Customer" Content="CUSTOMER" HorizontalAlignment="Left" Margin="444,65,444,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="White" Foreground="White" FontSize="36" FontWeight="SemiBold" Width="200">
+                <Label.Effect>
+                    <DropShadowEffect Direction="200" ShadowDepth="4" BlurRadius="10" Color="#FF5FB3AE"/>
+                </Label.Effect>
+            </Label>
         </Grid>
     </Grid>
 </Window>

@@ -21,11 +21,9 @@ namespace La_Bakéry
     /// </summary>
     public partial class MainWindow : Window
     {
-        BlurEffect blurEffect = new BlurEffect();
         public MainWindow()
         {
             InitializeComponent();
-            blurEffect.Radius = 0;
         }
 
         private void BtnLogout_Click(object sender, RoutedEventArgs e)
@@ -43,7 +41,10 @@ namespace La_Bakéry
                 gridProduct.Visibility = Visibility.Hidden;
                 gridEmployee.Visibility = Visibility.Visible;
             }
-            imgDashBackground.Effect = blurEffect;
+            else
+            {
+                gridEmployee.Focus();
+            }
         }
 
         private void BtnProduct_Click(object sender, RoutedEventArgs e)
@@ -53,9 +54,11 @@ namespace La_Bakéry
                 gridCustomer.Visibility = Visibility.Hidden;
                 gridEmployee.Visibility = Visibility.Hidden;
                 gridProduct.Visibility = Visibility.Visible;
-                blurEffect.Radius = 0;
             }
-            imgDashBackground.Effect = blurEffect;
+            else
+            {
+                gridProduct.Focus();
+            }
         }
 
         private void BtnReport_Click(object sender, RoutedEventArgs e)
@@ -65,9 +68,7 @@ namespace La_Bakéry
                 gridCustomer.Visibility = Visibility.Hidden;
                 gridEmployee.Visibility = Visibility.Hidden;
                 gridProduct.Visibility = Visibility.Hidden;
-                blurEffect.Radius = 0;
             }
-            imgDashBackground.Effect = blurEffect;
         }
 
         private void BtnCustomer_Click(object sender, RoutedEventArgs e)
@@ -77,9 +78,11 @@ namespace La_Bakéry
                 gridProduct.Visibility = Visibility.Hidden;
                 gridEmployee.Visibility = Visibility.Hidden;
                 gridCustomer.Visibility = Visibility.Visible;
-                blurEffect.Radius = 5;
             }
-            imgDashBackground.Effect = blurEffect;
+            else
+            {
+                gridCustomer.Focus();
+            }
         }
 
         private void BtnAddCustomer_Click(object sender, RoutedEventArgs e)
@@ -105,9 +108,15 @@ namespace La_Bakéry
 
         private void BtnRemoveEmployee_Click(object sender, RoutedEventArgs e)
         {
-            gridEmployee.IsEnabled = false;
             Remove_Employee remove_Employee = new Remove_Employee();
-            remove_Employee.Show();
+            if (remove_Employee.IsFocused == false)
+            {
+                remove_Employee.Show(); 
+            } else
+            {
+                remove_Employee.BringIntoView();
+                remove_Employee.Focus();
+            }
         }
 
         private void BtnAddProduct_Click(object sender, RoutedEventArgs e)
@@ -122,6 +131,12 @@ namespace La_Bakéry
             gridProduct.IsEnabled = false;
             Remove_Product remove_Product = new Remove_Product();
             remove_Product.Show();
+        }
+
+        private void BtnViewCustomer_Click(object sender, RoutedEventArgs e)
+        {
+            gridCustomer.Visibility = Visibility.Hidden;
+            gridViewCustomer.Visibility = Visibility.Visible;
         }
     }
 }
