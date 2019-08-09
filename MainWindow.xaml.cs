@@ -138,5 +138,18 @@ namespace La_Bakéry
             gridCustomer.Visibility = Visibility.Hidden;
             gridViewCustomer.Visibility = Visibility.Visible;
         }
+
+        private void Dashboard_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            var result = MessageBox.Show("Are you sure you want to exit", "Exit Application", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                Environment.Exit(0);
+            }
+        }
     }
 }
