@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,10 @@ namespace La_Bakéry
     /// </summary>
     public partial class Add_Product : Window
     {
+        private readonly object dialog;
+
+        public object Image { get; private set; }
+
         public Add_Product()
         {
             InitializeComponent();
@@ -47,6 +52,27 @@ namespace La_Bakéry
             MainWindow objMain = new MainWindow();
             objMain.Show();
             Hide();
+        }
+
+        private void BtnUpload_ProPic_Click(object sender, RoutedEventArgs e)
+        {
+          /*  String imageLocation = "";
+            try
+            {
+                OpenFileDialog JuPic = new OpenFileDialog();
+                JuPic.Filter = "jpg files (*.jpg)|*.jpg| PNG Files(*.png)|*png| All Files(*.*)|*.*";
+                if (JuPic.ShowDialog() == DialogResult)
+                {
+                    imageLocation = dialog.GetType.
+                    pbNewPro_Image = imageLocation;
+                }
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("An Error Occured", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            */
         }
     }
 }
