@@ -23,5 +23,22 @@ namespace La_Bakéry
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnReCust_Clear_Click(object sender, RoutedEventArgs e)
+        {
+
+            txtReCust_ID.Clear();
+            txtReCust_Result.Clear();
+        }
     }
 }
