@@ -21,6 +21,10 @@ namespace La_Bakéry
     /// </summary>
     public partial class MainWindow : Window
     {
+        public void allGrid(Visibility prop, Grid grid)
+        {
+            
+        }
         public MainWindow()
         {
             InitializeComponent();
@@ -28,9 +32,13 @@ namespace La_Bakéry
 
         private void BtnLogout_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
-            Login login = new Login();
-            login.Show();
+            MessageBoxResult result = MessageBox.Show("Are you sure you want to exit", "Exit Application", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                this.Hide();
+                Login login = new Login();
+                login.Show();
+            }
         }
 
         private void BtnEmployee_Click(object sender, RoutedEventArgs e)
@@ -141,12 +149,11 @@ namespace La_Bakéry
 
         private void Dashboard_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            var result = MessageBox.Show("Are you sure you want to exit", "Exit Application", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            MessageBoxResult result = MessageBox.Show("Are you sure you want to exit", "Exit Application", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (result == MessageBoxResult.No)
             {
                 e.Cancel = true;
-            }
-            else
+            }else
             {
                 Environment.Exit(0);
             }
