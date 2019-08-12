@@ -23,5 +23,11 @@ namespace La_Bakéry
         {
             InitializeComponent();
         }
+
+        private void BtnRemovePro_Clear_Click(object sender, RoutedEventArgs e)
+        {
+            txtRemovePro_ID.Clear();
+            txtRemovePro_Result.Clear();
+        }
     }
 }

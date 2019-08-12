@@ -41,5 +41,12 @@ namespace La_Bakéry
             txtProduct_Name.Clear();
             
         }
+
+        private void BtnExit_Product_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow objMain = new MainWindow();
+            objMain.Show();
+            Hide();
+        }
     }
 }

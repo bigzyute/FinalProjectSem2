@@ -34,9 +34,9 @@
             <TextBox x:Name="txtProduct_Name" HorizontalAlignment="Left" Height="23" Margin="364,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123"/>
             <Label Content="Product Cost" HorizontalAlignment="Left" Margin="220,170,0,0" VerticalAlignment="Top" Width="90"/>
             <TextBox x:Name="txtProduct_Cost" HorizontalAlignment="Left" Height="23" Margin="364,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123"/>
-            <Button x:Name="btnAdd_Product" Content="Add" HorizontalAlignment="Left" Margin="31,273,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" RenderTransformOrigin="0.549,1.594" Background="#FFC9C7C7" Foreground="Black"/>
+            <Button x:Name="btnAdd_Product" Content="Add" HorizontalAlignment="Left" Margin="31,273,0,10" Width="75" Click="Button_Click" RenderTransformOrigin="0.549,1.594" Background="#FFC9C7C7" Foreground="Black"/>
             <Button x:Name="btnClear_Product" Content="Clear" HorizontalAlignment="Left" Margin="202,273,0,0" VerticalAlignment="Top" Width="75" Click="BtnClear_Product_Click"/>
-            <Button x:Name="btnExit_Product" Content="Exit " HorizontalAlignment="Left" Margin="383,273,0,0" VerticalAlignment="Top" Width="75"/>
+            <Button x:Name="btnExit_Product" Content="Exit " HorizontalAlignment="Left" Margin="383,273,0,0" VerticalAlignment="Top" Width="75" Click="BtnExit_Product_Click"/>
             <Button x:Name="btnUpload_ProPic" Content="Upload " HorizontalAlignment="Left" Margin="69,232,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.14,2.25"/>
          
         </Grid>

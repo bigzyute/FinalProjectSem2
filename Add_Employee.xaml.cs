@@ -15,27 +15,33 @@ using System.Windows.Shapes;
 namespace La_Bakéry
 {
     /// <summary>
-    /// Interaction logic for Add_Customer.xaml
+    /// Interaction logic for Add_Employee.xaml
     /// </summary>
-    public partial class Add_Customer : Window
+    public partial class Add_Employee : Window
     {
-        public Add_Customer()
+        public Add_Employee()
         {
             InitializeComponent();
         }
 
+        private void BtnAdd_CusAdd_Click_2(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void BtnAdd_CusExit_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow objMain = new MainWindow();
-            objMain.Show();
-            Hide();
-          
+
         }
 
-        private void BtnAdd_CusAdd_Click(object sender, RoutedEventArgs e)
+        private void BtnAdd_EmpUpdate_Click(object sender, RoutedEventArgs e)
         {
-            int telephone;
+
         }
 
+        private void BtnAdd_EmpCancel_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
