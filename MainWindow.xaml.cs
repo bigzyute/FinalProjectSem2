@@ -21,9 +21,23 @@ namespace La_Bakéry
     /// </summary>
     public partial class MainWindow : Window
     {
-        public void allGrid(Visibility prop, Grid grid)
+        public void showGrid(Grid grid)
         {
-            
+            var hide = Visibility.Hidden;
+            var show = Visibility.Visible;
+            if (grid.Visibility == hide)
+            {
+                gridCustomer.Visibility = hide;
+                gridEmployee.Visibility = hide;
+                gridProduct.Visibility = hide;
+                gridViewEmployee.Visibility = hide;
+                gridViewCustomer.Visibility = hide;
+                /*gridReport.Visibility = hide;*/
+                grid.Visibility = show;
+            } else
+            {
+                grid.Focus();
+            }
         }
         public MainWindow()
         {
@@ -43,30 +57,12 @@ namespace La_Bakéry
 
         private void BtnEmployee_Click(object sender, RoutedEventArgs e)
         {
-            if (gridEmployee.Visibility == Visibility.Hidden)
-            {
-                gridCustomer.Visibility = Visibility.Hidden;
-                gridProduct.Visibility = Visibility.Hidden;
-                gridEmployee.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                gridEmployee.Focus();
-            }
+            showGrid(gridEmployee);
         }
 
         private void BtnProduct_Click(object sender, RoutedEventArgs e)
         {
-            if (gridProduct.Visibility == Visibility.Hidden)
-            {
-                gridCustomer.Visibility = Visibility.Hidden;
-                gridEmployee.Visibility = Visibility.Hidden;
-                gridProduct.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                gridProduct.Focus();
-            }
+            showGrid(gridProduct);
         }
 
         private void BtnReport_Click(object sender, RoutedEventArgs e)
@@ -81,16 +77,7 @@ namespace La_Bakéry
 
         private void BtnCustomer_Click(object sender, RoutedEventArgs e)
         {
-            if (gridCustomer.Visibility == Visibility.Hidden)
-            {
-                gridProduct.Visibility = Visibility.Hidden;
-                gridEmployee.Visibility = Visibility.Hidden;
-                gridCustomer.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                gridCustomer.Focus();
-            }
+            showGrid(gridProduct);
         }
 
         private void BtnAddCustomer_Click(object sender, RoutedEventArgs e)
