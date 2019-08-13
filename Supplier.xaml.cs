@@ -15,19 +15,25 @@ using System.Windows.Shapes;
 namespace La_Bakéry
 {
     /// <summary>
-    /// Interaction logic for Remove_Product.xaml
+    /// Interaction logic for Supplier.xaml
     /// </summary>
-    public partial class Remove_Product : Window
+    public partial class Supplier : Window
     {
-        public Remove_Product()
+        public Supplier()
         {
             InitializeComponent();
         }
 
-        private void BtnRemovePro_Clear_Click(object sender, RoutedEventArgs e)
+        private void BtnSupDetails_Clear_Click(object sender, RoutedEventArgs e)
         {
-            txtRemovePro_ID.Clear();
-            txtRemovePro_Result.Clear();
+            txtSup_ID.Clear();
+            txtSup_Name.Clear();
+            txtSup_Address.Clear();
+            txtSup_ContactNum.Clear();
+            txtSup_EmailAdd.Clear();
+            txtSup_SuplyOf.Clear();
+            cbSup_Parish.SelectedIndex = -1;
+            cbSup_Search.SelectedIndex = -1;
         }
     }
 }
