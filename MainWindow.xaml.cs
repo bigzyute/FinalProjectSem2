@@ -143,7 +143,7 @@ namespace La_Bakéry
 
         private void BtnViewCustomer_Click(object sender, RoutedEventArgs e)
         {
-            gridCustomer.Visibility = Visibility.Hidden;
+            gridCustomer.Visibility = Visibility.Hidden;    //Work in progress
             gridViewCustomer.Visibility = Visibility.Visible;
         }
 
@@ -157,6 +157,12 @@ namespace La_Bakéry
             {
                 Environment.Exit(0);
             }
+        }
+
+        private void BtnViewEmployee_Click(object sender, RoutedEventArgs e)
+        {
+            gridEmployee.Visibility = Visibility.Hidden;
+            gridViewEmployee.Visibility = Visibility.Visible;
         }
     }
 }

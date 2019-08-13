@@ -146,7 +146,7 @@
                 </Button>
             </Grid>
             <Grid x:Name="gridBtnViewEmployee" HorizontalAlignment="Left" Height="287.85" Margin="744,167.1,0,0" VerticalAlignment="Top" Width="250.8">
-                <Button x:Name="btnViewEmployee" Background="#FF39DAD1" BorderBrush="{x:Null}">
+                <Button x:Name="btnViewEmployee" Background="#FF39DAD1" BorderBrush="{x:Null}" Click="BtnViewEmployee_Click">
                     <StackPanel>
                         <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">
                             <Label.Effect>
@@ -232,7 +232,7 @@
                 </Label.Effect>
             </Label>
         </Grid>
-        <Grid x:Name="gridViewEmployee" Grid.Column="1" HorizontalAlignment="Left" Height="718" Margin="10,10,0,0" VerticalAlignment="Top" Width="1088">
+        <Grid x:Name="gridViewEmployee" Grid.Column="1" HorizontalAlignment="Left" Height="718" Margin="10,10,0,0" VerticalAlignment="Top" Width="1088" Visibility="Hidden">
             <DataGrid x:Name="dataGridViewEmployee" HorizontalAlignment="Left" Height="546" Margin="10,162,0,0" VerticalAlignment="Top" Width="1068">
 
                 <!--Styling the grid view header-->
