@@ -17,9 +17,9 @@ namespace La_Bakéry
     /// <summary>
     /// Interaction logic for Add_Customer.xaml
     /// </summary>
-    public partial class Add_Customer : Window
+    public partial class Add_Employee : Window
     {
-        public Add_Customer()
+        public Add_Employee()
         {
             InitializeComponent();
         }
@@ -37,6 +37,7 @@ namespace La_Bakéry
             int telephone;
             char gender = 'm';
             String marStat = "single";
+            
             Int32.TryParse(txtAdd_EmpTelephone.Text, out telephone);
             bool valid = false;
 
