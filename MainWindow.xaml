@@ -213,14 +213,14 @@
                 
                 <!--Setting header titles in the gridview-->
                 <DataGrid.Columns>
+                    <DataGridTextColumn Header="Customer ID"/>
                     <DataGridTextColumn Header="First Name"/>
-                    <DataGridTextColumn Header="Middle Name"/>
+                    <DataGridTextColumn Header="Middle Initial"/>
                     <DataGridTextColumn Header="Last Name"/>
                     <DataGridTextColumn Header="Date of Birth"/>
                     <DataGridTextColumn Header="Gender"/>
-                    <DataGridTextColumn Header="Marital Status"/>
-                    <DataGridTextColumn Header="Town"/>
                     <DataGridTextColumn Header="PO Box"/>
+                    <DataGridTextColumn Header="District"/>
                     <DataGridTextColumn Header="Parish"/>
                     <DataGridTextColumn Header="Phone"/>
                     <DataGridTextColumn Header="Email" Width="*"/>
