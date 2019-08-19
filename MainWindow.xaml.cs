@@ -83,11 +83,11 @@ namespace La_Bakéry
         private void BtnAddCustomer_Click(object sender, RoutedEventArgs e)
         {
             gridCustomer.IsEnabled = false;
-            Add_Customer add_Customer = new Add_Customer();
-            add_Customer.Show();
+           /* Add_Customer add_Customer = new Add_Customer();
+            add_Customer.Show();*/
         }
 
-        private void BtnRemoveCustomer_Click(object sender, RoutedEventArgs e)
+        private void BtnRemoveCustomer_Click(object sender, RoutedEventArgs e) 
         {
             gridCustomer.IsEnabled = false;
             Remove_Customer remove_Customer = new Remove_Customer();
@@ -97,8 +97,8 @@ namespace La_Bakéry
         private void BtnAddEmployee_Click(object sender, RoutedEventArgs e)
         {
             gridEmployee.IsEnabled = false;
-            Add_Employee add_Employee = new Add_Employee();
-            add_Employee.Show();
+           /* Add_Employee add_Employee = new Add_Employee();
+            add_Employee.Show();*/
         }
 
         private void BtnRemoveEmployee_Click(object sender, RoutedEventArgs e)

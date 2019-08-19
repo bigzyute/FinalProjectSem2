@@ -37,6 +37,7 @@ namespace La_Bakéry
             int telephone;
             char gender = 'm';
             String marStat = "single";
+            
             Int32.TryParse(txtAdd_EmpTelephone.Text, out telephone);
             bool valid = false;
 

@@ -6,26 +6,9 @@
         xmlns:local="clr-namespace:La_Bakéry"
         mc:Ignorable="d"
         Title="Add_Product" Height="450" Width="800">
-    <Grid Margin="0,0,0,-3">
-        <Grid.Background>
-            <RadialGradientBrush>
-                <GradientStop Color="#FF0F2276"/>
-                <GradientStop Color="#FFBAB3E4"/>
-                <GradientStop Color="#FF71DA5A"/>
-                <GradientStop Color="#FF55953D"/>
-                <GradientStop Color="#FF80DD6B"/>
-                <GradientStop Color="#FF162151" Offset="0.004"/>
-                <GradientStop Color="#FFEBF5E9" Offset="0.984"/>
-            </RadialGradientBrush>
-        </Grid.Background>
+    <Grid Margin="0,0,0,-3" Background="#FF6E9086">
 
-        <Grid HorizontalAlignment="Left" Height="303" Margin="44,28,0,0" VerticalAlignment="Top" Width="529">
-            <Grid.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                        <GradientStop Color="#FF073E2C" Offset="1"/>
-                        <GradientStop Color="#FF83D6CE" Offset="0.5"/>
-                    </LinearGradientBrush>
-            </Grid.Background>
+        <Grid HorizontalAlignment="Left" Height="303" Margin="44,28,0,0" VerticalAlignment="Top" Width="529" Background="#FFFDC8B7">
             <Label x:Name="lblAddProduct_" Content="Add New Product" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="134" FontSize="14" FontWeight="Bold"/>
             <DatePicker x:Name="dpAddProduct_Date" HorizontalAlignment="Left" Margin="383,38,0,0" VerticalAlignment="Top" Width="130"/>
             <TextBox x:Name="txtProduct_Code" HorizontalAlignment="Left" Height="23" Margin="364,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" TextChanged="TextBox_TextChanged"/>
@@ -34,13 +17,13 @@
             <TextBox x:Name="txtProduct_Name" HorizontalAlignment="Left" Height="23" Margin="364,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123"/>
             <Label Content="Product Cost" HorizontalAlignment="Left" Margin="220,170,0,0" VerticalAlignment="Top" Width="90"/>
             <TextBox x:Name="txtProduct_Cost" HorizontalAlignment="Left" Height="23" Margin="364,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123"/>
-            <Button x:Name="btnAdd_Product" Content="Add" HorizontalAlignment="Left" Margin="31,273,0,10" Width="75" Click="Button_Click" RenderTransformOrigin="0.549,1.594" Background="#FFC9C7C7" Foreground="Black"/>
-            <Button x:Name="btnClear_Product" Content="Clear" HorizontalAlignment="Left" Margin="202,273,0,0" VerticalAlignment="Top" Width="75" Click="BtnClear_Product_Click"/>
-            <Button x:Name="btnExit_Product" Content="Exit " HorizontalAlignment="Left" Margin="383,273,0,0" VerticalAlignment="Top" Width="75" Click="BtnExit_Product_Click"/>
-            <Button x:Name="btnUpload_ProPic" Content="Upload " HorizontalAlignment="Left" Margin="69,232,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.14,2.25" Click="BtnUpload_ProPic_Click"/>
-         
+            <Button x:Name="btnAdd_Product" Content="Add" HorizontalAlignment="Left" Margin="27,313,0,-51" Width="75" Click="Button_Click" RenderTransformOrigin="0.549,1.594" Background="#FFFABC74" Foreground="Black" FontWeight="Bold"/>
+            <Button x:Name="btnClear_Product" Content="Clear" HorizontalAlignment="Left" Margin="195,313,0,-51" VerticalAlignment="Top" Width="75" Click="BtnClear_Product_Click" Height="41" Background="#FFFABC74" FontWeight="Bold"/>
+            <Button x:Name="btnExit_Product" Content="Exit " HorizontalAlignment="Left" Margin="383,313,0,-51" VerticalAlignment="Top" Width="75" Click="BtnExit_Product_Click" Height="41" Background="#FFFABC74" FontWeight="Bold"/>
+            <Button x:Name="btnUpload_ProPic" Content="Upload " HorizontalAlignment="Left" Margin="69,211,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.14,2.25" Click="BtnUpload_ProPic_Click" Height="41" Background="#FFFABC74" FontWeight="Bold"/>
+
         </Grid>
-        
+
         <Border BorderThickness="2" BorderBrush="Black" Background="LightGray" CornerRadius="3" HorizontalAlignment="Left" Height="156" Margin="57,69,0,0" VerticalAlignment="Top" Width="164" >
             <Image x:Name="pbNewPro_Image" Source="program_icon.ico">
                 <Image.OpacityMask>

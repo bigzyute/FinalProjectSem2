@@ -16,10 +16,10 @@
             <Label x:Name="lblRem_EmpResult" Content="Result" HorizontalAlignment="Left" Margin="83,163,0,0" VerticalAlignment="Top" FontSize="14"/>
             <TextBox x:Name="txtRem_EmpId" HorizontalAlignment="Left" Height="23" Margin="282,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
             <TextBox x:Name="txtRem_EmpResult" HorizontalAlignment="Left" Height="23" Margin="282,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
-            <Button x:Name="btnRem_EmpCancel" Content="Cancel" HorizontalAlignment="Left" Margin="299,225,0,0" VerticalAlignment="Top" Width="101" Height="41" Background="#FFFABC74" BorderBrush="#FF540E33" Foreground="Black"/>
-            <Button x:Name="btnRem_EmpExit" Content="Exit" HorizontalAlignment="Left" Margin="522,225,0,0" VerticalAlignment="Top" Width="101" Height="41" Click="BtnRem_EmpExit_Click" Background="#FFFABC74" BorderBrush="#FF540E33" Foreground="Black"/>
-            <Button x:Name="btnRem_EmpRemove" Content="Remove " HorizontalAlignment="Left" Margin="111,225,0,0" VerticalAlignment="Top" Width="101" Height="41" Background="#FFFABC74" BorderBrush="#FF540E33" Foreground="Black"/>
-            <Button x:Name="btnRem_EmpSearch" Content="Search" HorizontalAlignment="Left" Margin="522,114,0,0" VerticalAlignment="Top" Width="83" Height="23" Background="#FFFABC74" BorderBrush="#FF540E33" Foreground="Black"/>
+            <Button x:Name="btnRem_EmpCancel" Content="Cancel" HorizontalAlignment="Left" Margin="299,225,0,0" VerticalAlignment="Top" Width="101" Height="41" Background="#FFFABC74" BorderBrush="#FF540E33" Foreground="Black" FontWeight="Bold"/>
+            <Button x:Name="btnRem_EmpExit" Content="Exit" HorizontalAlignment="Left" Margin="522,225,0,0" VerticalAlignment="Top" Width="101" Height="41" Click="BtnRem_EmpExit_Click" Background="#FFFABC74" BorderBrush="#FF540E33" Foreground="Black" FontWeight="Bold"/>
+            <Button x:Name="btnRem_EmpRemove" Content="Remove " HorizontalAlignment="Left" Margin="111,225,0,0" VerticalAlignment="Top" Width="101" Height="41" Background="#FFFABC74" BorderBrush="#FF540E33" Foreground="Black" FontWeight="Bold"/>
+            <Button x:Name="btnRem_EmpSearch" Content="Search" HorizontalAlignment="Left" Margin="522,114,0,0" VerticalAlignment="Top" Width="83" Height="23" Background="#FFFABC74" BorderBrush="#FF540E33" Foreground="Black" FontWeight="Bold"/>
         </Grid>
 
     </Grid>

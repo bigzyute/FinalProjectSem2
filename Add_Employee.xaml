@@ -61,9 +61,9 @@
             <Label Content="*" HorizontalAlignment="Left" Margin="263,269,0,0" VerticalAlignment="Top" Height="28" Width="20" FontSize="16" Foreground="#FFFB0707" FontWeight="Bold"/>
             <Label Content="*" HorizontalAlignment="Left" Margin="263,37,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.278,-0.004" FontSize="16" Height="29" Width="20" Foreground="#FFFB0707" FontWeight="Bold"/>
         </Grid>
-        <Button x:Name="btnAdd_EmpAdd" Content="Add" HorizontalAlignment="Left" Margin="45,363,0,0" VerticalAlignment="Top" Width="80" Height="41" Click="BtnAdd_CusAdd_Click" Background="#FFFABC74" BorderBrush="#FF540E33"/>
-        <Button x:Name="btnAdd_EmpUpdate" Content="Update" HorizontalAlignment="Left" Margin="225,363,0,0" VerticalAlignment="Top" Width="80" Height="41" Background="#FFFABC74" BorderBrush="#FF540E33"/>
-        <Button x:Name="btnAdd_EmpCancel" Content="Cancel" HorizontalAlignment="Left" Margin="427,363,0,0" VerticalAlignment="Top" Width="82" Height="41" Background="#FFFABC74" BorderBrush="#FF540E33"/>
-        <Button x:Name="btnAdd_EmpExit" Content="Exit" HorizontalAlignment="Left" Margin="614,363,0,0" VerticalAlignment="Top" Width="86" Height="41" RenderTransformOrigin="0.395,0.512" Click="BtnAdd_CusExit_Click" Background="#FFFABC74" BorderBrush="#FF540E33"/>
+        <Button x:Name="btnAdd_EmpAdd" Content="Add" HorizontalAlignment="Left" Margin="45,363,0,0" VerticalAlignment="Top" Width="80" Height="41" Click="BtnAdd_CusAdd_Click" Background="#FFFABC74" BorderBrush="#FF540E33" FontWeight="Bold"/>
+        <Button x:Name="btnAdd_EmpUpdate" Content="Update" HorizontalAlignment="Left" Margin="225,363,0,0" VerticalAlignment="Top" Width="80" Height="41" Background="#FFFABC74" BorderBrush="#FF540E33" FontWeight="Bold"/>
+        <Button x:Name="btnAdd_EmpCancel" Content="Cancel" HorizontalAlignment="Left" Margin="427,363,0,0" VerticalAlignment="Top" Width="82" Height="41" Background="#FFFABC74" BorderBrush="#FF540E33" FontWeight="Bold"/>
+        <Button x:Name="btnAdd_EmpExit" Content="Exit" HorizontalAlignment="Left" Margin="614,363,0,0" VerticalAlignment="Top" Width="86" Height="41" RenderTransformOrigin="0.395,0.512" Click="BtnAdd_CusExit_Click" Background="#FFFABC74" BorderBrush="#FF540E33" FontWeight="Bold"/>
     </Grid>
 </Window>
