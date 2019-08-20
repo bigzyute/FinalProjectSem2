@@ -20,102 +20,101 @@
     </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="63*"/>
-            <ColumnDefinition Width="277*"/>
+            <ColumnDefinition Width="251.2"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1.5*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel x:Name="navPanel" HorizontalAlignment="Left" Margin="0,0,0,0.4" Width="250" Background="#FFC8DAD3">
+
+        <StackPanel x:Name="navPanel" Background="#FFC8DAD3">
             <StackPanel.Effect>
                 <DropShadowEffect Opacity="0.5" ShadowDepth="10" BlurRadius="15"/>
             </StackPanel.Effect>
-            <Border CornerRadius="50"/>
-            <Ellipse x:Name="imgCurrentUser" Height="100" Width="100" Margin="0,10,0,2" Cursor="Hand">
-                <Ellipse.Effect>
-                    <DropShadowEffect Direction="265" Color="#FF63707E" Opacity="0.5"/>
-                </Ellipse.Effect>
-                <Ellipse.Fill>
-                    <ImageBrush ImageSource="images/default_user.png"/>
-                </Ellipse.Fill>
-            </Ellipse>
-            <StackPanel Orientation="Horizontal" Margin="61,0,19.6,0" HorizontalAlignment="Center" Width="169">
-                <Label x:Name="lblCurrentUser" Content="Current User" Margin="0,0,5,0" Cursor="Hand" VerticalAlignment="Top" Foreground="White" HorizontalContentAlignment="Center" HorizontalAlignment="Left">
-                    <Label.Effect>
-                        <DropShadowEffect ShadowDepth="1" BlurRadius="15" Opacity="0.5"/>
-                    </Label.Effect>
-                </Label>
-                <Expander Width="88" Height="58">
-                    <Button x:Name="btnLogout" Height="35" BorderBrush="{x:Null}" Background="#FF93B5B3" Click="BtnLogout_Click">
-                        <StackPanel Orientation="Horizontal" Height="30" Width="70">
-                            <Label Content="Logout" Foreground="White">
 
-                            </Label>
-                            <Image x:Name="imgLogoutIcon" Height="25" Width="25" Source="images/logout_icon.png"/>
-                        </StackPanel>
-                    </Button>
-                </Expander>
+            <StackPanel>
+                <Ellipse x:Name="imgCurrentUser" Height="100" Width="100" Margin="0,10,0,2" Cursor="Hand">
+                    <Ellipse.Effect>
+                        <DropShadowEffect Direction="265" Color="#FF63707E" Opacity="0.5"/>
+                    </Ellipse.Effect>
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="images/default_user.png"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <StackPanel Orientation="Horizontal" Margin="61,0,19.6,0" HorizontalAlignment="Center" Width="169">
+                    <Expander Header="Current User" Foreground="White" Background="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="83.2">
+                        <Button x:Name="btnLogout" Height="Auto" BorderBrush="{x:Null}" Background="#FF93B5B3" Click="BtnLogout_Click">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <MaterialDesign:PackIcon Kind="Logout" Foreground="White" VerticalAlignment="Center" Width="25" Height="25"/>
+                                <Label Content="Logout" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+                            </StackPanel>
+                        </Button>
+                    </Expander>
+                </StackPanel>
             </StackPanel>
+
             <Separator Height="19" Margin="15" Background="#FF63707E" BorderBrush="#FF63707E" Foreground="#FF63707E">
                 <Separator.Effect>
                     <DropShadowEffect Opacity="0.5" ShadowDepth="2.5" BlurRadius="10"/>
                 </Separator.Effect>
             </Separator>
-            <ListView Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
-                <ListViewItem x:Name="listOrder" Height="50" Margin="20,0,19.6,5" Background="#FF93B5B3" Foreground="White">
+
+            <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <ListViewItem x:Name="listOrder" Height="50" Margin="10,0,10,2.5" Background="#FF93B5B3" Foreground="White">
                     <StackPanel Orientation="Horizontal" Width="195">
-                        <MaterialDesign:PackIcon Kind="CashRegister" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <MaterialDesign:PackIcon Kind="CashRegister" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Left" Width="25" Height="25"/>
                         <TextBlock Text="Order" Margin="10,0,0,0" FontSize="16" VerticalAlignment="Center"/>
                     </StackPanel>
                 </ListViewItem>
-                <ListViewItem x:Name="listCustomer" Height="50" Margin="20,0,19.6,5" Background="#FF93B5B3" Foreground="White">
+                <ListViewItem x:Name="listCustomer" Height="50" Margin="10,0,10,2.5" Background="#FF93B5B3" Foreground="White">
                     <StackPanel Orientation="Horizontal" Width="195">
-                        <MaterialDesign:PackIcon Kind="AccountCardDetails" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+                        <MaterialDesign:PackIcon Kind="AccountCardDetails" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Stretch" Width="25" Height="25"/>
                         <TextBlock Text="Customer" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="16"/>
                     </StackPanel>
                 </ListViewItem>
-                <ListViewItem x:Name="listEmployee" Height="50" Margin="20,0,19.6,5" Background="#FF93B5B3" Foreground="White">
+                <ListViewItem x:Name="listEmployee" Height="50" Margin="10,0,10,2.5" Background="#FF93B5B3" Foreground="White">
                     <StackPanel Orientation="Horizontal" Width="195">
-                        <MaterialDesign:PackIcon Kind="User" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+                        <MaterialDesign:PackIcon Kind="User" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Stretch" Width="25" Height="25"/>
                         <TextBlock Text="Employee" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="16"/>
                     </StackPanel>
                 </ListViewItem>
-                <ListViewItem x:Name="listProduct" Height="50" Margin="20,0,19.6,5" Background="#FF93B5B3" Foreground="White">
+                <ListViewItem x:Name="listProduct" Height="50" Margin="10,0,10,2.5" Background="#FF93B5B3" Foreground="White">
                     <StackPanel Orientation="Horizontal" Width="195">
-                        <MaterialDesign:PackIcon Kind="BoxVariantClosed" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+                        <MaterialDesign:PackIcon Kind="BoxVariantClosed" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Stretch" Width="25" Height="25"/>
                         <TextBlock Text="Order" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="16"/>
                     </StackPanel>
                 </ListViewItem>
-                <ListViewItem x:Name="listReport" Height="50" Margin="20,0,19.6,5" Background="#FF93B5B3" Foreground="White">
+                <ListViewItem x:Name="listReport" Height="50" Margin="10,0,10,2.5" Background="#FF93B5B3" Foreground="White">
                     <StackPanel Orientation="Horizontal" Width="195">
-                        <MaterialDesign:PackIcon Kind="ChartFinance" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+                        <MaterialDesign:PackIcon Kind="ChartFinance" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Stretch" Width="25" Height="25"/>
                         <TextBlock Text="Report" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="16"/>
                     </StackPanel>
                 </ListViewItem>
             </ListView>
+
         </StackPanel>
-        <Grid Margin="0,0,0,0.4" Grid.Column="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="554*"/>
-                <ColumnDefinition Width="554*"/>
-            </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="75*" />
-                <RowDefinition Height="506*" />
-                <RowDefinition Height="157*" />
+                <RowDefinition Height="0.7*" />
+                <RowDefinition Height="3*" />
+                <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
-            <StackPanel x:Name="StackPanelSession" Margin="10,10,9.6,14.2">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Foreground="Gray" Text="USER: " FontWeight="Bold" FontSize="14"/>
-                    <TextBlock x:Name="txtBlkCurrentUser" Text="ADMIN" Foreground="LightGray" Margin="5 0" FontSize="14"/>
+            <Border Grid.Row="0" BorderBrush="LightGray" BorderThickness="1" Margin="10" CornerRadius="5" Background="#FFF0FFF9">
+                <StackPanel x:Name="StackPanelSession" Margin="10,10,9.6,14.2" Background="#FFF0FFF9">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Gray" Text="USER: " FontWeight="Bold" FontSize="14"/>
+                        <TextBlock x:Name="txtBlkCurrentUser" Text="ADMIN" Foreground="LightGray" Margin="5 0" FontSize="14"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Gray" Text="DATE: " FontWeight="Bold" FontSize="14"/>
+                        <TextBlock x:Name="txtBlkDate" Text="2019-08-22 12:00AM" Foreground="LightGray" Margin="5 0" FontSize="14"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Gray" Text="CUSTOMER: " FontWeight="Bold" FontSize="14"/>
+                        <TextBlock x:Name="txtBlkCurrentCustomer" Text="GUEST" Foreground="LightGray" Margin="5 0" FontSize="14"/>
+                    </StackPanel>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Foreground="Gray" Text="DATE: " FontWeight="Bold" FontSize="14"/>
-                    <TextBlock x:Name="txtBlkDate" Text="2019-08-22 12:00AM" Foreground="LightGray" Margin="5 0" FontSize="14"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Foreground="Gray" Text="CUSTOMER: " FontWeight="Bold" FontSize="14"/>
-                    <TextBlock x:Name="txtBlkCurrentCustomer" Text="GUEST" Foreground="LightGray" Margin="5 0" FontSize="14"/>
-                </StackPanel>
-            </StackPanel>
-            <Border Grid.Row="1" BorderBrush="LightGreen" BorderThickness="1" Margin="10" CornerRadius="5">
+            </Border>
+
+            <Border Grid.Row="1" BorderBrush="LightGray" BorderThickness="1" Margin="10" CornerRadius="5" Background="#FFF0FFF9">
                 <ListView Margin="0 0 4 0" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                     <ListViewItem>
                         <Grid Width="520">
@@ -139,6 +138,7 @@
                     </ListViewItem>
                 </ListView>
             </Border>
+
             <Grid Grid.Row="2">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"/>
@@ -148,16 +148,50 @@
                     <ColumnDefinition Width="5*"/>
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="2*"/>                    
+                    <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
-                <TextBox Grid.Row="0" Grid.Column="0" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Top" MaterialDesign:HintAssist.Hint= "Barcode" Margin="10"/>
-                <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Top" Margin="10"
-                           MaterialDesign:HintAssist.Hint="Qty" />
-                <TextBox Grid.Row="0" Grid.Column="2" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Top" Margin="10"
-                           MaterialDesign:HintAssist.Hint="Discount"/>
+                <TextBox Grid.Row="0" Grid.Column="0" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Top" Margin="10" 
+                         MaterialDesign:HintAssist.Hint= "Barcode" FontSize="14" FontWeight="Bold" Background="#FFF0FFF9" SelectionBrush="#FFACFFDF" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+                <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Top" Margin="10" 
+                         MaterialDesign:HintAssist.Hint="Qty" FontSize="14" FontWeight="Bold" Background="#FFF0FFF9" SelectionBrush="#FFACFFDF" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+                <TextBox Grid.Row="0" Grid.Column="2" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Top" Margin="10" 
+                         MaterialDesign:HintAssist.Hint="Discount" FontSize="14" FontWeight="Bold" Background="#FFF0FFF9" SelectionBrush="#FFACFFDF" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
                 <TextBox Grid.Row="0" Grid.Column="3" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Top" Margin="10"
-                           MaterialDesign:HintAssist.Hint="Addition"/>
+                         MaterialDesign:HintAssist.Hint="Addition" FontSize="14" FontWeight="Bold" Background="#FFF0FFF9" SelectionBrush="#FFACFFDF" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
                 <Button Grid.Row="1" Grid.Column="1" Content="PAY" Grid.ColumnSpan="3" Margin="10" Width="Auto" Height="Auto" FontSize="22" Foreground="White" BorderBrush="{x:Null}" Background="#FF93B5B3"/>
+            </Grid>
+
+        </Grid>
+
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            <MaterialDesign:ColorZone Margin="5" Background="#FF93B5B3">
+                <TextBlock x:Name="txtBlkTotal" Text="$ 15.00" FontSize="40" HorizontalAlignment="Center" Margin="45" Grid.Row="0"/>
+            </MaterialDesign:ColorZone>
+            <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="5" Grid.Row="1" Margin="5">
+                <Grid Background="#FFC8DAD3">
+                    <Image Source="images/default_product.png" Margin="10"/>
+                </Grid>
+            </Border>
+            <Grid Grid.Row="2" Margin="10" Background="#FFC8DAD3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Width="Auto" Height="Auto" Content="1" FontSize="18" Margin="5"/>
             </Grid>
         </Grid>
         <Grid x:Name="gridCustomer" Grid.Column="1" HorizontalAlignment="Left" Height="718" Margin="10,10,0,0" VerticalAlignment="Top" Width="1088" Visibility="Hidden">
