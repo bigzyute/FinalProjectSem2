@@ -114,25 +114,32 @@
                 </StackPanel>
             </Border>
 
-            <Border Grid.Row="1" BorderBrush="LightGray" BorderThickness="1" Margin="10" CornerRadius="5" Background="#FFF0FFF9">
-                <ListView Margin="0 0 4 0" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <Border Grid.Row="1" BorderBrush="LightGray" BorderThickness="1" Margin="10" CornerRadius="5" Background="#7FF0FFF9">
+                <ListView Margin="0 0 4 0" ScrollViewer.HorizontalScrollBarVisibility="Disabled" FontSize="14">
                     <ListViewItem>
-                        <Grid Width="520">
+                        <Grid Width="607.2">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="4*"/>
                                 <ColumnDefinition Width="2*"/>
                                 <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="2*"/>
                             </Grid.ColumnDefinitions>
-                            <Image Grid.Column="0" Source="images/default_product.png"/>
+                            <Image x:Name="imgLineItem" Grid.Column="0" Source="images/default_product.png"/>
                             <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="5">
-                                <TextBlock Text="Sample Item " Foreground="Gray" FontSize="14"/>
-                                <TextBlock Text="Sanple bar code 784154561"/>
+                                <TextBlock x:Name="txtBlkLineItemMainDesc" Text="Sample Item " Foreground="Black"/>
+                                <TextBlock x:Name="txtBlkLineItemSubDesc" Text="Sanple bar code 784154561" Foreground="Gray"/>
                             </StackPanel>
-                            <TextBlock Grid.Column="2" Text="$ 100.00" Foreground="Gray" VerticalAlignment="Center"/>
-                            <TextBox x:Name="txtBoxQty" Grid.Column="3" Foreground="Gray" VerticalAlignment="Center" Height="25"/>
-                            <TextBlock Grid.Column="4" Text="$ 300.00" Foreground="Gray" VerticalAlignment="Center"/>
+                            <StackPanel Orientation="Horizontal" Grid.Column="2">
+                                <TextBlock Text="$ " Foreground="Black" VerticalAlignment="Center" />
+                                <TextBlock x:Name="txtBlkLineItemPrice" Text="0.00" Foreground="Black" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <TextBox x:Name="txtBoxLineItemQty" Grid.Column="3" Foreground="Black" VerticalAlignment="Center"
+                                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" MaterialDesign:HintAssist.Hint= "QTY"/>
+                            <StackPanel Orientation="Horizontal" Grid.Column="4">
+                                <TextBlock Text="$ " Foreground="Black" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                                <TextBlock x:Name="txtBlkLineTotal" Text="0.00" Foreground="Black" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                            </StackPanel>
 
                         </Grid>
                     </ListViewItem>
@@ -150,14 +157,14 @@
                     <ColumnDefinition Width="2*"/>
                     <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
-                <TextBox Grid.Row="0" Grid.Column="0" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Top" Margin="10" 
-                         MaterialDesign:HintAssist.Hint= "Barcode" FontSize="14" FontWeight="Bold" Background="#FFF0FFF9" SelectionBrush="#FFACFFDF" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
-                <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Top" Margin="10" 
-                         MaterialDesign:HintAssist.Hint="Qty" FontSize="14" FontWeight="Bold" Background="#FFF0FFF9" SelectionBrush="#FFACFFDF" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
-                <TextBox Grid.Row="0" Grid.Column="2" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Top" Margin="10" 
-                         MaterialDesign:HintAssist.Hint="Discount" FontSize="14" FontWeight="Bold" Background="#FFF0FFF9" SelectionBrush="#FFACFFDF" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                <TextBox Grid.Row="0" Grid.Column="3" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Top" Margin="10"
-                         MaterialDesign:HintAssist.Hint="Addition" FontSize="14" FontWeight="Bold" Background="#FFF0FFF9" SelectionBrush="#FFACFFDF" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <TextBox Grid.Row="0" Grid.Column="0" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Center" Margin="10" 
+                         MaterialDesign:HintAssist.Hint= "Barcode" FontSize="14" FontWeight="Bold" SelectionBrush="#FFACFFDF" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="Black" Background="#7FF0FFF9" />
+                <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Center" Margin="10" 
+                         MaterialDesign:HintAssist.Hint="Qty" FontSize="14" FontWeight="Bold" SelectionBrush="#FFACFFDF" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="Black" Background="#7FF0FFF9" />
+                <TextBox Grid.Row="0" Grid.Column="2" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Center" Margin="10" 
+                         MaterialDesign:HintAssist.Hint="Discount" FontSize="14" FontWeight="Bold" SelectionBrush="#FFACFFDF" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="Black" Background="#7FF0FFF9"/>
+                <TextBox Grid.Row="0" Grid.Column="3" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Center" Margin="10"
+                         MaterialDesign:HintAssist.Hint="Addition" FontSize="14" FontWeight="Bold" SelectionBrush="#FFACFFDF" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="Black" Background="#7FF0FFF9"/>
                 <Button Grid.Row="1" Grid.Column="1" Content="PAY" Grid.ColumnSpan="3" Margin="10" Width="Auto" Height="Auto" FontSize="22" Foreground="White" BorderBrush="{x:Null}" Background="#FF93B5B3"/>
             </Grid>
 
@@ -170,14 +177,14 @@
                 <RowDefinition Height="3*"/>
             </Grid.RowDefinitions>
             <MaterialDesign:ColorZone Margin="5" Background="#FF93B5B3">
-                <TextBlock x:Name="txtBlkTotal" Text="$ 15.00" FontSize="40" HorizontalAlignment="Center" Margin="45" Grid.Row="0"/>
+                <TextBlock x:Name="txtBlkTotal" Text="$ 0.00" FontSize="40" HorizontalAlignment="Center" Margin="45" Grid.Row="0"/>
             </MaterialDesign:ColorZone>
             <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="5" Grid.Row="1" Margin="5">
-                <Grid Background="#FFC8DAD3">
+                <Grid Background="#7FC8DAD3">
                     <Image Source="images/default_product.png" Margin="10"/>
                 </Grid>
             </Border>
-            <Grid Grid.Row="2" Margin="10" Background="#FFC8DAD3">
+            <Grid Grid.Row="2" Margin="10" Background="#FFF0FFF9">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"/>
                     <RowDefinition Height="1*"/>
@@ -191,7 +198,25 @@
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button Width="Auto" Height="Auto" Content="1" FontSize="18" Margin="5"/>
+                <Button Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Content="1" FontSize="18" Margin="5" Background="#FF93B5B3"/>
+                <Button Grid.Column="1" Grid.Row="0" Width="Auto" Height="Auto" Content="2" FontSize="18" Margin="5" Background="#FF93B5B3"/>
+                <Button Grid.Column="2" Grid.Row="0" Width="Auto" Height="Auto" Content="3" FontSize="18" Margin="5" Background="#FF93B5B3"/>
+                
+                <Button Grid.Column="0" Grid.Row="1" Width="Auto" Height="Auto" Content="4" FontSize="18" Margin="5" Background="#FF93B5B3"/>
+                <Button Grid.Column="1" Grid.Row="1" Width="Auto" Height="Auto" Content="5" FontSize="18" Margin="5" Background="#FF93B5B3"/>
+                <Button Grid.Column="2" Grid.Row="1" Width="Auto" Height="Auto" Content="6" FontSize="18" Margin="5" Background="#FF93B5B3"/>
+                
+                <Button Grid.Column="0" Grid.Row="2" Width="Auto" Height="Auto" Content="7" FontSize="18" Margin="5" Background="#FF93B5B3"/>
+                <Button Grid.Column="1" Grid.Row="2" Width="Auto" Height="Auto" Content="8" FontSize="18" Margin="5" Background="#FF93B5B3"/>
+                <Button Grid.Column="2" Grid.Row="2" Width="Auto" Height="Auto" Content="9" FontSize="18" Margin="5" Background="#FF93B5B3"/>
+                
+                <Button Grid.Column="0" Grid.Row="3" Width="Auto" Height="Auto" Content="Clear" FontSize="18" Margin="5" Background="#FF93B5B3"/>
+                <Button Grid.Column="1" Grid.Row="3" Width="Auto" Height="Auto" Content="0" FontSize="18" Margin="5" Background="#FF93B5B3"/>
+                <Button Grid.Column="2" Grid.Row="3" Width="Auto" Height="Auto" Content="." FontSize="18" Margin="5" Background="#FF93B5B3"/>
+
+                <Button Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Width="Auto" Height="Auto" Content="Enter" FontSize="18" Margin="5" Background="#FF93B5B3" IsDefault="True"/>
+                <Button Grid.Column="2" Grid.Row="4" Width="Auto" Height="Auto" Content="Cancel" FontSize="18" Margin="5" 
+                        Style="{StaticResource MaterialDesignFlatButton}"/>
             </Grid>
         </Grid>
         <Grid x:Name="gridCustomer" Grid.Column="1" HorizontalAlignment="Left" Height="718" Margin="10,10,0,0" VerticalAlignment="Top" Width="1088" Visibility="Hidden">
