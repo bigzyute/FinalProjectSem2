@@ -21,6 +21,7 @@ namespace La_Bakéry
     {
         public Reports()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
     }

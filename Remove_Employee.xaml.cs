@@ -21,6 +21,7 @@ namespace La_Bakéry
     {
         public Remove_Employee()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
 
