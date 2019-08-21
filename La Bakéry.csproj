@@ -185,5 +185,38 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\default_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\customer_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\employee_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\product_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\report_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\logout_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\add_customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\remove_customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\view_customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\dash_background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\add_employee.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

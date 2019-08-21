@@ -5,14 +5,268 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:La_Bakéry"
         mc:Ignorable="d"
-        Title="Home" Height="450" Width="800" BorderBrush="Black">
+        Title="Home" Height="768" Width="1366" Foreground="{DynamicResource {x:Static SystemColors.DesktopBrushKey}}" Padding="10,0" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen" MinWidth="683" MinHeight="384" Closing="Dashboard_Closing" WindowState="Maximized">
     <Window.Background>
-        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="#FF00DFFF" Offset="1"/>
-            <GradientStop Color="White"/>
-        </LinearGradientBrush>
+        <VisualBrush>
+            <VisualBrush.Visual>
+                <Image x:Name="imgDashBackground" Source="images/dash_background.jpg">
+                    <Image.Effect>
+                        <BlurEffect RenderingBias="Quality" Radius="0"/>
+                    </Image.Effect>
+                </Image>
+            </VisualBrush.Visual>
+        </VisualBrush>
     </Window.Background>
     <Grid>
+        <Grid.Effect>
+            <DropShadowEffect Opacity="0.5" ShadowDepth="10" BlurRadius="15"/>
+        </Grid.Effect>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="63*"/>
+            <ColumnDefinition Width="277*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel x:Name="navPanel" HorizontalAlignment="Left" Margin="0,0,0,0.4" Width="250" Background="#FFC8DAD3">
+            <Border CornerRadius="50"/>
+            <Ellipse x:Name="imgCurrentUser" Height="100" Width="100" Margin="0,10,0,2" Cursor="Hand">
+                <Ellipse.Effect>
+                    <DropShadowEffect Direction="265" Color="#FF63707E" Opacity="0.5"/>
+                </Ellipse.Effect>
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="images/default_user.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <StackPanel Orientation="Horizontal" Margin="61,0,19.6,0" HorizontalAlignment="Center" Width="169">
+                <Label x:Name="lblCurrentUser" Content="Current User" Margin="0,0,5,0" Cursor="Hand" VerticalAlignment="Top" Foreground="White" HorizontalContentAlignment="Center" HorizontalAlignment="Left">
+                    <Label.Effect>
+                        <DropShadowEffect ShadowDepth="1" BlurRadius="15" Opacity="0.5"/>
+                    </Label.Effect>
+                </Label>
+                <Expander Width="88">
+                    <Button x:Name="btnLogout" Height="35" BorderBrush="{x:Null}" Background="#FF93B5B3" Click="BtnLogout_Click">
+                        <StackPanel Orientation="Horizontal" Height="30" Width="70">
+                            <Label Content="Logout" Foreground="White">
 
+                            </Label>
+                            <Image x:Name="imgLogoutIcon" Height="25" Width="25" Source="images/logout_icon.png"/>
+                        </StackPanel>
+                    </Button>
+                </Expander>
+            </StackPanel>
+            <Separator Height="19" Margin="15" Background="#FF63707E" BorderBrush="#FF63707E" Foreground="#FF63707E">
+                <Separator.Effect>
+                    <DropShadowEffect Opacity="0.5" ShadowDepth="2.5" BlurRadius="10"/>
+                </Separator.Effect>
+            </Separator>
+            <Button x:Name="btnCustomer" Height="50" Margin="20,0,19.6,5" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="#FF93B5B3" Click="BtnCustomer_Click">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="16" Foreground="White" Margin="10,0,0,0" VerticalAlignment="Center"><Run Text="Customer"/></TextBlock>
+                    <Image x:Name="imgCustIcon" Height="45" Width="45" Source="images/customer_icon.png" Margin="75,0,0,0"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btnEmployee" Height="50" Margin="20,0,19.6,5" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="#FF93B5B3" Click="BtnEmployee_Click">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="16" Foreground="White" Margin="10,0,0,0"><Run Text="Employee"/></TextBlock>
+                    <Image x:Name="imhEmpIcon" Height="45" Width="45" Source="images/employee_icon.png" Margin="75,0,0,0"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btnProduct" Height="50" Margin="20,0,19.6,5" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="#FF93B5B3" Click="BtnProduct_Click">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="16" Foreground="White" Margin="10,0,0,0"><Run Text="Product"/></TextBlock>
+                    <Image x:Name="imgProdIcon" Height="45" Width="45" Source="images/product_icon.png" Margin="90,0,0,0"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btnReport" Height="50" Margin="20,0,19.6,5" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" Background="#FF93B5B3" Click="BtnReport_Click">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="16" Foreground="White" Margin="10,0,0,0"><Run Text="Report"/></TextBlock>
+                    <Image x:Name="imgRepoIcon" Height="45" Width="45" Source="images/report_icon.png" Margin="100,0,0,0"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <Grid x:Name="gridCustomer" Grid.Column="1" HorizontalAlignment="Left" Height="718" Margin="10,10,0,0" VerticalAlignment="Top" Width="1088" Visibility="Hidden">
+            <Grid x:Name="gridAddCutomer" HorizontalAlignment="Left" Height="287.85" Margin="0,167.1" VerticalAlignment="Top" Width="250.8">
+                <Button x:Name="btnAddCustomer" Background="#FF39DAD1" BorderBrush="{x:Null}" Click="BtnAddCustomer_Click">
+                    <StackPanel>
+                        <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">
+                            <Label.Effect>
+                                <DropShadowEffect BlurRadius="15" Opacity="0.5"/>
+                            </Label.Effect> Add Cutomer
+                        </Label>
+                        <Image Source="images\add_customer.png"/>
+                    </StackPanel>
+                </Button>
+            </Grid>
+            <Grid x:Name="gridBtnRemoveCustomer" HorizontalAlignment="Left" Height="287.85" Margin="372,167.1,0,0" VerticalAlignment="Top" Width="250.8">
+                <Button x:Name="btnRemoveCustomer" Background="#FF39DAD1" BorderBrush="{x:Null}" Click="BtnRemoveCustomer_Click">
+                    <StackPanel>
+                        <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">
+                            <Label.Effect>
+                                <DropShadowEffect BlurRadius="15" Opacity="0.5"/>
+                            </Label.Effect> Remove Cutomer
+                        </Label>
+                        <Image Source="images\remove_customer.png"/>
+                    </StackPanel>
+                </Button>
+            </Grid>
+            <Grid x:Name="gridBtnViewCustomer" HorizontalAlignment="Left" Height="287.85" Margin="744,167.1,0,0" VerticalAlignment="Top" Width="250.8">
+                <Button x:Name="btnViewCustomer" Background="#FF39DAD1" BorderBrush="{x:Null}" Click="BtnViewCustomer_Click">
+                    <StackPanel>
+                        <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">
+                            <Label.Effect>
+                                <DropShadowEffect BlurRadius="15" Opacity="0.5"/>
+                            </Label.Effect> View Cutomer
+                        </Label>
+                        <Image Source="images\view_customer.png"/>
+                    </StackPanel>
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid x:Name="gridEmployee" Grid.Column="1" HorizontalAlignment="Left" Height="718" Margin="10,10,0,0" VerticalAlignment="Top" Width="1088" Visibility="Hidden">
+            <Grid x:Name="gridAddEmployee" HorizontalAlignment="Left" Height="287.85" Margin="0,167.1" VerticalAlignment="Top" Width="250.8">
+                <Button x:Name="btnAddEmployee" Background="#FF39DAD1" BorderBrush="{x:Null}" Click="BtnAddEmployee_Click">
+                    <StackPanel>
+                        <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">
+                            <Label.Effect>
+                                <DropShadowEffect BlurRadius="15" Opacity="0.5"/>
+                            </Label.Effect> Add Employee
+                        </Label>
+                        <Image Source="images\add_customer.png"/>
+                    </StackPanel>
+                </Button>
+            </Grid>
+            <Grid x:Name="gridBtnRemoveEmployee" HorizontalAlignment="Left" Height="287.85" Margin="372,167.1,0,0" VerticalAlignment="Top" Width="250.8">
+                <Button x:Name="btnRemoveEmployee" Background="#FF39DAD1" BorderBrush="{x:Null}" Click="BtnRemoveEmployee_Click">
+                    <StackPanel>
+                        <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">
+                            <Label.Effect>
+                                <DropShadowEffect BlurRadius="15" Opacity="0.5"/>
+                            </Label.Effect> Remove Employee
+                        </Label>
+                        <Image Source="images\remove_customer.png"/>
+                    </StackPanel>
+                </Button>
+            </Grid>
+            <Grid x:Name="gridBtnViewEmployee" HorizontalAlignment="Left" Height="287.85" Margin="744,167.1,0,0" VerticalAlignment="Top" Width="250.8">
+                <Button x:Name="btnViewEmployee" Background="#FF39DAD1" BorderBrush="{x:Null}" Click="BtnViewEmployee_Click">
+                    <StackPanel>
+                        <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">
+                            <Label.Effect>
+                                <DropShadowEffect BlurRadius="15" Opacity="0.5"/>
+                            </Label.Effect> View Employee
+                        </Label>
+                        <Image Source="images\view_customer.png"/>
+                    </StackPanel>
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid x:Name="gridProduct" Grid.Column="1" HorizontalAlignment="Left" Height="718" Margin="10,10,0,0" VerticalAlignment="Top" Width="1088" Visibility="Hidden">
+            <Grid x:Name="gridAddProduct" HorizontalAlignment="Left" Height="287.85" Margin="0,167.1" VerticalAlignment="Top" Width="250.8">
+                <Button x:Name="btnAddProduct" Background="#FF39DAD1" BorderBrush="{x:Null}" Click="BtnAddProduct_Click">
+                    <StackPanel>
+                        <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">
+                            <Label.Effect>
+                                <DropShadowEffect BlurRadius="15" Opacity="0.5"/>
+                            </Label.Effect> Add Product
+                        </Label>
+                        <Image Source="images\add_customer.png"/>
+                    </StackPanel>
+                </Button>
+            </Grid>
+            <Grid x:Name="gridBtnRemoveProduct" HorizontalAlignment="Left" Height="287.85" Margin="372,167.1,0,0" VerticalAlignment="Top" Width="250.8">
+                <Button x:Name="btnRemoveProduct" Background="#FF39DAD1" BorderBrush="{x:Null}" Click="BtnRemoveProduct_Click">
+                    <StackPanel>
+                        <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">
+                            <Label.Effect>
+                                <DropShadowEffect BlurRadius="15" Opacity="0.5"/>
+                            </Label.Effect> Remove Product
+                        </Label>
+                        <Image Source="images\remove_customer.png"/>
+                    </StackPanel>
+                </Button>
+            </Grid>
+            <Grid x:Name="gridBtnViewProduct" HorizontalAlignment="Left" Height="287.85" Margin="744,167.1,0,0" VerticalAlignment="Top" Width="250.8">
+                <Button x:Name="btnViewProduct" Background="#FF39DAD1" BorderBrush="{x:Null}">
+                    <StackPanel>
+                        <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">
+                            <Label.Effect>
+                                <DropShadowEffect BlurRadius="15" Opacity="0.5"/>
+                            </Label.Effect> View Product
+                        </Label>
+                        <Image Source="images\view_customer.png"/>
+                    </StackPanel>
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid x:Name="gridViewCustomer" Grid.Column="1" HorizontalAlignment="Left" Height="718" Margin="10,10,0,0" VerticalAlignment="Top" Width="1088" Visibility="Hidden">
+            <DataGrid x:Name="dataGridViewCustomer" HorizontalAlignment="Left" Height="546" Margin="10,162,0,0" VerticalAlignment="Top" Width="1068">
+                
+                <!--Styling the grid view header-->
+                <DataGrid.Resources>
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="#FF93B5B3"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="BorderThickness" Value="1,1,2,3"/>
+                        <Setter Property="BorderBrush" Value="#FF61807E"/>
+                        <Setter Property="FontSize" Value="16"/>
+                        <Setter Property="Foreground" Value="White"/>
+                    </Style>
+                </DataGrid.Resources>
+                
+                <!--Setting header titles in the gridview-->
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Customer ID"/>
+                    <DataGridTextColumn Header="First Name"/>
+                    <DataGridTextColumn Header="Middle Initial"/>
+                    <DataGridTextColumn Header="Last Name"/>
+                    <DataGridTextColumn Header="Date of Birth"/>
+                    <DataGridTextColumn Header="Gender"/>
+                    <DataGridTextColumn Header="PO Box"/>
+                    <DataGridTextColumn Header="District"/>
+                    <DataGridTextColumn Header="Parish"/>
+                    <DataGridTextColumn Header="Phone"/>
+                    <DataGridTextColumn Header="Email" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Label x:Name="label_Customer" Content="CUSTOMER" HorizontalAlignment="Left" Margin="444,65,444,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="White" Foreground="White" FontSize="36" FontWeight="SemiBold" Width="200">
+                <Label.Effect>
+                    <DropShadowEffect Direction="200" ShadowDepth="4" BlurRadius="10" Color="#FF5FB3AE"/>
+                </Label.Effect>
+            </Label>
+        </Grid>
+        <Grid x:Name="gridViewEmployee" Grid.Column="1" HorizontalAlignment="Left" Height="718" Margin="10,10,0,0" VerticalAlignment="Top" Width="1088" Visibility="Hidden">
+            <DataGrid x:Name="dataGridViewEmployee" HorizontalAlignment="Left" Height="546" Margin="10,162,0,0" VerticalAlignment="Top" Width="1068">
+
+                <!--Styling the grid view header-->
+                <DataGrid.Resources>
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="#FF93B5B3"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="BorderThickness" Value="1,1,2,3"/>
+                        <Setter Property="BorderBrush" Value="#FF61807E"/>
+                        <Setter Property="FontSize" Value="16"/>
+                        <Setter Property="Foreground" Value="White"/>
+                    </Style>
+                </DataGrid.Resources>
+
+                <!--Setting header titles in the gridview-->
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="First Name"/>
+                    <DataGridTextColumn Header="Middle Name"/>
+                    <DataGridTextColumn Header="Last Name"/>
+                    <DataGridTextColumn Header="Date of Birth"/>
+                    <DataGridTextColumn Header="Gender"/>
+                    <DataGridTextColumn Header="Marital Status"/>
+                    <DataGridTextColumn Header="Town"/>
+                    <DataGridTextColumn Header="PO Box"/>
+                    <DataGridTextColumn Header="Parish"/>
+                    <DataGridTextColumn Header="Phone"/>
+                    <DataGridTextColumn Header="Email" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Label x:Name="label_Employee" Content="EMPLOYEE" HorizontalAlignment="Left" Margin="444,65,444,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="White" Foreground="White" FontSize="36" FontWeight="SemiBold" Width="200">
+                <Label.Effect>
+                    <DropShadowEffect Direction="200" ShadowDepth="4" BlurRadius="10" Color="#FF5FB3AE"/>
+                </Label.Effect>
+            </Label>
+        </Grid>
     </Grid>
 </Window>

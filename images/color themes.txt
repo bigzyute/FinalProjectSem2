@@ -1,0 +1,17 @@
+Theme #1 : 
+	ffb6b9
+	fae3d9
+	bbded6
+	8ac6d1
+
+Theme #2 :
+	ff8080
+	ffba92
+	eof5b9
+	c6f1d6
+
+Theme #3 :
+	f2f6f5
+	c8dad3
+	93b5b3
+	63707e

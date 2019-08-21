@@ -23,5 +23,18 @@ namespace La_Bakéry
         {
             InitializeComponent();
         }
+
+        private void BtnRem_EmpExit_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow objMain = new MainWindow();
+            if (objMain.IsVisible == true)
+            {
+                this.Close();
+            }
+            else
+            {
+                this.Close();
+            }
+        }
     }
 }

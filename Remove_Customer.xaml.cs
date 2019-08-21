@@ -40,5 +40,10 @@ namespace La_Bakéry
             txtReCust_ID.Clear();
             txtReCust_Result.Clear();
         }
+
+        private void TxtReCust_ID_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
