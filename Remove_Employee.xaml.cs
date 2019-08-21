@@ -37,5 +37,18 @@ namespace La_Bakéry
                 this.Close();
             }
         }
+
+        private void BtnRem_EmpRemove_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnRem_EmpSearch_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtRem_EmpId.Text) || string.IsNullOrWhiteSpace(txtRem_EmpResult.Text))
+            {
+                MessageBox.Show("Please enter a valid Employee I.D.", "Name Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
     }
 }
