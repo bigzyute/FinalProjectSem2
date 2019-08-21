@@ -26,11 +26,6 @@ namespace La_Bakéry
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void BtnCustClear_Click(object sender, RoutedEventArgs e)
         {
             txtCustID.Clear();
@@ -44,8 +39,6 @@ namespace La_Bakéry
             txtCustDistrict.Clear();
             txtCustParish.Clear();
             cbCustSearch.SelectedIndex = -1;
-
-
         }
 
         private void BtnExit__Click(object sender, RoutedEventArgs e)
@@ -156,6 +149,11 @@ namespace La_Bakéry
         private void TxtCustPO_Box_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void BtnExit__Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

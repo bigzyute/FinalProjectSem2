@@ -30,9 +30,9 @@ namespace La_Bakéry
                 gridCustomer.Visibility = hide;
                 gridEmployee.Visibility = hide;
                 gridProduct.Visibility = hide;
+                gridOrder.Visibility = hide;
                 gridViewEmployee.Visibility = hide;
                 gridViewCustomer.Visibility = hide;
-                gridOrder.Visibility = hide;
                 /*gridReport.Visibility = hide;*/
                 grid.Visibility = show;
             } else
@@ -58,48 +58,38 @@ namespace La_Bakéry
 
         private void BtnAddCustomer_Click(object sender, RoutedEventArgs e)
         {
-            
+            Add_Customer add_Customer = new Add_Customer();
+            add_Customer.ShowDialog();
         }
 
         private void BtnRemoveCustomer_Click(object sender, RoutedEventArgs e) 
         {
-            gridCustomer.IsEnabled = false;
             Remove_Customer remove_Customer = new Remove_Customer();
-            remove_Customer.Show();
+            remove_Customer.ShowDialog();
         }
 
         private void BtnAddEmployee_Click(object sender, RoutedEventArgs e)
         {
-            gridEmployee.IsEnabled = false;
-           /* Add_Employee add_Employee = new Add_Employee();
-            add_Employee.Show();*/
+            Add_Employee add_Employee = new Add_Employee();
+            add_Employee.ShowDialog();
         }
 
         private void BtnRemoveEmployee_Click(object sender, RoutedEventArgs e)
         {
             Remove_Employee remove_Employee = new Remove_Employee();
-            if (remove_Employee.IsFocused == false)
-            {
-                remove_Employee.Show(); 
-            } else
-            {
-                remove_Employee.BringIntoView();
-                remove_Employee.Focus();
-            }
+            remove_Employee.ShowDialog();
         }
 
         private void BtnAddProduct_Click(object sender, RoutedEventArgs e)
         {
-            gridProduct.IsEnabled = false;
             Add_Product add_Product = new Add_Product();
-            add_Product.Show();
+            add_Product.ShowDialog();
         }
 
         private void BtnRemoveProduct_Click(object sender, RoutedEventArgs e)
         {
-            gridProduct.IsEnabled = false;
             Remove_Product remove_Product = new Remove_Product();
-            remove_Product.Show();
+            remove_Product.ShowDialog();
         }
 
         private void BtnViewCustomer_Click(object sender, RoutedEventArgs e)
@@ -121,8 +111,7 @@ namespace La_Bakéry
 
         private void BtnViewEmployee_Click(object sender, RoutedEventArgs e)
         {
-            gridEmployee.Visibility = Visibility.Hidden;
-            gridViewEmployee.Visibility = Visibility.Visible;
+            showGrid(gridViewEmployee);
         }
 
         private void ListOrder_Selected(object sender, RoutedEventArgs e)
