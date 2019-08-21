@@ -32,6 +32,7 @@ namespace La_Bakéry
                 gridProduct.Visibility = hide;
                 gridViewEmployee.Visibility = hide;
                 gridViewCustomer.Visibility = hide;
+                gridOrder.Visibility = hide;
                 /*gridReport.Visibility = hide;*/
                 grid.Visibility = show;
             } else
@@ -55,36 +56,9 @@ namespace La_Bakéry
             }
         }
 
-        private void BtnEmployee_Click(object sender, RoutedEventArgs e)
-        {
-            showGrid(gridEmployee);
-        }
-
-        private void BtnProduct_Click(object sender, RoutedEventArgs e)
-        {
-            showGrid(gridProduct);
-        }
-
-        private void BtnReport_Click(object sender, RoutedEventArgs e)
-        {
-            if (gridCustomer.Visibility == Visibility.Visible || gridEmployee.Visibility == Visibility.Visible || gridProduct.Visibility == Visibility.Visible)
-            {
-                gridCustomer.Visibility = Visibility.Hidden;
-                gridEmployee.Visibility = Visibility.Hidden;
-                gridProduct.Visibility = Visibility.Hidden;
-            }
-        }
-
-        private void BtnCustomer_Click(object sender, RoutedEventArgs e)
-        {
-            showGrid(gridProduct);
-        }
-
         private void BtnAddCustomer_Click(object sender, RoutedEventArgs e)
         {
-            gridCustomer.IsEnabled = false;
-           /* Add_Customer add_Customer = new Add_Customer();
-            add_Customer.Show();*/
+            
         }
 
         private void BtnRemoveCustomer_Click(object sender, RoutedEventArgs e) 
@@ -130,8 +104,7 @@ namespace La_Bakéry
 
         private void BtnViewCustomer_Click(object sender, RoutedEventArgs e)
         {
-            gridCustomer.Visibility = Visibility.Hidden;    //Work in progress
-            gridViewCustomer.Visibility = Visibility.Visible;
+            showGrid(gridViewCustomer);
         }
 
         private void Dashboard_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -150,6 +123,26 @@ namespace La_Bakéry
         {
             gridEmployee.Visibility = Visibility.Hidden;
             gridViewEmployee.Visibility = Visibility.Visible;
+        }
+
+        private void ListOrder_Selected(object sender, RoutedEventArgs e)
+        {
+            showGrid(gridOrder);
+        }
+
+        private void ListCustomer_Selected(object sender, RoutedEventArgs e)
+        {
+            showGrid(gridCustomer);
+        }
+
+        private void ListEmployee_Selected(object sender, RoutedEventArgs e)
+        {
+            showGrid(gridEmployee);
+        }
+
+        private void ListProduct_Selected(object sender, RoutedEventArgs e)
+        {
+            showGrid(gridProduct);
         }
     }
 }
