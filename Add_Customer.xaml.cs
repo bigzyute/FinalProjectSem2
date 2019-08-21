@@ -23,7 +23,9 @@ namespace La_Bakéry
 
         public Add_Customer()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

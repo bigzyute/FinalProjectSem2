@@ -26,6 +26,7 @@ namespace La_Bakéry
 
         public Add_Product()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
 
