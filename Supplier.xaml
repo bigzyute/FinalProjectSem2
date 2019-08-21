@@ -6,15 +6,8 @@
         xmlns:local="clr-namespace:La_Bakéry"
         mc:Ignorable="d"
         Title="Supplier" Height="500" Width="800">
-    <Grid Margin="0,0,-8,-7" Width="800">
-        <Rectangle HorizontalAlignment="Left" Height="389" Margin="24,22,0,0" RadiusY="11" RadiusX="11" Stroke="Black" VerticalAlignment="Top" Width="743">
-            <Rectangle.Fill>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF92A0FB" Offset="0"/>
-                    <GradientStop Color="#FFF0F696" Offset="1"/>
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
+    <Grid Margin="0,0,-8,-7" Width="800" Background="#FF6E9086">
+        <Rectangle HorizontalAlignment="Left" Height="373" Margin="31,30,0,0" RadiusY="11" RadiusX="11" Stroke="Black" VerticalAlignment="Top" Width="743" Fill="#FFFDC8B7"/>
         <Label x:Name="lblSupDetails" Content="Supplier Details " HorizontalAlignment="Left" Margin="102,38,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label x:Name="lblSupID" Content="Supplier ID" HorizontalAlignment="Left" Margin="80,82,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtSup_ID" HorizontalAlignment="Left" Height="23" Margin="183,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="81"/>
@@ -28,17 +21,17 @@
         <Label x:Name="lblSup_ContactNum" Content="Contact Number " HorizontalAlignment="Left" Margin="80,331,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.78,0.011"/>
         <TextBox x:Name="txtSup_ContactNum" HorizontalAlignment="Left" Height="23" Margin="202,331,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="159"/>
         <Label Content="Email Address" HorizontalAlignment="Left" Margin="80,367,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.629,0.066"/>
-        <TextBox x:Name="txtSup_EmailAdd" HorizontalAlignment="Left" Height="23" Margin="202,367,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="227"/>
+        <TextBox x:Name="txtSup_EmailAdd" HorizontalAlignment="Left" Height="23" Margin="202,367,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227"/>
         <Label x:Name="lblSup_SuplyOf" Content="Supplier Of" HorizontalAlignment="Left" Margin="467,133,0,0" VerticalAlignment="Top" Width="77"/>
         <TextBox x:Name="txtSup_SuplyOf" HorizontalAlignment="Left" Height="95" Margin="561,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186"/>
         <Rectangle HorizontalAlignment="Left" Height="103" Margin="502,275,0,0" RadiusY="11" RadiusX="11" Stroke="#FFFDFCFC" VerticalAlignment="Top" Width="237"/>
         <Label Content="Search" HorizontalAlignment="Left" Margin="510,281,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.415,0.093" FontWeight="Bold"/>
-        <ComboBox x:Name="cbSup_Search" HorizontalAlignment="Left" Margin="575,309,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnSup_SearchID" Content="Search by ID" HorizontalAlignment="Left" Margin="575,342,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnSupDetails_Add" Content="Add" HorizontalAlignment="Left" Margin="80,428,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.488,1.397"/>
-        <Button x:Name="btnSupDetails_Update" Content="Update" HorizontalAlignment="Left" Margin="367,428,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btnSupDetails_Clear" Content="Clear" HorizontalAlignment="Left" Margin="228,428,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.361,0.647" Click="BtnSupDetails_Clear_Click"/>
-        <Button x:Name="btnSupDetails_Exit" Content="Exit" HorizontalAlignment="Left" Margin="510,428,0,0" VerticalAlignment="Top" Width="75"/>
+        <ComboBox x:Name="cbSup_Search" HorizontalAlignment="Left" Margin="575,296,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnSup_SearchID" Content="Search by ID" HorizontalAlignment="Left" Margin="575,336,0,0" VerticalAlignment="Top" Width="120" Height="26" Background="#FFFABC74" FontWeight="Bold"/>
+        <Button x:Name="btnSupDetails_Add" Content="Add" HorizontalAlignment="Left" Margin="80,418,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.488,1.397" Height="40" Background="#FFFABC74" FontWeight="Bold"/>
+        <Button x:Name="btnSupDetails_Update" Content="Update" HorizontalAlignment="Left" Margin="367,418,0,0" VerticalAlignment="Top" Width="75" Height="40" Background="#FFFABC74" FontWeight="Bold"/>
+        <Button x:Name="btnSupDetails_Clear" Content="Clear" HorizontalAlignment="Left" Margin="228,418,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.361,0.647" Click="BtnSupDetails_Clear_Click" Height="40" Background="#FFFABC74" FontWeight="Bold"/>
+        <Button x:Name="btnSupDetails_Exit" Content="Exit" HorizontalAlignment="Left" Margin="510,418,0,0" VerticalAlignment="Top" Width="75" Height="40" Background="#FFFABC74" FontWeight="Bold"/>
 
     </Grid>
 </Window>
