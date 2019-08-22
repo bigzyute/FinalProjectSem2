@@ -78,7 +78,7 @@
                 <ListViewItem x:Name="listProduct" Margin="10,0,10,2.5" Background="#FF93B5B3" Foreground="White" Selected="ListProduct_Selected">
                     <StackPanel Orientation="Horizontal" Width="195">
                         <MaterialDesign:PackIcon Kind="BoxVariantClosed" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Stretch" Width="25" Height="25"/>
-                        <TextBlock Text="Product" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="16"/>
+                        <TextBlock Text="Products" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="16"/>
                     </StackPanel>
                 </ListViewItem>
                 <ListViewItem x:Name="listReport" Margin="10,0,10,2.5" Background="#FF93B5B3" Foreground="White">
@@ -229,10 +229,10 @@
                 <Grid x:Name="gridAddCutomer" HorizontalAlignment="Left" Height="287.85" Margin="0,167.1" VerticalAlignment="Top" Width="250.8">
                     <Button x:Name="btnAddCustomer" Background="#FF39DAD1" BorderBrush="{x:Null}" Click="BtnAddCustomer_Click" Height="Auto">
                         <StackPanel>
-                            <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">
+                            <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold" Content="Add Customer">
                                 <Label.Effect>
                                     <DropShadowEffect BlurRadius="15" Opacity="0.5"/>
-                                </Label.Effect> Add Cutomer
+                                </Label.Effect>
                             </Label>
                             <Image Source="images\add_customer.png"/>
                         </StackPanel>
@@ -241,10 +241,10 @@
                 <Grid x:Name="gridBtnRemoveCustomer" HorizontalAlignment="Left" Height="287.85" Margin="372,167.1,0,0" VerticalAlignment="Top" Width="250.8">
                     <Button x:Name="btnRemoveCustomer" Background="#FF39DAD1" BorderBrush="{x:Null}" Click="BtnRemoveCustomer_Click" Height="Auto">
                         <StackPanel>
-                            <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">
+                            <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold" Content="Remove Customer">
                                 <Label.Effect>
                                     <DropShadowEffect BlurRadius="15" Opacity="0.5"/>
-                                </Label.Effect> Remove Cutomer
+                                </Label.Effect>
                             </Label>
                             <Image Source="images\remove_customer.png"/>
                         </StackPanel>
@@ -253,10 +253,10 @@
                 <Grid x:Name="gridBtnViewCustomer" HorizontalAlignment="Left" Height="287.85" Margin="744,167.1,0,0" VerticalAlignment="Top" Width="250.8">
                     <Button x:Name="btnViewCustomer" Background="#FF39DAD1" BorderBrush="{x:Null}" Click="BtnViewCustomer_Click" Height="Auto">
                         <StackPanel>
-                            <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold">
+                            <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="Bold" Content="View Customer">
                                 <Label.Effect>
                                     <DropShadowEffect BlurRadius="15" Opacity="0.5"/>
-                                </Label.Effect> View Cutomer
+                                </Label.Effect>
                             </Label>
                             <Image Source="images\view_customer.png"/>
                         </StackPanel>

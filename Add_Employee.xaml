@@ -16,7 +16,7 @@
             <Label Content="First Name:" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.026,0.115" FontSize="14" Foreground="#DD000000"/>
             <Label Content="Middle Name:" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.026,0.115" FontSize="14" Foreground="#DD000000"/>
             <Label Content="Last Name:" HorizontalAlignment="Left" Margin="10,98,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.026,0.115" FontSize="14" Foreground="#DD000000"/>
-            <TextBox x:Name="txtAdd_EmpMName" HorizontalAlignment="Left" Height="23" Margin="104,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Foreground="Black" Background="#FFFFAA8F" Padding="5,0,0,0"/>
+            <TextBox x:Name="txtAdd_EmpMName" HorizontalAlignment="Left" Height="23" Margin="104,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Foreground="Black" Background="#FFFFAA8F" Padding="5,0,0,0" MaxLength="1"/>
             <TextBox x:Name="txtAdd_EmpLName" HorizontalAlignment="Left" Height="23" Margin="104,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Foreground="Black" Background="#FFFFAA8F" Padding="5,0,0,0"/>
             <Label Content="Date of Birth:" HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
             <Grid>
@@ -50,7 +50,7 @@
             <TextBox x:Name="txtAdd_EmpTown" HorizontalAlignment="Left" Height="23" Margin="108,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Foreground="Black" Background="#FFFFAA8F" Padding="5,0,0,0"/>
             <TextBox x:Name="txtAdd_EmpPOBox" HorizontalAlignment="Left" Height="23" Margin="108,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Foreground="Black" Background="#FFFFAA8F" Padding="5,0,0,0"/>
             <TextBox x:Name="txtAdd_EmpParish" HorizontalAlignment="Left" Height="23" Margin="108,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Foreground="Black" Background="#FFFFAA8F" Padding="5,0,0,0"/>
-            <TextBox x:Name="txtAdd_EmpTelephone" HorizontalAlignment="Left" Height="23" Margin="108,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Foreground="Black" Background="#FFFFAA8F" Padding="5,0,0,0"/>
+            <TextBox x:Name="txtAdd_EmpTelephone" HorizontalAlignment="Left" Height="23" Margin="108,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Foreground="Black" Background="#FFFFAA8F" Padding="5,0,0,0" TextChanged="TxtAdd_EmpTelephone_TextChanged"/>
             <TextBox x:Name="txtAdd_EmpEmail" HorizontalAlignment="Left" Height="23" Margin="108,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Foreground="Black" Background="#FFFFAA8F" Padding="5,0,0,0"/>
             <TextBox x:Name="txtAdd_EmpUserName" HorizontalAlignment="Left" Height="23" Margin="108,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Foreground="Black" Background="#FFFFAA8F" Padding="5,0,0,0"/>
             <PasswordBox x:Name="txtAdd_EmpPassword" HorizontalAlignment="Left" Height="23" Margin="108,269,0,0" VerticalAlignment="Top" Width="142" Foreground="Black" Background="#FFFFAA8F" Padding="5,0,0,0"/>

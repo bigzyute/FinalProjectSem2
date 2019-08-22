@@ -125,27 +125,53 @@ namespace La_Bakéry
             }
         }
 
-        private void TxtCustPhone_Num_TextChanged(object sender, TextChangedEventArgs e)
+        private void TxtCustPhone_Num_Leave(object sender, TextChangedEventArgs e)
         {
-
+           /* Regex phoneNumpattern = new Regex(@"\(?\d{3}\)?-? *\d{3}-? *-?\d{4}");
+            if (phoneNumpattern.IsMatch(txtCustPhone_Num.Text))
+            {
+                MessageBox.Show("OK");
+            }
+            else
+            {
+                MessageBox.Show("Invalid phone number");
+            }
+           /* Regex pattern = new Regex(@"^((\+){0,1}91(\s){0,1}(\-){0,1}(\s){0,1}){0,1}9[0-9](\s){0,1}(\-){0,1}(\s){0,1}[1-9]{3}[0-9]{4}$");
+            if (pattern.IsMatch(txtCustPhone_Num.Text))
+            {
+                MessageBox.Show("OK");
+            }
+            else
+            {
+                MessageBox.Show("Invalid phone number");
+            }*/
         }
 
         private void TxtCustPhone_Num_LostFocus(object sender, RoutedEventArgs e)
         {
-          /*  var num = txtCustPhone_Num.Text;
-
-           var regex = (@"\+[0-9]{3}\s+[0-9]{3}\s+[0-9]{4}");
-          //  Match getmatch = phoneNumpattern.Match(txtCustPhone_Num.Text);
-            
-            
-            if (Regex.IsMatch(num, regex))
+            Regex phoneNumpattern = new Regex(@"\(?\d{3}\)?-? *\d{3}-? *-?\d{4}");
+            if (phoneNumpattern.IsMatch(txtCustPhone_Num.Text))
             {
-                MessageBox.Show(num + " Great Number accepted");
+                MessageBox.Show("The Number you entered is valid");
             }
             else
             {
-                MessageBox.Show("Invalid phone number entered, please try again");
-            }*/
+                MessageBox.Show("Invalid phone number");
+            }
+            /*  var num = txtCustPhone_Num.Text;
+
+             var regex = (@"\+[0-9]{3}\s+[0-9]{3}\s+[0-9]{4}");
+            //  Match getmatch = phoneNumpattern.Match(txtCustPhone_Num.Text);
+
+
+              if (Regex.IsMatch(num, regex))
+              {
+                  MessageBox.Show(num + " Great Number accepted");
+              }
+              else
+              {
+                  MessageBox.Show("Invalid phone number entered, please try again");
+              }*/
         }
 
         private void TxtCustPO_Box_TextChanged(object sender, TextChangedEventArgs e)
@@ -156,6 +182,11 @@ namespace La_Bakéry
         private void BtnExit__Click_1(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void TxtCustMid_Initial_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

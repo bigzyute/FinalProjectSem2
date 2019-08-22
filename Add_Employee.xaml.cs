@@ -103,6 +103,9 @@ namespace La_Bakéry
             }
         }
 
-        
+        private void TxtAdd_EmpTelephone_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
