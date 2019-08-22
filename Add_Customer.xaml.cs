@@ -32,7 +32,8 @@ namespace La_Bakéry
             txtCustFirst_Name.Clear();
             txtCustLast_Name.Clear();
             txtCustMid_Initial.Clear();
-            txtCust_Gender.Clear();
+            grdbAdd_CusFemale.IsChecked = false;
+            grdbAdd_CusMale.IsChecked = false;
             txtCustPhone_Num.Clear();
             txtCustEmail_Add.Clear();
             txtCustPO_Box.Clear();
@@ -88,38 +89,40 @@ namespace La_Bakéry
 
         private void BtnAdd_Cust_Click_1(object sender, RoutedEventArgs e)
         {
+            char gender;
             //int telephone;
             //Int32.TryParse(txtCustPhone_Num.Text, out telephone);
-            //bool validated = false;
+            bool validated = false;
             //Input validation
             if (string.IsNullOrWhiteSpace(txtCustFirst_Name.Text) || string.IsNullOrWhiteSpace(txtCustLast_Name.Text))
             {
                 MessageBox.Show("Please complete the required feilds", "Name Error", MessageBoxButton.OK);
             }
-            else if (txtCustFirst_Name.Text.Trim().Length < 3 || txtCustLast_Name.Text.Trim().Length < 3)
+            else if (grdbAdd_CusFemale.IsChecked == false && grdbAdd_CusMale.IsChecked == false)
             {
-                MessageBox.Show("Invalid Name, Please put your full name in the required field", "Name Length", MessageBoxButton.OK);
-
+                MessageBox.Show("Please select a gender.", "Gender Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            else if (string.IsNullOrWhiteSpace(txtCust_Gender.Text))
-            {
-                MessageBox.Show("Please complete the required feild", "Gender Error", MessageBoxButton.OK);
-            }
-            if (!this.txtCustEmail_Add.Text.Contains('@') || !this.txtCustEmail_Add.Text.Contains('.'))
+            else if (!string.IsNullOrWhiteSpace(txtCustEmail_Add.Text) && !this.txtCustEmail_Add.Text.Contains('@') || !this.txtCustEmail_Add.Text.Contains('.'))
             {
                 MessageBox.Show("Please Enter A Valid Email", "Invalid Email", MessageBoxButton.OK);
             }
-            if (string.IsNullOrWhiteSpace(txtCustPO_Box.Text))
+            else
             {
-                MessageBox.Show("Please complete the required feild", " PoB Error", MessageBoxButton.OK);
+                validated = true;
             }
-            if (string.IsNullOrWhiteSpace(txtCustDistrict.Text))
+
+            if (validated == true) //Assigning radio buttons
             {
-                MessageBox.Show("Please complete the required feild", " District Error", MessageBoxButton.OK);
-            }
-            if (string.IsNullOrWhiteSpace(txtCustParish.Text))
-            {
-                MessageBox.Show("Please complete the required feild", "  Error", MessageBoxButton.OK);
+
+                if (grdbAdd_CusFemale.IsChecked == true)
+                {
+                    gender = 'f';
+                }
+                else if (grdbAdd_CusMale.IsChecked == true)
+                {
+                    gender = 'm';
+                }
+                MessageBox.Show("Employee Succesfully Added!", "Employee Added", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
 
