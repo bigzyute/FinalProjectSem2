@@ -41,6 +41,12 @@
     <StartupObject>La_Bakéry.App</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialDesignColors, Version=1.2.0.1418, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\MaterialDesignColors.1.2.0-ci1418\lib\net45\MaterialDesignColors.dll</HintPath>
     </Reference>
@@ -48,8 +54,11 @@
       <HintPath>packages\MaterialDesignThemes.3.0.0-ci482\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -73,6 +82,33 @@
     </Compile>
     <Compile Include="Add_Product.xaml.cs">
       <DependentUpon>Add_Product.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerTable.cs">
+      <DependentUpon>LaBakeryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeTable.cs">
+      <DependentUpon>LaBakeryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LaBakeryModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaBakeryModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LaBakeryModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaBakeryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LaBakeryModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaBakeryModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <DependentUpon>LaBakeryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductTable.cs">
+      <DependentUpon>LaBakeryModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Receipts.xaml.cs">
       <DependentUpon>Receipts.xaml</DependentUpon>
@@ -169,6 +205,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="LaBakeryModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LaBakeryModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="LaBakeryModel.edmx.diagram">
+      <DependentUpon>LaBakeryModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -227,6 +270,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\default_product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LaBakeryModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>LaBakeryModel.Context.cs</LastGenOutput>
+      <DependentUpon>LaBakeryModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="LaBakeryModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LaBakeryModel.edmx</DependentUpon>
+      <LastGenOutput>LaBakeryModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
