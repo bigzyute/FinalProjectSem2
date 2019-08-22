@@ -21,6 +21,7 @@ namespace La_Bakéry
     {
         public Remove_Customer()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
 
