@@ -83,6 +83,33 @@
     <Compile Include="Add_Product.xaml.cs">
       <DependentUpon>Add_Product.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomerTable.cs">
+      <DependentUpon>NewBakeryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeTable.cs">
+      <DependentUpon>NewBakeryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoginTable.cs">
+      <DependentUpon>NewBakeryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewBakeryModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewBakeryModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewBakeryModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewBakeryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewBakeryModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewBakeryModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductTable.cs">
+      <DependentUpon>NewBakeryModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Receipts.xaml.cs">
       <DependentUpon>Receipts.xaml</DependentUpon>
     </Compile>
@@ -178,6 +205,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="NewBakeryModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NewBakeryModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="NewBakeryModel.edmx.diagram">
+      <DependentUpon>NewBakeryModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -239,6 +273,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NewBakeryModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NewBakeryModel.edmx</DependentUpon>
+      <LastGenOutput>NewBakeryModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="NewBakeryModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NewBakeryModel.edmx</DependentUpon>
+      <LastGenOutput>NewBakeryModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

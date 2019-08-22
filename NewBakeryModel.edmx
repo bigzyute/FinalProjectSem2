@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="NewBakeryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CustomerTable">
+          <Key>
+            <PropertyRef Name="CustomerId" />
+          </Key>
+          <Property Name="CustomerId" Type="int" Nullable="false" />
+          <Property Name="cusFirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="cusMidInitial" Type="char" MaxLength="1" />
+          <Property Name="cusLastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="cusGender" Type="nchar" MaxLength="1" />
+          <Property Name="cusTelephone" Type="nvarchar" MaxLength="50" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" />
+          <Property Name="poBox" Type="nvarchar" MaxLength="50" />
+          <Property Name="district" Type="nvarchar" MaxLength="50" />
+          <Property Name="parish" Type="nvarchar" MaxLength="50" />
+          <Property Name="dateCreated" Type="date" />
+        </EntityType>
+        <EntityType Name="EmployeeTable">
+          <Key>
+            <PropertyRef Name="employeeId" />
+          </Key>
+          <Property Name="employeeId" Type="int" Nullable="false" />
+          <Property Name="empFirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="empMidInit" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="empLastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="dob" Type="date" Nullable="false" />
+          <Property Name="gender" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="maritalStat" Type="nvarchar" MaxLength="10" />
+          <Property Name="town" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="poBox" Type="nvarchar" MaxLength="50" />
+          <Property Name="parish" Type="nvarchar" MaxLength="50" />
+          <Property Name="telephone" Type="nvarchar" MaxLength="50" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" />
+          <Property Name="dateCreated" Type="date" />
+        </EntityType>
+        <EntityType Name="LoginTable">
+          <Key>
+            <PropertyRef Name="username" />
+          </Key>
+          <Property Name="username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" />
+          <Property Name="employeeId" Type="int" />
+        </EntityType>
+        <EntityType Name="ProductTable">
+          <Key>
+            <PropertyRef Name="productCode" />
+          </Key>
+          <Property Name="productCode" Type="int" Nullable="false" />
+          <Property Name="productName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="productCost" Type="float" Nullable="false" />
+          <Property Name="productImage" Type="image" />
+          <Property Name="dateCreated" Type="date" />
+        </EntityType>
+        <Association Name="FK__LoginTabl__emplo__29572725">
+          <End Role="EmployeeTable" Type="Self.EmployeeTable" Multiplicity="0..1" />
+          <End Role="LoginTable" Type="Self.LoginTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeTable">
+              <PropertyRef Name="employeeId" />
+            </Principal>
+            <Dependent Role="LoginTable">
+              <PropertyRef Name="employeeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="NewBakeryModelStoreContainer">
+          <EntitySet Name="CustomerTable" EntityType="Self.CustomerTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EmployeeTable" EntityType="Self.EmployeeTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LoginTable" EntityType="Self.LoginTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProductTable" EntityType="Self.ProductTable" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__LoginTabl__emplo__29572725" Association="Self.FK__LoginTabl__emplo__29572725">
+            <End Role="EmployeeTable" EntitySet="EmployeeTable" />
+            <End Role="LoginTable" EntitySet="LoginTable" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NewBakeryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CustomerTable">
+          <Key>
+            <PropertyRef Name="CustomerId" />
+          </Key>
+          <Property Name="CustomerId" Type="Int32" Nullable="false" />
+          <Property Name="cusFirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cusMidInitial" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="cusLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cusGender" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="cusTelephone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="poBox" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="district" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="parish" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="dateCreated" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="EmployeeTable">
+          <Key>
+            <PropertyRef Name="employeeId" />
+          </Key>
+          <Property Name="employeeId" Type="Int32" Nullable="false" />
+          <Property Name="empFirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="empMidInit" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="empLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="dob" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="gender" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="maritalStat" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="town" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="poBox" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="parish" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="telephone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="dateCreated" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="LoginTables" Relationship="Self.FK__LoginTabl__emplo__29572725" FromRole="EmployeeTable" ToRole="LoginTable" />
+        </EntityType>
+        <EntityType Name="LoginTable">
+          <Key>
+            <PropertyRef Name="username" />
+          </Key>
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="employeeId" Type="Int32" />
+          <NavigationProperty Name="EmployeeTable" Relationship="Self.FK__LoginTabl__emplo__29572725" FromRole="LoginTable" ToRole="EmployeeTable" />
+        </EntityType>
+        <EntityType Name="ProductTable">
+          <Key>
+            <PropertyRef Name="productCode" />
+          </Key>
+          <Property Name="productCode" Type="Int32" Nullable="false" />
+          <Property Name="productName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="productCost" Type="Double" Nullable="false" />
+          <Property Name="productImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="dateCreated" Type="DateTime" Precision="0" />
+        </EntityType>
+        <Association Name="FK__LoginTabl__emplo__29572725">
+          <End Role="EmployeeTable" Type="Self.EmployeeTable" Multiplicity="0..1" />
+          <End Role="LoginTable" Type="Self.LoginTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeTable">
+              <PropertyRef Name="employeeId" />
+            </Principal>
+            <Dependent Role="LoginTable">
+              <PropertyRef Name="employeeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="NewBakeryEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CustomerTables" EntityType="Self.CustomerTable" />
+          <EntitySet Name="EmployeeTables" EntityType="Self.EmployeeTable" />
+          <EntitySet Name="LoginTables" EntityType="Self.LoginTable" />
+          <EntitySet Name="ProductTables" EntityType="Self.ProductTable" />
+          <AssociationSet Name="FK__LoginTabl__emplo__29572725" Association="Self.FK__LoginTabl__emplo__29572725">
+            <End Role="EmployeeTable" EntitySet="EmployeeTables" />
+            <End Role="LoginTable" EntitySet="LoginTables" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NewBakeryModelStoreContainer" CdmEntityContainer="NewBakeryEntities">
+          <EntitySetMapping Name="CustomerTables">
+            <EntityTypeMapping TypeName="NewBakeryModel.CustomerTable">
+              <MappingFragment StoreEntitySet="CustomerTable">
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="cusFirstName" ColumnName="cusFirstName" />
+                <ScalarProperty Name="cusMidInitial" ColumnName="cusMidInitial" />
+                <ScalarProperty Name="cusLastName" ColumnName="cusLastName" />
+                <ScalarProperty Name="cusGender" ColumnName="cusGender" />
+                <ScalarProperty Name="cusTelephone" ColumnName="cusTelephone" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="poBox" ColumnName="poBox" />
+                <ScalarProperty Name="district" ColumnName="district" />
+                <ScalarProperty Name="parish" ColumnName="parish" />
+                <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeeTables">
+            <EntityTypeMapping TypeName="NewBakeryModel.EmployeeTable">
+              <MappingFragment StoreEntitySet="EmployeeTable">
+                <ScalarProperty Name="employeeId" ColumnName="employeeId" />
+                <ScalarProperty Name="empFirstName" ColumnName="empFirstName" />
+                <ScalarProperty Name="empMidInit" ColumnName="empMidInit" />
+                <ScalarProperty Name="empLastName" ColumnName="empLastName" />
+                <ScalarProperty Name="dob" ColumnName="dob" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="maritalStat" ColumnName="maritalStat" />
+                <ScalarProperty Name="town" ColumnName="town" />
+                <ScalarProperty Name="poBox" ColumnName="poBox" />
+                <ScalarProperty Name="parish" ColumnName="parish" />
+                <ScalarProperty Name="telephone" ColumnName="telephone" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LoginTables">
+            <EntityTypeMapping TypeName="NewBakeryModel.LoginTable">
+              <MappingFragment StoreEntitySet="LoginTable">
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="employeeId" ColumnName="employeeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductTables">
+            <EntityTypeMapping TypeName="NewBakeryModel.ProductTable">
+              <MappingFragment StoreEntitySet="ProductTable">
+                <ScalarProperty Name="productCode" ColumnName="productCode" />
+                <ScalarProperty Name="productName" ColumnName="productName" />
+                <ScalarProperty Name="productCost" ColumnName="productCost" />
+                <ScalarProperty Name="productImage" ColumnName="productImage" />
+                <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
