@@ -24,6 +24,9 @@ namespace La_Bakéry
         public Add_Customer()
         {
             InitializeComponent();
+            CustomerTable customer = new CustomerTable();
+            var id = customer.customerId + 1;
+            txtCustID.Text = id.ToString();
         }
 
         private void BtnCustClear_Click(object sender, RoutedEventArgs e)
@@ -48,52 +51,11 @@ namespace La_Bakéry
             objMain.Show();
             Hide();
         }
-
-        /* private void BtnAdd_Cust_Click(object sender, RoutedEventArgs e)
-         {
-
-
-
-             int telephone;
-             Int32.TryParse(txtCustPhone_Num.Text, out telephone);
-             //bool validated = false;
-             //Input validation
-             if (string.IsNullOrWhiteSpace(txtCustFirst_Name.Text) || string.IsNullOrWhiteSpace(txtCustLast_Name.Text))
-             {
-                 MessageBox.Show("Please complete the required feilds", "Name Error", MessageBoxButton.OK );
-             }
-             else if (txtCustFirst_Name.Text.Trim().Length < 3 || txtCustLast_Name.Text.Trim().Length < 3)
-             {
-                 MessageBox.Show("Invalid Name, Please put your full name in the required field", "Name Length", MessageBoxButton.OK);
-
-             }
-             else if (string.IsNullOrWhiteSpace(txtCust_Gender.Text))
-             {
-                 MessageBox.Show("Please complete the required feild", "Gender Error", MessageBoxButton.OK );
-             }
-             if (!this.txtCustEmail_Add.Text.Contains('@') || !this.txtCustEmail_Add.Text.Contains('.'))
-             {
-                 MessageBox.Show("Please Enter A Valid Email", "Invalid Email", MessageBoxButton.OK);
-             }
-
-             Regex phoneNumpattern = new Regex(@"\+[0-9]{3}\s+[0-9]{3}\s+[0-9]{4}");
-             if (phoneNumpattern.IsMatch(txtCustPhone_Num.Text))
-             {
-                 MessageBox.Show("OK");
-             }
-             else
-             {
-                 MessageBox.Show("Invalid phone number");
-             }
-         }*/
-
         private void BtnAdd_Cust_Click_1(object sender, RoutedEventArgs e)
         {
-            char gender;
-            //int telephone;
-            //Int32.TryParse(txtCustPhone_Num.Text, out telephone);
-            bool validated = false;
             //Input validation
+            string gender;
+            bool validated = false;
             if (string.IsNullOrWhiteSpace(txtCustFirst_Name.Text) || string.IsNullOrWhiteSpace(txtCustLast_Name.Text))
             {
                 MessageBox.Show("Please complete the required feilds", "Name Error", MessageBoxButton.OK);
@@ -116,12 +78,30 @@ namespace La_Bakéry
 
                 if (grdbAdd_CusFemale.IsChecked == true)
                 {
-                    gender = 'f';
+                    gender = "f";
                 }
-                else if (grdbAdd_CusMale.IsChecked == true)
+                else
                 {
-                    gender = 'm';
+                    gender = "m";
                 }
+
+                using (La_BakeryEntities databaseHandler = new La_BakeryEntities())
+                {
+                    CustomerTable customer = new CustomerTable
+                    {
+                        firstName = txtCustFirst_Name.Text,
+                        mInitial = txtCustFirst_Name.Text,
+                        lastName = txtCustFirst_Name.Text,
+                        gender = gender,
+                        phoneNumber = Int32.Parse(txtCustFirst_Name.Text),
+                        poBox = txtCustPO_Box.Text,
+                        district = txtCustDistrict.Text,
+                        parish = txtCustDistrict.Text
+                    };
+                    databaseHandler.CustomerTables.Add(customer);
+                    databaseHandler.SaveChanges();
+                }
+
                 MessageBox.Show("Employee Succesfully Added!", "Employee Added", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }

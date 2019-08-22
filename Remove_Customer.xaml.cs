@@ -26,12 +26,41 @@ namespace La_Bakéry
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            using (La_BakeryEntities databaseHandler = new La_BakeryEntities())
+            {
+                try
+                {
+                    var entity = databaseHandler.CustomerTables.Find(Int32.Parse(txtReCust_ID.Text)); //var blog = context.Blogs.Find(3);
+                    txtReCust_Result.Text = entity.firstName;
+                }
+                catch (Exception)
+                {
 
+                    MessageBox.Show("Please enter a valid Customer ID", "ID Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            using (La_BakeryEntities databaseHandler = new La_BakeryEntities())
+            {
+                try
+                {
+                    var entity = databaseHandler.CustomerTables.Find(Int32.Parse(txtReCust_ID.Text)); //var blog = context.Blogs.Find(3);
+                    txtReCust_Result.Text = entity.firstName;
+                    MessageBoxResult result = MessageBox.Show("Are you sure you want to delete this Customer?", "Delete Customer", MessageBoxButton.YesNo, MessageBoxImage.Asterisk);
+                    if (result == MessageBoxResult.Yes)
+                    {
+                        databaseHandler.CustomerTables.Remove(entity);
+                    }
+                }
+                catch (Exception)
+                {
 
+                    MessageBox.Show("Please enter a valid Customer ID", "ID Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
 
         private void BtnReCust_Clear_Click(object sender, RoutedEventArgs e)

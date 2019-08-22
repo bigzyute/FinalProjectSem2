@@ -14,7 +14,7 @@
         <Label x:Name="lblReCust_ID" Content="Customer ID" HorizontalAlignment="Left" Margin="139,127,0,0" VerticalAlignment="Top" Foreground="#DD000000" FontSize="14"/>
         <Label x:Name="lblReCust_Result" Content="Result" HorizontalAlignment="Left" Margin="139,179,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.151,0.395" Foreground="#DD000000" FontSize="14"/>
         <TextBox x:Name="txtReCust_ID" HorizontalAlignment="Left" Margin="319,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TxtReCust_ID_TextChanged" FontSize="14" Background="#FFFFAF95"/>
-        <TextBox x:Name="txtReCust_Result" HorizontalAlignment="Left" Margin="319,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14" Background="#FFFFAF95"/>
+        <TextBox x:Name="txtReCust_Result" HorizontalAlignment="Left" Margin="319,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14" Background="#FFFFAF95" IsEnabled="False"/>
         <Button x:Name="btnReCust_Search" Content="Search" HorizontalAlignment="Left" Margin="539,149,0,0" VerticalAlignment="Top" Width="101" Click="Button_Click" Height="41
                 " Background="#FFFABC74" FontWeight="Bold"/>
         <Label Content="Enter Customer I.D. To Search" HorizontalAlignment="Left" Margin="178,65,0,0" VerticalAlignment="Top" Width="290" FontWeight="Bold" FontSize="18" Foreground="#DD000000"/>
