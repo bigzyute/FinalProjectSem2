@@ -17,7 +17,7 @@
         <TextBox x:Name="txtCustFirst_Name" HorizontalAlignment="Left" Margin="192,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="14" SelectionBrush="#FFFFA486" Background="#FFFFB29A"/>
         <Label x:Name="lblCustLast_Name" Content="last Name " HorizontalAlignment="Left" Margin="90,205,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.411,1.95" Foreground="#DD000000" FontSize="14"/>
         <TextBox x:Name="txtCustLast_Name" HorizontalAlignment="Left" Margin="192,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="14" SelectionBrush="#FFFFA486" Background="#FFFFB29A"/>
-        <TextBox x:Name="txtCustMid_Initial" HorizontalAlignment="Left" Margin="192,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="14" SelectionBrush="#FFFFA486" Background="#FFFFB29A"/>
+        <TextBox x:Name="txtCustMid_Initial" HorizontalAlignment="Left" Margin="192,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="14" SelectionBrush="#FFFFA486" Background="#FFFFB29A" TextChanged="TxtCustMid_Initial_TextChanged" MaxLength="1"/>
         <Label x:Name="lblCustMid_Initial" Content="Middle Initial " HorizontalAlignment="Left" Margin="90,166,0,0" VerticalAlignment="Top" Foreground="#DD000000" FontSize="14"/>
         <Label x:Name="lblCust_Gender" Content="Gender" HorizontalAlignment="Left" Margin="90,246,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.851,-1.648" Foreground="#DD000000" FontSize="14"/>
         <TextBox x:Name="txtCust_Gender" HorizontalAlignment="Left" Margin="192,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="14" SelectionBrush="#FFFFA486" Background="#FFFFB29A"/>

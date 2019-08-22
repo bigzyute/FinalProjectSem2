@@ -16,7 +16,7 @@
             <Label Content="First Name:" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.026,0.115" FontSize="14" Foreground="#DD000000"/>
             <Label Content="Middle Name:" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.026,0.115" FontSize="14" Foreground="#DD000000"/>
             <Label Content="Last Name:" HorizontalAlignment="Left" Margin="10,98,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.026,0.115" FontSize="14" Foreground="#DD000000"/>
-            <TextBox x:Name="txtAdd_EmpMName" HorizontalAlignment="Left" Height="23" Margin="104,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Foreground="Black" Background="#FFFFAA8F" Padding="5,0,0,0"/>
+            <TextBox x:Name="txtAdd_EmpMName" HorizontalAlignment="Left" Height="23" Margin="104,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Foreground="Black" Background="#FFFFAA8F" Padding="5,0,0,0" MaxLength="1"/>
             <TextBox x:Name="txtAdd_EmpLName" HorizontalAlignment="Left" Height="23" Margin="104,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Foreground="Black" Background="#FFFFAA8F" Padding="5,0,0,0"/>
             <Label Content="Date of Birth:" HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
             <Grid>

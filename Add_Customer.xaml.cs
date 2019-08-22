@@ -157,6 +157,11 @@ namespace La_Bakéry
         {
             this.Close();
         }
+
+        private void TxtCustMid_Initial_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
 
