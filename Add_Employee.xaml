@@ -11,25 +11,25 @@
             <Grid.Effect>
                 <DropShadowEffect Color="#FF540E33" BlurRadius="7" ShadowDepth="7"/>
             </Grid.Effect>
-            <Label Content="Personal Info" HorizontalAlignment="Left" VerticalAlignment="Top" Width="204" FontWeight="Bold"/>
-            <TextBox x:Name="txtAdd_EmpFName" HorizontalAlignment="Left" Height="23" Margin="104,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <Label Content="First Name:" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.026,0.115"/>
-            <Label Content="Middle Name:" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.026,0.115"/>
-            <Label Content="Last Name:" HorizontalAlignment="Left" Margin="10,98,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.026,0.115"/>
-            <TextBox x:Name="txtAdd_EmpMName" HorizontalAlignment="Left" Height="23" Margin="104,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="txtAdd_EmpLName" HorizontalAlignment="Left" Height="23" Margin="104,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Date of Birth:" HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top"/>
+            <Label Content="Personal Info" HorizontalAlignment="Left" VerticalAlignment="Top" Width="204" FontWeight="Bold" FontSize="14" Foreground="#DD000000"/>
+            <TextBox x:Name="txtAdd_EmpFName" HorizontalAlignment="Left" Height="23" Margin="104,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Foreground="Black" Background="#FFFFAA8F" Padding="5,0,0,0"/>
+            <Label Content="First Name:" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.026,0.115" FontSize="14" Foreground="#DD000000"/>
+            <Label Content="Middle Name:" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.026,0.115" FontSize="14" Foreground="#DD000000"/>
+            <Label Content="Last Name:" HorizontalAlignment="Left" Margin="10,98,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.026,0.115" FontSize="14" Foreground="#DD000000"/>
+            <TextBox x:Name="txtAdd_EmpMName" HorizontalAlignment="Left" Height="23" Margin="104,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Foreground="Black" Background="#FFFFAA8F" Padding="5,0,0,0"/>
+            <TextBox x:Name="txtAdd_EmpLName" HorizontalAlignment="Left" Height="23" Margin="104,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Foreground="Black" Background="#FFFFAA8F" Padding="5,0,0,0"/>
+            <Label Content="Date of Birth:" HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
             <Grid>
-                <RadioButton x:Name="grdbAdd_EmpFemale" Content="Female" HorizontalAlignment="Left" Margin="104,196,0,0" VerticalAlignment="Top"/>
-                <RadioButton x:Name="grdbAdd_EmpMale" Content="Male" HorizontalAlignment="Left" Margin="209,196,0,0" VerticalAlignment="Top"/>
-                <Label Content="Gender:" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top"/>
+                <RadioButton x:Name="grdbAdd_EmpFemale" Content="Female" HorizontalAlignment="Left" Margin="104,196,0,0" VerticalAlignment="Top" Background="Black"/>
+                <RadioButton x:Name="grdbAdd_EmpMale" Content="Male" HorizontalAlignment="Left" Margin="209,196,0,0" VerticalAlignment="Top" Background="Black"/>
+                <Label Content="Gender:" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
             </Grid>
-            <Label Content="Marital Status:" HorizontalAlignment="Left" Margin="10,215,0,0" VerticalAlignment="Top"/>
-            <RadioButton x:Name="rdbAdd_EmpSingle" Content="Single" HorizontalAlignment="Left" Margin="10,244,0,0" VerticalAlignment="Top"/>
-            <RadioButton x:Name="rdbAdd_EmpMarried" Content="Married" HorizontalAlignment="Left" Margin="66,246,0,0" VerticalAlignment="Top"/>
-            <RadioButton x:Name="rdbAdd_EmpDivorced" Content="Divorced" HorizontalAlignment="Left" Margin="138,247,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.136,0.4"/>
-            <RadioButton x:Name="rdbAdd_EmpWidowed" Content="Widowed" HorizontalAlignment="Left" Margin="223,247,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.167,0.4"/>
-            <DatePicker HorizontalAlignment="Left" Margin="104,131,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Marital Status:" HorizontalAlignment="Left" Margin="10,215,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+            <RadioButton x:Name="rdbAdd_EmpSingle" Content="Single" HorizontalAlignment="Left" Margin="10,244,0,0" VerticalAlignment="Top" Background="Black"/>
+            <RadioButton x:Name="rdbAdd_EmpMarried" Content="Married" HorizontalAlignment="Left" Margin="66,246,0,0" VerticalAlignment="Top" Background="Black"/>
+            <RadioButton x:Name="rdbAdd_EmpDivorced" Content="Divorced" HorizontalAlignment="Left" Margin="138,247,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.136,0.4" Background="Black"/>
+            <RadioButton x:Name="rdbAdd_EmpWidowed" Content="Widowed" HorizontalAlignment="Left" Margin="223,247,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.167,0.4" Background="Black"/>
+            <DatePicker HorizontalAlignment="Left" Margin="104,131,0,0" VerticalAlignment="Top" Width="120" Foreground="Black" Background="#FFFFAA8F"/>
             <Label Content="*" HorizontalAlignment="Left" Margin="238,36,0,0" VerticalAlignment="Top" Height="23" Width="22" Foreground="#FFFB0707" FontSize="16" FontWeight="Bold"/>
             <Label Content="*" HorizontalAlignment="Left" Margin="238,71,0,0" VerticalAlignment="Top" Height="23" Width="22" RenderTransformOrigin="0.584,1.017" Foreground="#FFFB0707" FontSize="16" FontWeight="Bold"/>
             <Label Content="*" HorizontalAlignment="Left" Margin="238,106,0,0" VerticalAlignment="Top" Height="26" Width="22" Foreground="#FFFB0707" FontSize="16" FontWeight="Bold"/>
@@ -41,22 +41,22 @@
                 <DropShadowEffect Color="#FF540E33" BlurRadius="7" ShadowDepth="7"/>
 
             </Grid.Effect>
-            <Label Content="Address Info" HorizontalAlignment="Left" VerticalAlignment="Top" Width="311" FontWeight="Bold"/>
-            <Label Content="Town:" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.526,0.115"/>
-            <Label Content="P.O. Box:" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top"/>
-            <Label Content="Parish:" HorizontalAlignment="Left" Margin="10,102,0,0" VerticalAlignment="Top"/>
-            <Label Content="Telephone:" HorizontalAlignment="Left" Margin="10,133,0,0" VerticalAlignment="Top"/>
-            <Label Content="Email:" HorizontalAlignment="Left" Margin="10,164,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txtAdd_EmpTown" HorizontalAlignment="Left" Height="23" Margin="108,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"/>
-            <TextBox x:Name="txtAdd_EmpPOBox" HorizontalAlignment="Left" Height="23" Margin="108,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"/>
-            <TextBox x:Name="txtAdd_EmpParish" HorizontalAlignment="Left" Height="23" Margin="108,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"/>
-            <TextBox x:Name="txtAdd_EmpTelephone" HorizontalAlignment="Left" Height="23" Margin="108,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"/>
-            <TextBox x:Name="txtAdd_EmpEmail" HorizontalAlignment="Left" Height="23" Margin="108,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"/>
-            <TextBox x:Name="txtAdd_EmpUserName" HorizontalAlignment="Left" Height="23" Margin="108,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"/>
-            <TextBox x:Name="txtAdd_EmpPassword" HorizontalAlignment="Left" Height="23" Margin="108,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"/>
-            <Label Content="Username:" HorizontalAlignment="Left" Margin="10,235,0,0" VerticalAlignment="Top"/>
-            <Label Content="Password:" HorizontalAlignment="Left" Margin="10,266,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,0.115"/>
-            <Label Content="Log In Info" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.395,0.577" FontWeight="Bold"/>
+            <Label Content="Address Info" HorizontalAlignment="Left" VerticalAlignment="Top" Width="311" FontWeight="Bold" FontSize="14" Foreground="#DD000000"/>
+            <Label Content="Town:" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.526,0.115" FontSize="14" Foreground="#DD000000"/>
+            <Label Content="P.O. Box:" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+            <Label Content="Parish:" HorizontalAlignment="Left" Margin="10,102,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+            <Label Content="Telephone:" HorizontalAlignment="Left" Margin="10,133,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+            <Label Content="Email:" HorizontalAlignment="Left" Margin="10,164,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+            <TextBox x:Name="txtAdd_EmpTown" HorizontalAlignment="Left" Height="23" Margin="108,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Foreground="Black" Background="#FFFFAA8F" Padding="5,0,0,0"/>
+            <TextBox x:Name="txtAdd_EmpPOBox" HorizontalAlignment="Left" Height="23" Margin="108,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Foreground="Black" Background="#FFFFAA8F" Padding="5,0,0,0"/>
+            <TextBox x:Name="txtAdd_EmpParish" HorizontalAlignment="Left" Height="23" Margin="108,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Foreground="Black" Background="#FFFFAA8F" Padding="5,0,0,0"/>
+            <TextBox x:Name="txtAdd_EmpTelephone" HorizontalAlignment="Left" Height="23" Margin="108,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Foreground="Black" Background="#FFFFAA8F" Padding="5,0,0,0"/>
+            <TextBox x:Name="txtAdd_EmpEmail" HorizontalAlignment="Left" Height="23" Margin="108,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Foreground="Black" Background="#FFFFAA8F" Padding="5,0,0,0"/>
+            <TextBox x:Name="txtAdd_EmpUserName" HorizontalAlignment="Left" Height="23" Margin="108,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Foreground="Black" Background="#FFFFAA8F" Padding="5,0,0,0"/>
+            <PasswordBox x:Name="txtAdd_EmpPassword" HorizontalAlignment="Left" Height="23" Margin="108,269,0,0" VerticalAlignment="Top" Width="142" Foreground="Black" Background="#FFFFAA8F" Padding="5,0,0,0"/>
+            <Label Content="Username:" HorizontalAlignment="Left" Margin="10,235,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+            <Label Content="Password:" HorizontalAlignment="Left" Margin="10,266,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,0.115" FontSize="14" Foreground="#DD000000"/>
+            <Label Content="Log In Info" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.395,0.577" FontWeight="Bold" FontSize="14" Foreground="#DD000000"/>
             <Label Content="*" HorizontalAlignment="Left" Margin="263,235,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.002,0.036" Foreground="#FFFB0707" FontSize="16" Height="26" Width="20" FontWeight="Bold"/>
             <Label Content="*" HorizontalAlignment="Left" Margin="263,269,0,0" VerticalAlignment="Top" Height="28" Width="20" FontSize="16" Foreground="#FFFB0707" FontWeight="Bold"/>
             <Label Content="*" HorizontalAlignment="Left" Margin="263,37,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.278,-0.004" FontSize="16" Height="29" Width="20" Foreground="#FFFB0707" FontWeight="Bold"/>

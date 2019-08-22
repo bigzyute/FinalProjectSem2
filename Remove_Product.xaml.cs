@@ -30,5 +30,10 @@ namespace La_Bakéry
             txtRemovePro_ID.Clear();
             txtRemovePro_Result.Clear();
         }
+
+        private void BtnRemovePro_Exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

@@ -26,9 +26,7 @@ namespace La_Bakéry
 
         private void BtnAdd_CusExit_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow objMain = new MainWindow();
-            objMain.Show();
-            Hide();
+            this.Close();
 
         }
 
@@ -59,7 +57,7 @@ namespace La_Bakéry
             {
                 MessageBox.Show("A Town must be added.", "Town Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            else if (string.IsNullOrWhiteSpace(txtAdd_EmpPassword.Text) || string.IsNullOrWhiteSpace(txtAdd_EmpUserName.Text))
+            else if (string.IsNullOrWhiteSpace(txtAdd_EmpPassword.Password.ToString()) || string.IsNullOrWhiteSpace(txtAdd_EmpUserName.Text))
             {
                 MessageBox.Show("Please enter a username and password", "Credentials Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }

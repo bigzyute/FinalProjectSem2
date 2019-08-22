@@ -12,37 +12,37 @@
                 <DropShadowEffect Color="#FF5E6073" BlurRadius="6"/>
             </Rectangle.Effect>
         </Rectangle>
-        <Label x:Name="lblAdd_Customer" Content="Customer Details " HorizontalAlignment="Left" Margin="73,40,0,0" Width="109" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="1.642,0.471"/>
-        <Label x:Name="lblCustFirst_Name_" Content="First Name " HorizontalAlignment="Left" Margin="90,129,0,0" VerticalAlignment="Top" Width="78"/>
-        <TextBox x:Name="txtCustFirst_Name" HorizontalAlignment="Left" Height="23" Margin="192,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lblCustLast_Name" Content="last Name " HorizontalAlignment="Left" Margin="90,205,0,0" VerticalAlignment="Top" Width="66" RenderTransformOrigin="0.411,1.95"/>
-        <TextBox x:Name="txtCustLast_Name" HorizontalAlignment="Left" Height="23" Margin="192,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtCustMid_Initial" HorizontalAlignment="Left" Height="23" Margin="192,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="45"/>
-        <Label x:Name="lblCustMid_Initial" Content="Middle Initial " HorizontalAlignment="Left" Margin="90,166,0,0" VerticalAlignment="Top" Width="78"/>
-        <Label x:Name="lblCust_Gender" Content="Gender" HorizontalAlignment="Left" Margin="90,246,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.851,-1.648"/>
-        <TextBox x:Name="txtCust_Gender" HorizontalAlignment="Left" Height="23" Margin="192,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74"/>
-        <Label Content="Contact Info" HorizontalAlignment="Left" Margin="53,282,0,0" VerticalAlignment="Top" Width="86" FontWeight="Bold"/>
-        <Label x:Name="lblCustPhone_Num" Content="Phone Number " HorizontalAlignment="Left" Margin="90,326,0,0" VerticalAlignment="Top" Width="92"/>
-        <TextBox x:Name="txtCustPhone_Num" HorizontalAlignment="Left" Height="23" Margin="192,329,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.534,1.904" TextChanged="TxtCustPhone_Num_TextChanged" LostFocus="TxtCustPhone_Num_LostFocus"/>
-        <TextBox x:Name="txtCustEmail_Add" HorizontalAlignment="Left" Height="23" Margin="192,361,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.46,1.833"/>
-        <Label x:Name="lblCustEmail_Add" Content="Email Address" HorizontalAlignment="Left" Margin="90,361,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.831,0.127"/>
-        <Label Content="Address" HorizontalAlignment="Left" Margin="419,83,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.351,-0.357" Width="64" FontWeight="Bold"/>
-        <Label x:Name="lblCustPO_Box" Content="P.O. Box" HorizontalAlignment="Left" Margin="377,129,0,0" VerticalAlignment="Top" Width="60"/>
-        <TextBox x:Name="txtCustPO_Box" HorizontalAlignment="Left" Height="23" Margin="455,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.509,-0.716" TextChanged="TxtCustPO_Box_TextChanged"/>
-        <Label x:Name="lblCustDistrict" Content="District" HorizontalAlignment="Left" Margin="377,166,0,0" VerticalAlignment="Top" Width="60"/>
-        <TextBox x:Name="txtCustDistrict" HorizontalAlignment="Left" Height="54" Margin="455,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
-        <TextBox x:Name="txtCustParish" HorizontalAlignment="Left" Height="23" Margin="455,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lblCustParish" Content="Parish" HorizontalAlignment="Left" Margin="377,246,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblCustID" Content="Customer ID " HorizontalAlignment="Left" Margin="90,83,0,0" VerticalAlignment="Top" Width="96"/>
-        <TextBox x:Name="txtCustID" HorizontalAlignment="Left" Height="23" Margin="192,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
-        <Button x:Name="btnAdd_Cust" Content="Add" HorizontalAlignment="Left" Margin="90,464,0,0" VerticalAlignment="Top" Width="75" Background="#FFFABC74" Click="BtnAdd_Cust_Click_1" Height="41" FontWeight="Bold"/>
-        <Button x:Name="btnCustClear" Content="Clear" HorizontalAlignment="Left" Margin="237,464,0,0" VerticalAlignment="Top" Width="75" Click="BtnCustClear_Click" Background="#FFFABC74" Height="41" RenderTransformOrigin="0.489,1.348" FontWeight="Bold"/>
-        <Button x:Name="btnCustUpdate" Content="Update" HorizontalAlignment="Left" Margin="377,464,0,0" VerticalAlignment="Top" Width="75" Background="#FFFABC74" Height="41" RenderTransformOrigin="0.514,0.791" FontWeight="Bold"/>
-        <Rectangle HorizontalAlignment="Left" Height="102" Margin="407,290,0,0" RadiusY="10" RadiusX="10" Stroke="#FFFFFEFE" VerticalAlignment="Top" Width="228"/>
-        <Label Content="Search" HorizontalAlignment="Left" Margin="419,290,0,0" VerticalAlignment="Top" Width="48" FontWeight="Bold"/>
-        <ComboBox x:Name="cbCustSearch" HorizontalAlignment="Left" Margin="494,310,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.443,-0.416" Height="24"/>
-        <Button x:Name="btnCustSearch" Content="Search by ID" HorizontalAlignment="Left" Margin="494,353,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click" Background="#FFFABC74" Height="28" FontWeight="Bold"/>
-        <Button x:Name="btnExit_" Content="Exit" HorizontalAlignment="Left" Margin="518,464,0,0" VerticalAlignment="Top" Width="75" Background="#FFFABC74" Height="41" RenderTransformOrigin="0.745,1.673" FontWeight="Bold"/>
+        <Label x:Name="lblAdd_Customer" Content="Customer Details " HorizontalAlignment="Left" Margin="53,49,0,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="1.642,0.471" Foreground="#DD000000" FontSize="14"/>
+        <Label x:Name="lblCustFirst_Name_" Content="First Name " HorizontalAlignment="Left" Margin="90,129,0,0" VerticalAlignment="Top" Foreground="#DD000000" FontSize="14"/>
+        <TextBox x:Name="txtCustFirst_Name" HorizontalAlignment="Left" Margin="192,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="14" SelectionBrush="#FFFFA486" Background="#FFFFB29A"/>
+        <Label x:Name="lblCustLast_Name" Content="last Name " HorizontalAlignment="Left" Margin="90,205,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.411,1.95" Foreground="#DD000000" FontSize="14"/>
+        <TextBox x:Name="txtCustLast_Name" HorizontalAlignment="Left" Margin="192,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="14" SelectionBrush="#FFFFA486" Background="#FFFFB29A"/>
+        <TextBox x:Name="txtCustMid_Initial" HorizontalAlignment="Left" Margin="192,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="14" SelectionBrush="#FFFFA486" Background="#FFFFB29A"/>
+        <Label x:Name="lblCustMid_Initial" Content="Middle Initial " HorizontalAlignment="Left" Margin="90,166,0,0" VerticalAlignment="Top" Foreground="#DD000000" FontSize="14"/>
+        <Label x:Name="lblCust_Gender" Content="Gender" HorizontalAlignment="Left" Margin="90,246,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.851,-1.648" Foreground="#DD000000" FontSize="14"/>
+        <TextBox x:Name="txtCust_Gender" HorizontalAlignment="Left" Margin="192,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="14" SelectionBrush="#FFFFA486" Background="#FFFFB29A"/>
+        <Label Content="Contact Info" HorizontalAlignment="Left" Margin="53,282,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#DD000000" FontSize="14"/>
+        <Label x:Name="lblCustPhone_Num" Content="Phone Number " HorizontalAlignment="Left" Margin="90,326,0,0" VerticalAlignment="Top" Foreground="#DD000000" FontSize="14"/>
+        <TextBox x:Name="txtCustPhone_Num" HorizontalAlignment="Left" Margin="192,329,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.534,1.904" TextChanged="TxtCustPhone_Num_TextChanged" LostFocus="TxtCustPhone_Num_LostFocus" FontSize="14" SelectionBrush="#FFFFA486" Background="#FFFFB29A"/>
+        <TextBox x:Name="txtCustEmail_Add" HorizontalAlignment="Left" Margin="192,361,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.46,1.833" FontSize="14" SelectionBrush="#FFFFA486" Background="#FFFFB29A"/>
+        <Label x:Name="lblCustEmail_Add" Content="Email Address" HorizontalAlignment="Left" Margin="90,361,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.831,0.127" Foreground="#DD000000" FontSize="14"/>
+        <Label Content="Address" HorizontalAlignment="Left" Margin="419,83,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.351,-0.357" FontWeight="Bold" Foreground="#DD000000" FontSize="14"/>
+        <Label x:Name="lblCustPO_Box" Content="P.O. Box" HorizontalAlignment="Left" Margin="377,129,0,0" VerticalAlignment="Top" Foreground="#DD000000" FontSize="14"/>
+        <TextBox x:Name="txtCustPO_Box" HorizontalAlignment="Left" Margin="455,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.509,-0.716" TextChanged="TxtCustPO_Box_TextChanged" FontSize="14" SelectionBrush="#FFFFA486" Background="#FFFFB29A"/>
+        <Label x:Name="lblCustDistrict" Content="District" HorizontalAlignment="Left" Margin="377,166,0,0" VerticalAlignment="Top" Foreground="#DD000000" FontSize="14"/>
+        <TextBox x:Name="txtCustDistrict" HorizontalAlignment="Left" Margin="455,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="14" SelectionBrush="#FFFFA486" Background="#FFFFB29A"/>
+        <TextBox x:Name="txtCustParish" HorizontalAlignment="Left" Margin="455,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="14" SelectionBrush="#FFFFA486" Background="#FFFFB29A"/>
+        <Label x:Name="lblCustParish" Content="Parish" HorizontalAlignment="Left" Margin="377,246,0,0" VerticalAlignment="Top" Foreground="#DD000000" FontSize="14"/>
+        <Label x:Name="lblCustID" Content="Customer ID " HorizontalAlignment="Left" Margin="90,83,0,0" VerticalAlignment="Top" Foreground="#DD000000" FontSize="14"/>
+        <TextBox x:Name="txtCustID" HorizontalAlignment="Left" Margin="192,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="14" SelectionBrush="#FFFFA486" Background="#FFFFB29A"/>
+        <Button x:Name="btnAdd_Cust" Content="Add" HorizontalAlignment="Left" Margin="90,464,0,0" VerticalAlignment="Top" Background="#FFFABC74" Click="BtnAdd_Cust_Click_1" Height="41" FontWeight="Bold" Width="101"/>
+        <Button x:Name="btnCustClear" Content="Clear" HorizontalAlignment="Left" Margin="237,464,0,0" VerticalAlignment="Top" Click="BtnCustClear_Click" Background="#FFFABC74" Height="41" RenderTransformOrigin="0.489,1.348" FontWeight="Bold" Width="101"/>
+        <Button x:Name="btnCustUpdate" Content="Update" HorizontalAlignment="Left" Margin="377,464,0,0" VerticalAlignment="Top" Background="#FFFABC74" Height="41" RenderTransformOrigin="0.514,0.791" FontWeight="Bold" Width="101"/>
+        <Rectangle HorizontalAlignment="Left" Height="102" Margin="377,290,0,0" RadiusY="10" RadiusX="10" Stroke="#FFFFFEFE" VerticalAlignment="Top" Width="299"/>
+        <Label Content="Search" HorizontalAlignment="Left" Margin="377,290,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#DD000000" FontSize="14" Width="61"/>
+        <ComboBox x:Name="cbCustSearch" HorizontalAlignment="Left" Margin="455,310,0,0" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.443,-0.416" FontSize="14" Background="#FFFFB29A"/>
+        <Button x:Name="btnCustSearch" Content="Search by ID" HorizontalAlignment="Left" Margin="455,353,0,0" VerticalAlignment="Top" Width="150" Background="#FFFABC74" Height="28" FontWeight="Bold"/>
+        <Button x:Name="btnExit_" Content="Exit" HorizontalAlignment="Left" Margin="518,464,0,0" VerticalAlignment="Top" Background="#FFFABC74" Height="41" RenderTransformOrigin="0.745,1.673" FontWeight="Bold" Click="BtnExit__Click_1" Width="101"/>
     </Grid>
 
 </Window>

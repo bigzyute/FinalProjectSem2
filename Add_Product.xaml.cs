@@ -50,9 +50,7 @@ namespace La_Bakéry
 
         private void BtnExit_Product_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow objMain = new MainWindow();
-            objMain.Show();
-            Hide();
+            this.Hide();
         }
 
         private void BtnUpload_ProPic_Click(object sender, RoutedEventArgs e)

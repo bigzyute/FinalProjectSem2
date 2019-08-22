@@ -46,5 +46,10 @@ namespace La_Bakéry
         {
 
         }
+
+        private void BtnReCust_Exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

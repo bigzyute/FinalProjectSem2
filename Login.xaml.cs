@@ -53,6 +53,10 @@ namespace La_Bakéry
             {
                 e.Cancel = true;
             }
+            else
+            {
+                Environment.Exit(0);
+            }
         }
     }
 }

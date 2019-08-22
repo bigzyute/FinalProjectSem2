@@ -8,15 +8,16 @@
         Title="Remove_Customer" Height="450" Width="800">
     <Grid Background="#FF6E9086">
         <Rectangle HorizontalAlignment="Left" Height="239" Margin="77,40,0,0" Stroke="Black" VerticalAlignment="Top" Width="643" RadiusX="11" RadiusY="11" Fill="#FFFDC8B7"/>
-        <Button x:Name="btnReCust_Remove_" Content="Remove " HorizontalAlignment="Left" Margin="139,316,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Height="41" Background="#FFFABC74" FontWeight="Bold"/>
-        <Button x:Name="btnReCust_Clear" Content="Clear" HorizontalAlignment="Left" Margin="339,316,0,0" VerticalAlignment="Top" Width="75" Click="BtnReCust_Clear_Click" Height="41" Background="#FFFABC74" FontWeight="Bold"/>
-        <Button x:Name="btnReCust_Exit" Content="Exit" HorizontalAlignment="Left" Margin="539,316,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.441,-1.683" Height="41" Background="#FFFABC74" FontWeight="Bold"/>
-        <Label x:Name="lblReCust_ID" Content="Customer ID" HorizontalAlignment="Left" Margin="139,127,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblReCust_Result" Content="Result" HorizontalAlignment="Left" Margin="139,179,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.151,0.395"/>
-        <TextBox x:Name="txtReCust_ID" HorizontalAlignment="Left" Height="23" Margin="319,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TxtReCust_ID_TextChanged"/>
-        <TextBox x:Name="txtReCust_Result" HorizontalAlignment="Left" Height="23" Margin="319,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnReCust_Search" Content="Search" HorizontalAlignment="Left" Margin="615,142,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Height="23" Background="#FFFABC74" FontWeight="Bold"/>
-        <Label Content="Enter Customer I.D. To Search" HorizontalAlignment="Left" Margin="178,65,0,0" VerticalAlignment="Top" Width="290" FontWeight="Bold" FontSize="18"/>
+        <Button x:Name="btnReCust_Remove_" Content="Remove " HorizontalAlignment="Left" Margin="139,316,0,0" VerticalAlignment="Top" Width="101" Click="Button_Click_1" Height="41" Background="#FFFABC74" FontWeight="Bold"/>
+        <Button x:Name="btnReCust_Clear" Content="Clear" HorizontalAlignment="Left" Margin="339,316,0,0" VerticalAlignment="Top" Width="101" Click="BtnReCust_Clear_Click" Height="41" Background="#FFFABC74" FontWeight="Bold"/>
+        <Button x:Name="btnReCust_Exit" Content="Exit" HorizontalAlignment="Left" Margin="539,316,0,0" VerticalAlignment="Top" Width="101" RenderTransformOrigin="0.441,-1.683" Height="41" Background="#FFFABC74" FontWeight="Bold" Click="BtnReCust_Exit_Click"/>
+        <Label x:Name="lblReCust_ID" Content="Customer ID" HorizontalAlignment="Left" Margin="139,127,0,0" VerticalAlignment="Top" Foreground="#DD000000" FontSize="14"/>
+        <Label x:Name="lblReCust_Result" Content="Result" HorizontalAlignment="Left" Margin="139,179,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.151,0.395" Foreground="#DD000000" FontSize="14"/>
+        <TextBox x:Name="txtReCust_ID" HorizontalAlignment="Left" Margin="319,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TxtReCust_ID_TextChanged" FontSize="14" Background="#FFFFAF95"/>
+        <TextBox x:Name="txtReCust_Result" HorizontalAlignment="Left" Margin="319,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14" Background="#FFFFAF95"/>
+        <Button x:Name="btnReCust_Search" Content="Search" HorizontalAlignment="Left" Margin="539,149,0,0" VerticalAlignment="Top" Width="101" Click="Button_Click" Height="41
+                " Background="#FFFABC74" FontWeight="Bold"/>
+        <Label Content="Enter Customer I.D. To Search" HorizontalAlignment="Left" Margin="178,65,0,0" VerticalAlignment="Top" Width="290" FontWeight="Bold" FontSize="18" Foreground="#DD000000"/>
 
     </Grid>
 </Window>
