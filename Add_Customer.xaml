@@ -19,8 +19,11 @@
         <TextBox x:Name="txtCustLast_Name" HorizontalAlignment="Left" Margin="192,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="14" SelectionBrush="#FFFFA486" Background="#FFFFB29A"/>
         <TextBox x:Name="txtCustMid_Initial" HorizontalAlignment="Left" Margin="192,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="14" SelectionBrush="#FFFFA486" Background="#FFFFB29A" TextChanged="TxtCustMid_Initial_TextChanged" MaxLength="1"/>
         <Label x:Name="lblCustMid_Initial" Content="Middle Initial " HorizontalAlignment="Left" Margin="90,166,0,0" VerticalAlignment="Top" Foreground="#DD000000" FontSize="14"/>
-        <Label x:Name="lblCust_Gender" Content="Gender" HorizontalAlignment="Left" Margin="90,246,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.851,-1.648" Foreground="#DD000000" FontSize="14"/>
-        <TextBox x:Name="txtCust_Gender" HorizontalAlignment="Left" Margin="192,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="14" SelectionBrush="#FFFFA486" Background="#FFFFB29A"/>
+        <Grid>
+            <RadioButton x:Name="CusAddRbFemale" Content="Female" HorizontalAlignment="Left" Margin="186,264,0,0" VerticalAlignment="Top" Background="Black"/>
+            <RadioButton x:Name="CusAddRbMale" Content="Male" HorizontalAlignment="Left" Margin="291,264,0,0" VerticalAlignment="Top" Background="Black"/>
+            <Label Content="Gender:" HorizontalAlignment="Left" Margin="92,238,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+        </Grid>
         <Label Content="Contact Info" HorizontalAlignment="Left" Margin="53,282,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#DD000000" FontSize="14"/>
         <Label x:Name="lblCustPhone_Num" Content="Phone Number " HorizontalAlignment="Left" Margin="90,326,0,0" VerticalAlignment="Top" Foreground="#DD000000" FontSize="14"/>
         <TextBox x:Name="txtCustPhone_Num" HorizontalAlignment="Left" Margin="192,329,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.534,1.904"  LostFocus="TxtCustPhone_Num_LostFocus" FontSize="14" SelectionBrush="#FFFFA486" Background="#FFFFB29A"/>

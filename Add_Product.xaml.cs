@@ -32,7 +32,15 @@ namespace La_Bakéry
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            using (NewBakeryEntities context = new NewBakeryEntities())
+            {
+                ProductTable product = new ProductTable
+                {
+                    productName = txtProduct_Name.Text,
+                    productCost = float.Parse(txtProduct_Cost.Text),
+                    //productImage = pbNewPro_Image
+                };
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

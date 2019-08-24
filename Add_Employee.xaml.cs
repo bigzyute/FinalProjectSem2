@@ -34,7 +34,7 @@ namespace La_Bakéry
         private void BtnAdd_CusAdd_Click(object sender, RoutedEventArgs e)
         {
             int telephone;
-            char gender = 'm';
+            string gender = "m";
             String marStat = "single";
             
             Int32.TryParse(txtAdd_EmpTelephone.Text, out telephone);
@@ -72,11 +72,11 @@ namespace La_Bakéry
 
                 if (grdbAdd_EmpFemale.IsChecked == true)
                 {
-                    gender = 'f';
+                    gender = "f";
                 }
                 else if (grdbAdd_EmpMale.IsChecked == true)
                 {
-                    gender = 'm';
+                    gender = "m";
                 }
 
                 if (valid == true)
@@ -97,6 +97,33 @@ namespace La_Bakéry
                     else
                     {
                         marStat = "single";
+                    }
+
+                    using (NewBakeryEntities context = new NewBakeryEntities())
+                    {
+                        EmployeeTable employee = new EmployeeTable
+                        {
+                            empFirstName = txtAdd_EmpFName.Text,
+                            empMidInit = txtAdd_EmpMName.Text,
+                            empLastName = txtAdd_EmpLName.Text,
+                            //dob = empDobDatePicker.SelectedDate,
+                            gender = gender,
+                            maritalStat = marStat,
+                            town = txtAdd_EmpTown.Text,
+                            poBox = txtAdd_EmpPOBox.Text,
+                            parish = txtAdd_EmpParish.Text,
+                            telephone = txtAdd_EmpTelephone.Text,
+                            email = txtAdd_EmpEmail.Text,
+                            dateCreated = DateTime.Now
+                        };
+                        LoginTable login = new LoginTable
+                        {
+                            username = txtAdd_EmpUserName.Text,
+                            password = txtAdd_EmpPassword.Password
+                        };
+                        context.EmployeeTables.Add(employee);
+                        context.LoginTables.Add(login);
+                        context.SaveChanges();
                     }
                 }
                 MessageBox.Show("Employee Succesfully Added!", "Employee Added", MessageBoxButton.OK, MessageBoxImage.Information);
