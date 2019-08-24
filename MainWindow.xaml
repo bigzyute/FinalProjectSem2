@@ -78,7 +78,7 @@
                 <ListViewItem x:Name="listProduct" Margin="10,0,10,2.5" Background="#FF93B5B3" Foreground="White" Selected="ListProduct_Selected">
                     <StackPanel Orientation="Horizontal" Width="195">
                         <MaterialDesign:PackIcon Kind="BoxVariantClosed" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Stretch" Width="25" Height="25"/>
-                        <TextBlock Text="Order" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="16"/>
+                        <TextBlock Text="Product" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="16"/>
                     </StackPanel>
                 </ListViewItem>
                 <ListViewItem x:Name="listReport" Margin="10,0,10,2.5" Background="#FF93B5B3" Foreground="White">
