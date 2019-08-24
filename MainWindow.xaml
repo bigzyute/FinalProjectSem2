@@ -85,6 +85,7 @@
                     <StackPanel Orientation="Horizontal" Width="195">
                         <MaterialDesign:PackIcon Kind="ChartFinance" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Stretch" Width="25" Height="25"/>
                         <TextBlock Text="Report" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="16"/>
+                        <Expander VerticalAlignment="Center" FontSize="16" Background="{x:Null}" HorizontalAlignment="Left"/>
                     </StackPanel>
                 </ListViewItem>
             </ListView>
