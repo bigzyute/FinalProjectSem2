@@ -14,7 +14,7 @@
         </Rectangle>
         <Label x:Name="lblAdd_Customer" Content="Customer Details " HorizontalAlignment="Left" Margin="53,83,0,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="1.642,0.471" Foreground="#DD000000" FontSize="14"/>
         <Label x:Name="lblCustFirst_Name_" Content="First Name " HorizontalAlignment="Left" Margin="90,129,0,0" VerticalAlignment="Top" Foreground="#DD000000" FontSize="14"/>
-        <TextBox x:Name="txtCustFirst_Name" HorizontalAlignment="Left" Margin="192,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="14" SelectionBrush="#FFFFA486" Background="#FFFFB29A"/>
+        <TextBox x:Name="txtCustFirst_Name" HorizontalAlignment="Left" Margin="192,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="14" SelectionBrush="#FFFFA486" Background="#FFFFB29A" LostFocus="TxtCustFirst_Name_LostFocus"/>
         <Label x:Name="lblCustLast_Name" Content="last Name " HorizontalAlignment="Left" Margin="90,205,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.411,1.95" Foreground="#DD000000" FontSize="14"/>
         <TextBox x:Name="txtCustLast_Name" HorizontalAlignment="Left" Margin="192,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="14" SelectionBrush="#FFFFA486" Background="#FFFFB29A"/>
         <TextBox x:Name="txtCustMid_Initial" HorizontalAlignment="Left" Margin="192,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="14" SelectionBrush="#FFFFA486" Background="#FFFFB29A" TextChanged="TxtCustMid_Initial_TextChanged" MaxLength="1" LostFocus="TxtCustMid_Initial_LostFocus"/>

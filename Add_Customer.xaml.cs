@@ -228,7 +228,18 @@ namespace La_Bakéry
 
         private void TxtCustMid_Initial_LostFocus(object sender, RoutedEventArgs e)
         {
-            txtCustMid_Initial.Text = txtCustMid_Initial.Text.ToUpper();
+            if (!string.IsNullOrEmpty(txtCustMid_Initial.Text))
+            {
+                txtCustMid_Initial.Text = txtCustMid_Initial.Text.ToUpper(); 
+            }
+        }
+
+        private void TxtCustFirst_Name_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtCustFirst_Name.Text))
+            {
+                txtCustFirst_Name.Text = char.ToUpper(txtCustFirst_Name.Text[0]) + txtCustFirst_Name.Text.Substring(1);
+            }
         }
     }
 }
