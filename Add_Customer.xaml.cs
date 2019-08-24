@@ -30,7 +30,6 @@ namespace La_Bakéry
 
         private void BtnCustClear_Click(object sender, RoutedEventArgs e)
         {
-            txtCustID.Clear();
             txtCustFirst_Name.Clear();
             txtCustLast_Name.Clear();
             txtCustMid_Initial.Clear();
@@ -91,7 +90,6 @@ namespace La_Bakéry
 
         private void BtnAdd_Cust_Click_1(object sender, RoutedEventArgs e)
         {
-            //int telephone;
             string gender = "f";
             bool validated = false;
             //Input validation
@@ -226,6 +224,11 @@ namespace La_Bakéry
         private void TxtCustMid_Initial_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void TxtCustMid_Initial_LostFocus(object sender, RoutedEventArgs e)
+        {
+            txtCustMid_Initial.Text = txtCustMid_Initial.Text.ToUpper();
         }
     }
 }
