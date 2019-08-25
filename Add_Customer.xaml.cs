@@ -85,7 +85,6 @@ namespace La_Bakéry
 
             if (validated == true) //Assigning radio buttons
             {
-
                 if (CusAddRbFemale.IsChecked == true)
                 {
                     gender = "F";
@@ -94,27 +93,36 @@ namespace La_Bakéry
                 {
                     gender = "M";
                 }
-                using (NewBakeryEntities context = new NewBakeryEntities())
+                try
                 {
-                    CustomerTable customer = new CustomerTable
+                    using (NewBakeryEntities context = new NewBakeryEntities())
                     {
+                        CustomerTable customer = new CustomerTable
+                        {
 
-                        cusFirstName = txtCustFirst_Name.Text,
-                        cusMidInitial = txtCustMid_Initial.Text,
-                        cusLastName = txtCustLast_Name.Text,
-                        cusGender = gender,
-                        cusTelephone = txtCustPhone_Num.Text,
-                        email = txtCustEmail_Add.Text,
-                        poBox = txtCustPO_Box.Text,
-                        district = txtCustDistrict.Text,
-                        parish = txtCustParish.Text,
-                        dateCreated = DateTime.Now
-                    };
-                    context.CustomerTables.Add(customer);
-                    context.SaveChanges();
+                            cusFirstName = txtCustFirst_Name.Text,
+                            cusMidInitial = txtCustMid_Initial.Text,
+                            cusLastName = txtCustLast_Name.Text,
+                            cusGender = gender,
+                            cusTelephone = txtCustPhone_Num.Text,
+                            email = txtCustEmail_Add.Text,
+                            poBox = txtCustPO_Box.Text,
+                            district = txtCustDistrict.Text,
+                            parish = txtCustParish.Text,
+                            dateCreated = DateTime.Now
+                        };
+                        context.CustomerTables.Add(customer);
+                        context.SaveChanges();
 
-                    MessageBox.Show("Customer with ID#" +customer.CustomerId +" Succesfully Added!", "Customer Added", MessageBoxButton.OK, MessageBoxImage.Information);
-                }                    
+                        MessageBox.Show("Customer with ID#" + customer.CustomerId + " Succesfully Added!", "Customer Added", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("Error Generated. Details: " + ex.ToString(), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                                    
             }
 
         }

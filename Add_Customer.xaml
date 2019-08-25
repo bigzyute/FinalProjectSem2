@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:La_Bakéry"
         mc:Ignorable="d"
-        Title="Add_Customer" Height="547.177" Width="800" Loaded="Window_Loaded">
+        Title="Add Customer" Height="547.177" Width="800" Loaded="Window_Loaded">
     <Grid x:Name="Add_CustomerDetails" Margin="-4,1,-4,0" Background="#FF6E9086">
         <Rectangle x:Name="AddCustomer_" HorizontalAlignment="Left" Height="427" Margin="40,24,0,0" Stroke="Black" VerticalAlignment="Top" Width="712" RadiusX="11" RadiusY="11" Fill="#FFFDC8B7">
             <Rectangle.Effect>

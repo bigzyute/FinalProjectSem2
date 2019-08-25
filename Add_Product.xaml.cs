@@ -45,7 +45,23 @@ namespace La_Bakéry
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                using (NewBakeryEntities context = new NewBakeryEntities())
+                {
+                    ProductTable product = new ProductTable
+                    {
+                        productName = txtProduct_Name.Text,
+                        productCost = float.Parse(txtProduct_Cost.Text),
+                        productImage = 
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show("Error Generated. Details: " + ex.ToString(), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void BtnClear_Product_Click(object sender, RoutedEventArgs e)
@@ -63,23 +79,21 @@ namespace La_Bakéry
 
         private void BtnUpload_ProPic_Click(object sender, RoutedEventArgs e)
         {
-          /*  String imageLocation = "";
             try
             {
-                OpenFileDialog JuPic = new OpenFileDialog();
-                JuPic.Filter = "jpg files (*.jpg)|*.jpg| PNG Files(*.png)|*png| All Files(*.*)|*.*";
-                if (JuPic.ShowDialog() == DialogResult)
+                OpenFileDialog productPic = new OpenFileDialog();
+                productPic.Filter = "jpg files (*.jpg)|*.jpg| PNG Files(*.png)|*png| All Files(*.*)|*.*";
+                productPic.Title = "Select a picture";
+                if (productPic.ShowDialog() == true)
                 {
-                    imageLocation = dialog.GetType.
-                    pbNewPro_Image = imageLocation;
+                    pbNewPro_Image.Source = new BitmapImage(new Uri(productPic.FileName));
                 }
 
             }
             catch (Exception)
             {
                 MessageBox.Show("An Error Occured", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-            */
+            }            
         }
     }
 }

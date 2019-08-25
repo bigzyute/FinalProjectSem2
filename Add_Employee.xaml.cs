@@ -102,34 +102,42 @@ namespace La_Bakéry
                         marStat = "single";
                     }
 
-                    using (NewBakeryEntities context = new NewBakeryEntities())
+                    try
                     {
-                        EmployeeTable employee = new EmployeeTable
+                        using (NewBakeryEntities context = new NewBakeryEntities())
                         {
-                            empFirstName = txtAdd_EmpFName.Text,
-                            empMidInit = txtAdd_EmpMName.Text,
-                            empLastName = txtAdd_EmpLName.Text,
-                            dob = empDobDatePicker.SelectedDate, //if i get a convert DateTime to DateTime error, its this line
-                            gender = gender.ToUpper(),
-                            maritalStat = marStat.ToUpper(),
-                            town = txtAdd_EmpTown.Text,
-                            poBox = txtAdd_EmpPOBox.Text,
-                            parish = txtAdd_EmpParish.Text,
-                            telephone = txtAdd_EmpTelephone.Text,
-                            email = txtAdd_EmpEmail.Text,
-                            dateCreated = DateTime.Now
-                        };
-                        LoginTable login = new LoginTable
-                        {
-                            username = txtAdd_EmpUserName.Text,
-                            password = txtAdd_EmpPassword.Password
-                        };
-                        context.EmployeeTables.Add(employee);
-                        context.LoginTables.Add(login);
-                        context.SaveChanges();
+                            EmployeeTable employee = new EmployeeTable
+                            {
+                                empFirstName = txtAdd_EmpFName.Text,
+                                empMidInit = txtAdd_EmpMName.Text,
+                                empLastName = txtAdd_EmpLName.Text,
+                                dob = empDobDatePicker.SelectedDate, //if i get a convert DateTime to DateTime error, its this line
+                                gender = gender.ToUpper(),
+                                maritalStat = marStat.ToUpper(),
+                                town = txtAdd_EmpTown.Text,
+                                poBox = txtAdd_EmpPOBox.Text,
+                                parish = txtAdd_EmpParish.Text,
+                                telephone = txtAdd_EmpTelephone.Text,
+                                email = txtAdd_EmpEmail.Text,
+                                dateCreated = DateTime.Now
+                            };
+                            LoginTable login = new LoginTable
+                            {
+                                username = txtAdd_EmpUserName.Text,
+                                password = txtAdd_EmpPassword.Password
+                            };
+                            context.EmployeeTables.Add(employee);
+                            context.LoginTables.Add(login);
+                            context.SaveChanges();
 
-                        MessageBox.Show("Employee with ID#" + employee.employeeId + " Succesfully Added!", "Employee Added", MessageBoxButton.OK, MessageBoxImage.Information);
+                            MessageBox.Show("Employee with ID#" + employee.employeeId + " Succesfully Added!", "Employee Added", MessageBoxButton.OK, MessageBoxImage.Information);
+                        }
                     }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show("Error Generated. Details: " + ex.ToString(), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }                    
                 }
             }
         }
