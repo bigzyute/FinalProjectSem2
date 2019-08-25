@@ -113,7 +113,7 @@ namespace La_Bakéry
                     context.CustomerTables.Add(customer);
                     context.SaveChanges();
 
-                    MessageBox.Show("Employee with ID#" +customer.CustomerId +" Succesfully Added!", "Employee Added", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Customer with ID#" +customer.CustomerId +" Succesfully Added!", "Customer Added", MessageBoxButton.OK, MessageBoxImage.Information);
                 }                    
             }
 

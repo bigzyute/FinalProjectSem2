@@ -34,7 +34,7 @@ namespace La_Bakéry
         private void BtnAdd_CusAdd_Click(object sender, RoutedEventArgs e)
         {
             int telephone;
-            string gender = "m";
+            string gender = "M";
             String marStat = "single";
             
             Int32.TryParse(txtAdd_EmpTelephone.Text, out telephone);
@@ -44,6 +44,7 @@ namespace La_Bakéry
             if (string.IsNullOrWhiteSpace(txtAdd_EmpFName.Text) || string.IsNullOrWhiteSpace(txtAdd_EmpLName.Text))
             {
                 MessageBox.Show("Please complete the required feilds", "Name Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                txtAdd_EmpFName.Focus();
             }
             else if (grdbAdd_EmpFemale.IsChecked == false && grdbAdd_EmpMale.IsChecked == false)
             {
@@ -57,10 +58,12 @@ namespace La_Bakéry
             else if (string.IsNullOrWhiteSpace(txtAdd_EmpTown.Text))
             {
                 MessageBox.Show("A Town must be added.", "Town Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                txtAdd_EmpTown.Focus();
             }
             else if (string.IsNullOrWhiteSpace(txtAdd_EmpPassword.Password.ToString()) || string.IsNullOrWhiteSpace(txtAdd_EmpUserName.Text))
             {
                 MessageBox.Show("Please enter a username and password", "Credentials Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                txtAdd_EmpUserName.Focus();
             }
             else
             {
@@ -106,9 +109,9 @@ namespace La_Bakéry
                             empFirstName = txtAdd_EmpFName.Text,
                             empMidInit = txtAdd_EmpMName.Text,
                             empLastName = txtAdd_EmpLName.Text,
-                            //dob = empDobDatePicker.SelectedDate,
-                            gender = gender,
-                            maritalStat = marStat,
+                            dob = empDobDatePicker.SelectedDate, //if i get a convert DateTime to DateTime error, its this line
+                            gender = gender.ToUpper(),
+                            maritalStat = marStat.ToUpper(),
                             town = txtAdd_EmpTown.Text,
                             poBox = txtAdd_EmpPOBox.Text,
                             parish = txtAdd_EmpParish.Text,
@@ -124,15 +127,69 @@ namespace La_Bakéry
                         context.EmployeeTables.Add(employee);
                         context.LoginTables.Add(login);
                         context.SaveChanges();
+
+                        MessageBox.Show("Employee with ID#" + employee.employeeId + " Succesfully Added!", "Employee Added", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
                 }
-                MessageBox.Show("Employee Succesfully Added!", "Employee Added", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
 
         private void TxtAdd_EmpTelephone_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void TxtAdd_EmpFName_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtAdd_EmpFName.Text))
+            {
+                txtAdd_EmpFName.Text = char.ToUpper(txtAdd_EmpFName.Text[0]) + txtAdd_EmpFName.Text.Substring(1);
+            }
+        }
+
+        private void TxtAdd_EmpMName_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtAdd_EmpMName.Text))
+            {
+                txtAdd_EmpMName.Text = char.ToUpper(txtAdd_EmpMName.Text[0]) + txtAdd_EmpMName.Text.Substring(1);
+            }
+        }
+
+        private void TxtAdd_EmpLName_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtAdd_EmpLName.Text))
+            {
+                txtAdd_EmpLName.Text = char.ToUpper(txtAdd_EmpLName.Text[0]) + txtAdd_EmpLName.Text.Substring(1);
+            }
+        }
+
+        private void TxtAdd_EmpTown_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtAdd_EmpTown.Text))
+            {
+                txtAdd_EmpTown.Text = char.ToUpper(txtAdd_EmpTown.Text[0]) + txtAdd_EmpTown.Text.Substring(1);
+            }
+        }
+
+        private void BtnAdd_EmpClear_Click(object sender, RoutedEventArgs e)
+        {
+            txtAdd_EmpFName.Clear();
+            txtAdd_EmpMName.Clear();
+            txtAdd_EmpLName.Clear();
+            empDobDatePicker.SelectedDate = null;
+            grdbAdd_EmpFemale.IsChecked = false;
+            grdbAdd_EmpMale.IsChecked = false;
+            rdbAdd_EmpSingle.IsChecked = false;
+            rdbAdd_EmpMarried.IsChecked = false;
+            rdbAdd_EmpDivorced.IsChecked = false;
+            rdbAdd_EmpWidowed.IsChecked = false;
+            txtAdd_EmpTown.Clear();
+            txtAdd_EmpPOBox.Clear();
+            txtAdd_EmpParish.Clear();
+            txtAdd_EmpTelephone.Clear();
+            txtAdd_EmpEmail.Clear();
+            txtAdd_EmpUserName.Clear();
+            txtAdd_EmpPassword.Clear();
         }
     }
 }
