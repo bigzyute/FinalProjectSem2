@@ -25,7 +25,6 @@ namespace La_Bakéry
         {
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
-            
         }
 
         private void BtnCustClear_Click(object sender, RoutedEventArgs e)
@@ -50,57 +49,20 @@ namespace La_Bakéry
             Hide();
         }
 
-        /* private void BtnAdd_Cust_Click(object sender, RoutedEventArgs e)
-         {
-
-
-
-             int telephone;
-             Int32.TryParse(txtCustPhone_Num.Text, out telephone);
-             //bool validated = false;
-             //Input validation
-             if (string.IsNullOrWhiteSpace(txtCustFirst_Name.Text) || string.IsNullOrWhiteSpace(txtCustLast_Name.Text))
-             {
-                 MessageBox.Show("Please complete the required feilds", "Name Error", MessageBoxButton.OK );
-             }
-             else if (txtCustFirst_Name.Text.Trim().Length < 3 || txtCustLast_Name.Text.Trim().Length < 3)
-             {
-                 MessageBox.Show("Invalid Name, Please put your full name in the required field", "Name Length", MessageBoxButton.OK);
-
-             }
-             else if (string.IsNullOrWhiteSpace(txtCust_Gender.Text))
-             {
-                 MessageBox.Show("Please complete the required feild", "Gender Error", MessageBoxButton.OK );
-             }
-             if (!this.txtCustEmail_Add.Text.Contains('@') || !this.txtCustEmail_Add.Text.Contains('.'))
-             {
-                 MessageBox.Show("Please Enter A Valid Email", "Invalid Email", MessageBoxButton.OK);
-             }
-
-             Regex phoneNumpattern = new Regex(@"\+[0-9]{3}\s+[0-9]{3}\s+[0-9]{4}");
-             if (phoneNumpattern.IsMatch(txtCustPhone_Num.Text))
-             {
-                 MessageBox.Show("OK");
-             }
-             else
-             {
-                 MessageBox.Show("Invalid phone number");
-             }
-         }*/
-
         private void BtnAdd_Cust_Click_1(object sender, RoutedEventArgs e)
         {
-            string gender = "f";
+            string gender = "F";
             bool validated = false;
             //Input validation
             if (string.IsNullOrWhiteSpace(txtCustFirst_Name.Text) || string.IsNullOrWhiteSpace(txtCustLast_Name.Text))
             {
                 MessageBox.Show("Please complete the required feilds", "Name Error", MessageBoxButton.OK);
+                txtCustFirst_Name.Focus();
             }
             else if (txtCustFirst_Name.Text.Trim().Length < 3 || txtCustLast_Name.Text.Trim().Length < 3)
             {
                 MessageBox.Show("Invalid Name, Please put your full name in the required field", "Name Length", MessageBoxButton.OK);
-
+                txtCustFirst_Name.Focus();
             }
             else if (CusAddRbFemale.IsChecked == false && CusAddRbMale.IsChecked == false)
             {
@@ -109,18 +71,13 @@ namespace La_Bakéry
             else if (!this.txtCustEmail_Add.Text.Contains('@') || !this.txtCustEmail_Add.Text.Contains('.'))
             {
                 MessageBox.Show("Please Enter A Valid Email", "Invalid Email", MessageBoxButton.OK);
-            }
-            else if (string.IsNullOrWhiteSpace(txtCustPO_Box.Text))
-            {
-                MessageBox.Show("Please complete the required feild", " PoB Error", MessageBoxButton.OK);
-            }
-            else if (string.IsNullOrWhiteSpace(txtCustDistrict.Text))
-            {
-                MessageBox.Show("Please complete the required feild", " District Error", MessageBoxButton.OK);
+                txtCustEmail_Add.Focus();
             }
             else if (string.IsNullOrWhiteSpace(txtCustParish.Text))
             {
                 MessageBox.Show("Please complete the required feild", "  Error", MessageBoxButton.OK);
+                lblEmailErrorIcon.Visibility = Visibility.Visible;
+                txtCustParish.Focus();
             }
             else
             {
@@ -132,16 +89,17 @@ namespace La_Bakéry
 
                 if (CusAddRbFemale.IsChecked == true)
                 {
-                    gender = "f";
+                    gender = "F";
                 }
                 else if (CusAddRbMale.IsChecked == true)
                 {
-                    gender = "m";
+                    gender = "M";
                 }
                 using (NewBakeryEntities context = new NewBakeryEntities())
                 {
                     CustomerTable customer = new CustomerTable
                     {
+
                         cusFirstName = txtCustFirst_Name.Text,
                         cusMidInitial = txtCustMid_Initial.Text,
                         cusLastName = txtCustLast_Name.Text,
@@ -155,75 +113,16 @@ namespace La_Bakéry
                     };
                     context.CustomerTables.Add(customer);
                     context.SaveChanges();
-                }
 
-                    MessageBox.Show("Employee Succesfully Added!", "Employee Added", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Employee with ID#" +customer.CustomerId +" Succesfully Added!", "Employee Added", MessageBoxButton.OK, MessageBoxImage.Information);
+                }                    
             }
-
-        }
-
-        private void TxtCustPhone_Num_Leave(object sender, TextChangedEventArgs e)
-        {
-           /* Regex phoneNumpattern = new Regex(@"\(?\d{3}\)?-? *\d{3}-? *-?\d{4}");
-            if (phoneNumpattern.IsMatch(txtCustPhone_Num.Text))
-            {
-                MessageBox.Show("OK");
-            }
-            else
-            {
-                MessageBox.Show("Invalid phone number");
-            }
-           /* Regex pattern = new Regex(@"^((\+){0,1}91(\s){0,1}(\-){0,1}(\s){0,1}){0,1}9[0-9](\s){0,1}(\-){0,1}(\s){0,1}[1-9]{3}[0-9]{4}$");
-            if (pattern.IsMatch(txtCustPhone_Num.Text))
-            {
-                MessageBox.Show("OK");
-            }
-            else
-            {
-                MessageBox.Show("Invalid phone number");
-            }*/
-        }
-
-        private void TxtCustPhone_Num_LostFocus(object sender, RoutedEventArgs e)
-        {
-            Regex phoneNumpattern = new Regex(@"\(?\d{3}\)?-? *\d{3}-? *-?\d{4}");
-            if (phoneNumpattern.IsMatch(txtCustPhone_Num.Text))
-            {
-                MessageBox.Show("The Number you entered is valid");
-            }
-            else
-            {
-                MessageBox.Show("Invalid phone number");
-            }
-            /*  var num = txtCustPhone_Num.Text;
-
-             var regex = (@"\+[0-9]{3}\s+[0-9]{3}\s+[0-9]{4}");
-            //  Match getmatch = phoneNumpattern.Match(txtCustPhone_Num.Text);
-
-
-              if (Regex.IsMatch(num, regex))
-              {
-                  MessageBox.Show(num + " Great Number accepted");
-              }
-              else
-              {
-                  MessageBox.Show("Invalid phone number entered, please try again");
-              }*/
-        }
-
-        private void TxtCustPO_Box_TextChanged(object sender, TextChangedEventArgs e)
-        {
 
         }
 
         private void BtnExit__Click_1(object sender, RoutedEventArgs e)
         {
             this.Close();
-        }
-
-        private void TxtCustMid_Initial_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
 
         private void TxtCustMid_Initial_LostFocus(object sender, RoutedEventArgs e)
@@ -240,6 +139,19 @@ namespace La_Bakéry
             {
                 txtCustFirst_Name.Text = char.ToUpper(txtCustFirst_Name.Text[0]) + txtCustFirst_Name.Text.Substring(1);
             }
+        }
+
+        private void TxtCustLast_Name_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtCustLast_Name.Text))
+            {
+                txtCustLast_Name.Text = char.ToUpper(txtCustLast_Name.Text[0]) + txtCustLast_Name.Text.Substring(1);
+            }
+        }
+
+        private void TxtCustEmail_Add_LostFocus(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
