@@ -20,27 +20,10 @@ namespace La_Bakéry
     /// </summary>
     public partial class Add_Product : Window
     {
-        private readonly object dialog;
-
-        public object Image { get; private set; }
-
         public Add_Product()
         {
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            using (NewBakeryEntities context = new NewBakeryEntities())
-            {
-                ProductTable product = new ProductTable
-                {
-                    productName = txtProduct_Name.Text,
-                    productCost = float.Parse(txtProduct_Cost.Text),
-                    //productImage = pbNewPro_Image
-                };
-            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -53,20 +36,22 @@ namespace La_Bakéry
                     {
                         productName = txtProduct_Name.Text,
                         productCost = float.Parse(txtProduct_Cost.Text),
-                        productImage = 
+                        dateCreated = DateTime.Now
                     };
+                    context.ProductTables.Add(product);
+                    context.SaveChanges();
+
+                    MessageBox.Show("Product with ID#" + product.productCode + " Succesfully Added!", "Product Added", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show("Error Generated. Details: " + ex.ToString(), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+            }            
         }
 
         private void BtnClear_Product_Click(object sender, RoutedEventArgs e)
         {
-            txtProduct_Code.Clear();
             txtProduct_Cost.Clear();
             txtProduct_Name.Clear();
             
@@ -75,25 +60,6 @@ namespace La_Bakéry
         private void BtnExit_Product_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
-        }
-
-        private void BtnUpload_ProPic_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                OpenFileDialog productPic = new OpenFileDialog();
-                productPic.Filter = "jpg files (*.jpg)|*.jpg| PNG Files(*.png)|*png| All Files(*.*)|*.*";
-                productPic.Title = "Select a picture";
-                if (productPic.ShowDialog() == true)
-                {
-                    pbNewPro_Image.Source = new BitmapImage(new Uri(productPic.FileName));
-                }
-
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("An Error Occured", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }            
         }
     }
 }

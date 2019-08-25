@@ -54,7 +54,6 @@
           <Property Name="productCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="productName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="productCost" Type="float" Nullable="false" />
-          <Property Name="productImage" Type="image" />
           <Property Name="dateCreated" Type="date" />
         </EntityType>
         <Association Name="FK__LoginTabl__emplo__5CD6CB2B">
@@ -134,7 +133,6 @@
           <Property Name="productCode" Type="Int32" Nullable="false" />
           <Property Name="productName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="productCost" Type="Double" Nullable="false" />
-          <Property Name="productImage" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="dateCreated" Type="DateTime" Precision="0" />
         </EntityType>
         <Association Name="FK__LoginTabl__emplo__29572725">
@@ -216,7 +214,6 @@
                 <ScalarProperty Name="productCode" ColumnName="productCode" />
                 <ScalarProperty Name="productName" ColumnName="productName" />
                 <ScalarProperty Name="productCost" ColumnName="productCost" />
-                <ScalarProperty Name="productImage" ColumnName="productImage" />
                 <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
               </MappingFragment>
             </EntityTypeMapping>

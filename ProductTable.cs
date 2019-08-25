@@ -17,7 +17,6 @@ namespace La_Bakéry
         public int productCode { get; set; }
         public string productName { get; set; }
         public double productCost { get; set; }
-        public byte[] productImage { get; set; }
         public Nullable<System.DateTime> dateCreated { get; set; }
     }
 }

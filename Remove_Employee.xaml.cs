@@ -68,5 +68,11 @@ namespace La_Bakéry
                 MessageBox.Show("No records were found ", "No Records", MessageBoxButton.OK, MessageBoxImage.Asterisk);
             }
         }
+
+        private void BtnRem_EmpCancel_Click(object sender, RoutedEventArgs e)
+        {
+            txtRem_EmpId.Clear();
+            txtRem_EmpResult.Clear();
+        }
     }
 }
