@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace La_Bakéry
 {
     /// <summary>
@@ -27,12 +28,40 @@ namespace La_Bakéry
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                using (NewBakeryEntities context = new NewBakeryEntities())
+                {
+                    var customer = context.CustomerTables.Find(int.Parse(txtReCust_ID.Text));
+                    txtReCust_Result.Text = customer.cusFirstName + " " + customer.cusLastName;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No records were found ", "No Records",MessageBoxButton.OK, MessageBoxImage.Asterisk);
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                using (NewBakeryEntities context = new NewBakeryEntities())
+                {
+                    var customer = context.CustomerTables.Find(int.Parse(txtReCust_ID.Text));
+                    var result = MessageBox.Show("Are you sure you want to remove customer " + customer.cusFirstName + " " + customer.cusLastName + "?",
+                        "Remove Customer", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                    if (result == MessageBoxResult.Yes)
+                    {
+                        context.CustomerTables.Remove(customer);
+                        context.SaveChanges();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No records were found ", "No Records", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+            }
         }
 
         private void BtnReCust_Clear_Click(object sender, RoutedEventArgs e)

@@ -158,10 +158,7 @@ namespace La_Bakéry
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            using (NewBakeryEntities dataContext = new NewBakeryEntities())
-            {
-                
-            }
+
         }
     }
 }
