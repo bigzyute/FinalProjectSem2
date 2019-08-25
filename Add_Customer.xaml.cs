@@ -39,7 +39,6 @@ namespace La_Bakéry
             txtCustPO_Box.Clear();
             txtCustDistrict.Clear();
             txtCustParish.Clear();
-            cbCustSearch.SelectedIndex = -1;
         }
 
         private void BtnExit__Click(object sender, RoutedEventArgs e)
@@ -151,7 +150,18 @@ namespace La_Bakéry
 
         private void TxtCustEmail_Add_LostFocus(object sender, RoutedEventArgs e)
         {
-            
+            if (!string.IsNullOrEmpty(txtCustEmail_Add.Text))
+            {
+                txtCustEmail_Add.Text = txtCustEmail_Add.Text.ToLower();
+            }
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            using (NewBakeryEntities dataContext = new NewBakeryEntities())
+            {
+                
+            }
         }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:La_Bakéry"
         mc:Ignorable="d"
-        Title="Add_Customer" Height="547.177" Width="800">
+        Title="Add_Customer" Height="547.177" Width="800" Loaded="Window_Loaded">
     <Grid x:Name="Add_CustomerDetails" Margin="-4,1,-4,0" Background="#FF6E9086">
         <Rectangle x:Name="AddCustomer_" HorizontalAlignment="Left" Height="427" Margin="40,24,0,0" Stroke="Black" VerticalAlignment="Top" Width="712" RadiusX="11" RadiusY="11" Fill="#FFFDC8B7">
             <Rectangle.Effect>
@@ -38,12 +38,7 @@
         <TextBox x:Name="txtCustParish" HorizontalAlignment="Left" Margin="455,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="14" SelectionBrush="#FFFFA486" Background="#FFFFB29A" Padding="5,0,0,0"/>
         <Label x:Name="lblCustParish" Content="Parish" HorizontalAlignment="Left" Margin="377,246,0,0" VerticalAlignment="Top" Foreground="#DD000000" FontSize="14"/>
         <Button x:Name="btnAdd_Cust" Content="Add" HorizontalAlignment="Left" Margin="90,464,0,0" VerticalAlignment="Top" Background="#FFFABC74" Click="BtnAdd_Cust_Click_1" Height="41" FontWeight="Bold" Width="101"/>
-        <Button x:Name="btnCustClear" Content="Clear" HorizontalAlignment="Left" Margin="237,464,0,0" VerticalAlignment="Top" Click="BtnCustClear_Click" Background="#FFFABC74" Height="41" RenderTransformOrigin="0.489,1.348" FontWeight="Bold" Width="101"/>
-        <Button x:Name="btnCustUpdate" Content="Update" HorizontalAlignment="Left" Margin="377,464,0,0" VerticalAlignment="Top" Background="#FFFABC74" Height="41" RenderTransformOrigin="0.514,0.791" FontWeight="Bold" Width="101"/>
-        <Rectangle HorizontalAlignment="Left" Height="102" Margin="377,290,0,0" RadiusY="10" RadiusX="10" Stroke="#FFFFFEFE" VerticalAlignment="Top" Width="299"/>
-        <Label Content="Search" HorizontalAlignment="Left" Margin="377,290,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#DD000000" FontSize="14" Width="61"/>
-        <ComboBox x:Name="cbCustSearch" HorizontalAlignment="Left" Margin="455,310,0,0" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.443,-0.416" FontSize="14" Background="#FFFFB29A" Padding="5,6,0,6"/>
-        <Button x:Name="btnCustSearch" Content="Search by ID" HorizontalAlignment="Left" Margin="455,353,0,0" VerticalAlignment="Top" Width="150" Background="#FFFABC74" Height="28" FontWeight="Bold"/>
+        <Button x:Name="btnCustClear" Content="Clear" HorizontalAlignment="Left" Margin="309,466,0,0" VerticalAlignment="Top" Click="BtnCustClear_Click" Background="#FFFABC74" Height="41" RenderTransformOrigin="0.489,1.348" FontWeight="Bold" Width="101"/>
         <Button x:Name="btnExit_" Content="Exit" HorizontalAlignment="Left" Margin="518,464,0,0" VerticalAlignment="Top" Background="#FFFABC74" Height="41" RenderTransformOrigin="0.745,1.673" FontWeight="Bold" Click="BtnExit__Click_1" Width="101"/>
         <TextBlock x:Name="lblErrorIcon" Text="*" Margin="347,129,0,0" Foreground="Red" FontSize="20" Width="9" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="8.864,3.088"/>
         <TextBlock x:Name="lblErrorIcon_Copy" Text="*" Margin="347,208,0,0" Foreground="Red" FontSize="20" Width="9" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="8.864,3.088"/>
