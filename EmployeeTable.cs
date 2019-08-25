@@ -24,7 +24,7 @@ namespace La_Bakéry
         public string empFirstName { get; set; }
         public string empMidInit { get; set; }
         public string empLastName { get; set; }
-        public Nullable<System.DateTime> dob { get; set; }
+        public System.DateTime dob { get; set; }
         public string gender { get; set; }
         public string maritalStat { get; set; }
         public string town { get; set; }

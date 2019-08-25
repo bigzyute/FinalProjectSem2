@@ -27,27 +27,45 @@ namespace La_Bakéry
 
         private void BtnRem_EmpExit_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow objMain = new MainWindow();
-            if (objMain.IsVisible == true)
-            {
-                this.Close();
-            }
-            else
-            {
-                this.Close();
-            }
+            this.Hide();
         }
 
         private void BtnRem_EmpRemove_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                using (NewBakeryEntities context = new NewBakeryEntities())
+                {
+                    var employee = context.EmployeeTables.Find(int.Parse(txtRem_EmpId.Text));
+                    var result = MessageBox.Show("Are you sure you want to remove employee " + employee.empFirstName + " " + employee.empLastName + "?",
+                        "Remove Employee", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                    if (result == MessageBoxResult.Yes)
+                    {
+                        context.EmployeeTables.Remove(employee);
+                        context.SaveChanges();
+                        MessageBox.Show("Employee successfully removed. ", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No records were found ", "No Records", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+            }
         }
 
         private void BtnRem_EmpSearch_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtRem_EmpId.Text) || string.IsNullOrWhiteSpace(txtRem_EmpResult.Text))
+            try
             {
-                MessageBox.Show("Please enter a valid Employee I.D.", "Name Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                using (NewBakeryEntities context = new NewBakeryEntities())
+                {
+                    var employee = context.EmployeeTables.Find(int.Parse(txtRem_EmpId.Text));
+                    txtRem_EmpResult.Text = employee.empFirstName + " " + employee.empLastName;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No records were found ", "No Records", MessageBoxButton.OK, MessageBoxImage.Asterisk);
             }
         }
     }

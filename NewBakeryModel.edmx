@@ -25,7 +25,7 @@
           <Key>
             <PropertyRef Name="employeeId" />
           </Key>
-          <Property Name="employeeId" Type="int" Nullable="false" />
+          <Property Name="employeeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="empFirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="empMidInit" Type="char" MaxLength="1" Nullable="false" />
           <Property Name="empLastName" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -51,13 +51,13 @@
           <Key>
             <PropertyRef Name="productCode" />
           </Key>
-          <Property Name="productCode" Type="int" Nullable="false" />
+          <Property Name="productCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="productName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="productCost" Type="float" Nullable="false" />
           <Property Name="productImage" Type="image" />
           <Property Name="dateCreated" Type="date" />
         </EntityType>
-        <Association Name="FK__LoginTabl__emplo__29572725">
+        <Association Name="FK__LoginTabl__emplo__5CD6CB2B">
           <End Role="EmployeeTable" Type="Self.EmployeeTable" Multiplicity="0..1" />
           <End Role="LoginTable" Type="Self.LoginTable" Multiplicity="*" />
           <ReferentialConstraint>
@@ -74,7 +74,7 @@
           <EntitySet Name="EmployeeTable" EntityType="Self.EmployeeTable" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LoginTable" EntityType="Self.LoginTable" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ProductTable" EntityType="Self.ProductTable" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__LoginTabl__emplo__29572725" Association="Self.FK__LoginTabl__emplo__29572725">
+          <AssociationSet Name="FK__LoginTabl__emplo__5CD6CB2B" Association="Self.FK__LoginTabl__emplo__5CD6CB2B">
             <End Role="EmployeeTable" EntitySet="EmployeeTable" />
             <End Role="LoginTable" EntitySet="LoginTable" />
           </AssociationSet>

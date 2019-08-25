@@ -55,6 +55,7 @@ namespace La_Bakéry
                     {
                         context.CustomerTables.Remove(customer);
                         context.SaveChanges();
+                        MessageBox.Show("Customer successfully removed. ", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
                 }
             }
