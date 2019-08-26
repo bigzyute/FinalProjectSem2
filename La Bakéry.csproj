@@ -83,6 +83,7 @@
     <Compile Include="Add_Product.xaml.cs">
       <DependentUpon>Add_Product.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CurrentUser.cs" />
     <Compile Include="CustomerTable.cs">
       <DependentUpon>NewBakeryModel.tt</DependentUpon>
     </Compile>
@@ -109,6 +110,11 @@
     </Compile>
     <Compile Include="ProductTable.cs">
       <DependentUpon>NewBakeryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Receipts.xaml.cs">
       <DependentUpon>Receipts.xaml</DependentUpon>
@@ -191,11 +197,6 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -239,19 +240,10 @@
     <Resource Include="images\default_user.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\customer_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="images\employee_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\product_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="images\report_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\logout_icon.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\add_customer.png" />
@@ -275,6 +267,11 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="images\remove_employee.png" />
+    <Resource Include="images\view_employee.png" />
+    <Resource Include="images\remove_product.png" />
+    <Resource Include="images\view_product.png" />
+    <Resource Include="images\add_product.png" />
     <Content Include="NewBakeryModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>NewBakeryModel.edmx</DependentUpon>
