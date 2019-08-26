@@ -38,6 +38,8 @@
           <Property Name="telephone" Type="nvarchar" MaxLength="50" />
           <Property Name="email" Type="nvarchar" MaxLength="50" />
           <Property Name="dateCreated" Type="date" />
+          <Property Name="username" Type="nvarchar" MaxLength="50" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="LoginTable">
           <Key>
@@ -116,6 +118,8 @@
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="dateCreated" Type="DateTime" Precision="0" />
           <NavigationProperty Name="LoginTables" Relationship="Self.FK__LoginTabl__emplo__29572725" FromRole="EmployeeTable" ToRole="LoginTable" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="LoginTable">
           <Key>
@@ -183,6 +187,8 @@
           <EntitySetMapping Name="EmployeeTables">
             <EntityTypeMapping TypeName="NewBakeryModel.EmployeeTable">
               <MappingFragment StoreEntitySet="EmployeeTable">
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="username" ColumnName="username" />
                 <ScalarProperty Name="employeeId" ColumnName="employeeId" />
                 <ScalarProperty Name="empFirstName" ColumnName="empFirstName" />
                 <ScalarProperty Name="empMidInit" ColumnName="empMidInit" />

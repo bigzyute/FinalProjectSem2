@@ -33,6 +33,8 @@ namespace La_Bakéry
         public string telephone { get; set; }
         public string email { get; set; }
         public Nullable<System.DateTime> dateCreated { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LoginTable> LoginTables { get; set; }

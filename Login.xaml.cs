@@ -29,13 +29,12 @@ namespace La_Bakéry
             MainWindow mainWindow = new MainWindow();
             try
             {
-                CurrentUser currentUser = new CurrentUser();
                 using (NewBakeryEntities context = new NewBakeryEntities())
                 {
-                    LoginTable login = context.LoginTables.FirstOrDefault(l => l.username == txtBoxUsername.Text && l.password == loginPasswordBox.Password);
-                    if (login.username == txtBoxUsername.Text.Trim() && login.password == loginPasswordBox.Password.Trim())
+                    EmployeeTable employee = context.EmployeeTables.FirstOrDefault(l => l.username == txtBoxUsername.Text && l.password == loginPasswordBox.Password);
+                    if (employee.username == txtBoxUsername.Text.Trim() && employee.password == loginPasswordBox.Password.Trim())
                     {
-                        currentUser.getCurrUser = login.username;
+                        CurrentUser.getCurrUser = employee.empFirstName + " " + employee.empLastName;
                         mainWindow.Show();
                         this.Hide();
                     }

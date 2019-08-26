@@ -158,20 +158,7 @@ namespace La_Bakéry
 
         private void Dashboard_Loaded(object sender, RoutedEventArgs e)
         {
-            /*try
-            {
-                CurrentUser currentUser = new CurrentUser();
-                using (NewBakeryEntities context = new NewBakeryEntities())
-                {
-                    LoginTable login = context.LoginTables.Find(currentUser.getCurrUser);
-                    var employeeUsername = context.EmployeeTables.Find(login.employeeId);
-                    dashboardEpander.Header = employeeUsername.empFirstName + " " + employeeUsername.empLastName;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error generated: \n" +ex.ToString(), "Error Message", MessageBoxButton.OK, MessageBoxImage.Error);
-            }       */   
+            dashboardEpander.Header = CurrentUser.getCurrUser;
         }
     }
 }

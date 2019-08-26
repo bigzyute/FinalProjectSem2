@@ -108,26 +108,22 @@ namespace La_Bakéry
                         {
                             EmployeeTable employee = new EmployeeTable
                             {
-                                empFirstName = txtAdd_EmpFName.Text,
+                                empFirstName = txtAdd_EmpFName.Text.Trim(),
                                 empMidInit = txtAdd_EmpMName.Text,
-                                empLastName = txtAdd_EmpLName.Text,
+                                empLastName = txtAdd_EmpLName.Text.Trim(),
                                 dob = empDobDatePicker.SelectedDate, //if i get a convert DateTime to DateTime error, its this line
                                 gender = gender.ToUpper(),
                                 maritalStat = marStat.ToUpper(),
-                                town = txtAdd_EmpTown.Text,
-                                poBox = txtAdd_EmpPOBox.Text,
-                                parish = txtAdd_EmpParish.Text,
-                                telephone = txtAdd_EmpTelephone.Text,
-                                email = txtAdd_EmpEmail.Text,
-                                dateCreated = DateTime.Now
-                            };
-                            LoginTable login = new LoginTable
-                            {
-                                username = txtAdd_EmpUserName.Text,
+                                town = txtAdd_EmpTown.Text.Trim(),
+                                poBox = txtAdd_EmpPOBox.Text.Trim(),
+                                parish = txtAdd_EmpParish.Text.Trim(),
+                                telephone = txtAdd_EmpTelephone.Text.Trim(),
+                                email = txtAdd_EmpEmail.Text.Trim(),
+                                dateCreated = DateTime.Now,
+                                username = txtAdd_EmpUserName.Text.Trim(),
                                 password = txtAdd_EmpPassword.Password
                             };
                             context.EmployeeTables.Add(employee);
-                            context.LoginTables.Add(login);
                             context.SaveChanges();
 
                             MessageBox.Show("Employee with ID#" + employee.employeeId + " Succesfully Added!", "Employee Added", MessageBoxButton.OK, MessageBoxImage.Information);
