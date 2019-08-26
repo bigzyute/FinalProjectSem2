@@ -8,8 +8,10 @@ namespace La_Bakéry
 {
     class CurrentUser
     {
-        public static string currentUser;
-        
+        //public static string currentUser;
+        //public static string currentUsername;
+
         public static string getCurrUser { get; set; }
+        public static string getCurrUsername { get; set; }
     }
 }

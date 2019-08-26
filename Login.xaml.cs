@@ -35,6 +35,7 @@ namespace La_Bakéry
                     if (employee.username == txtBoxUsername.Text.Trim() && employee.password == loginPasswordBox.Password.Trim())
                     {
                         CurrentUser.getCurrUser = employee.empFirstName + " " + employee.empLastName;
+                        CurrentUser.getCurrUsername = employee.username;
                         mainWindow.Show();
                         this.Hide();
                     }

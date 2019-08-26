@@ -160,5 +160,24 @@ namespace La_Bakéry
         {
             dashboardEpander.Header = CurrentUser.getCurrUser;
         }
+
+        private void GridOrder_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtBlkCurrentUser.Text = CurrentUser.getCurrUsername;
+            txtBlkDate.Text = DateTime.Now.ToString();
+            using (NewBakeryEntities context = new NewBakeryEntities())
+            {
+                var product = from p in context.ProductTables
+                              select p;
+                listBoxProduct.ItemsSource = product.ToList();
+                listBoxProduct.DisplayMemberPath = "productName";
+                listBoxProduct.SelectedValuePath = "productCode";
+            }
+        }
+
+        private void ListBoxProduct_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+        }
     }
 }
