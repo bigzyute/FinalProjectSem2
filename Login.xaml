@@ -16,7 +16,7 @@
                     <DropShadowEffect ShadowDepth="15" Opacity="0.3" Direction="270"/>
                 </Image.Effect>
             </Image>
-            <Label x:Name="labelLogin" Content="LOGIN" FontFamily="Comic Sans MS" FontSize="36" Foreground="White" HorizontalContentAlignment="Center" Margin="0,0,0.4,0" Height="50"/>
+            <Label x:Name="labelLogin" Content="LOGIN" FontFamily="Comic Sans MS" FontSize="36" Foreground="White" HorizontalContentAlignment="Center" Margin="0,0,0.4,0" Height="51"/>
             <Separator Margin="10,0,10.4,0" Background="#FF6E6E6E" Height="13"/>
             <Label x:Name="labelUsername" Content="Username" Foreground="White" FontSize="14" Margin="0,0,-0.6,0"/>
             <TextBox x:Name="txtBoxUsername" TextWrapping="Wrap" BorderBrush="#FF6E6E6E" Foreground="White" FontSize="14" Background="#FF844257" Margin="0" SelectionBrush="#FFE881A2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="25"/>

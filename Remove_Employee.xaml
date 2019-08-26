@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:La_Bakéry"
         mc:Ignorable="d"
-        Title="Remove_Employee" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="Remove Employee" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid Background="#FF6E9086">
         <Grid HorizontalAlignment="Left" Height="306" Margin="60,61,0,0" VerticalAlignment="Top" Width="674" Background="#FFFDC8B7">
             <Grid.Effect>
@@ -14,9 +14,9 @@
             <Label Content="Enter Employee I.D. To Search" HorizontalAlignment="Center" Margin="101,35,0,0" VerticalAlignment="Top" Width="483" FontWeight="Bold" FontSize="18" Foreground="#DD000000"/>
             <Label x:Name="lblRem_EmpId" Content="Employee I.D." HorizontalAlignment="Left" Margin="83,114,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
             <Label x:Name="lblRem_EmpResult" Content="Result" HorizontalAlignment="Left" Margin="83,163,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
-            <TextBox x:Name="txtRem_EmpId" HorizontalAlignment="Left" Margin="282,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" Background="#FFFDA98E"/>
-            <TextBox x:Name="txtRem_EmpResult" HorizontalAlignment="Left" Margin="282,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" Background="#FFFDA98E"/>
-            <Button x:Name="btnRem_EmpCancel" Content="Cancel" HorizontalAlignment="Left" Margin="299,225,0,0" VerticalAlignment="Top" Width="101" Height="41" Background="#FFFABC74" BorderBrush="#FF540E33" Foreground="Black" FontWeight="Bold"/>
+            <TextBox x:Name="txtRem_EmpId" HorizontalAlignment="Left" Margin="211,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" Background="#FFFDA98E"/>
+            <TextBox x:Name="txtRem_EmpResult" HorizontalAlignment="Left" Margin="211,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" Background="#FFFDA98E"/>
+            <Button x:Name="btnRem_EmpCancel" Content="Clear" HorizontalAlignment="Left" Margin="299,225,0,0" VerticalAlignment="Top" Width="101" Height="41" Background="#FFFABC74" BorderBrush="#FF540E33" Foreground="Black" FontWeight="Bold" Click="BtnRem_EmpCancel_Click"/>
             <Button x:Name="btnRem_EmpExit" Content="Exit" HorizontalAlignment="Left" Margin="522,225,0,0" VerticalAlignment="Top" Width="101" Height="41" Click="BtnRem_EmpExit_Click" Background="#FFFABC74" BorderBrush="#FF540E33" Foreground="Black" FontWeight="Bold"/>
             <Button x:Name="btnRem_EmpRemove" Content="Remove " HorizontalAlignment="Left" Margin="111,225,0,0" VerticalAlignment="Top" Width="101" Height="41" Background="#FFFABC74" BorderBrush="#FF540E33" Foreground="Black" FontWeight="Bold" Click="BtnRem_EmpRemove_Click"/>
             <Button x:Name="btnRem_EmpSearch" Content="Search" HorizontalAlignment="Left" Margin="522,114,0,0" VerticalAlignment="Top" Width="101" Background="#FFFABC74" BorderBrush="#FF540E33" Foreground="Black" FontWeight="Bold" Height="41" Click="BtnRem_EmpSearch_Click"/>

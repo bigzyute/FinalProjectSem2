@@ -21,7 +21,7 @@ namespace La_Bakéry
     /// </summary>
     public partial class MainWindow : Window
     {
-        public void showGrid(Grid grid)
+        public void showGrid(Grid grid) //This method is designed to handle the visibility property of all the grids in the Application
         {
             var hide = Visibility.Hidden;
             var show = Visibility.Visible;
@@ -33,6 +33,7 @@ namespace La_Bakéry
                 gridOrder.Visibility = hide;
                 gridViewEmployee.Visibility = hide;
                 gridViewCustomer.Visibility = hide;
+                gridViewProduct.Visibility = hide;
                 /*gridReport.Visibility = hide;*/
                 grid.Visibility = show;
             } else
@@ -132,6 +133,51 @@ namespace La_Bakéry
         private void ListProduct_Selected(object sender, RoutedEventArgs e)
         {
             showGrid(gridProduct);
+        }
+
+        private void GridViewCustomer_Loaded(object sender, RoutedEventArgs e)
+        {
+            using(NewBakeryEntities context = new NewBakeryEntities())
+            {
+                dataGridViewCustomer.ItemsSource = context.CustomerTables.ToList();
+            }
+        }
+
+        private void GridViewEmployee_Loaded(object sender, RoutedEventArgs e)
+        {
+            using (NewBakeryEntities context = new NewBakeryEntities())
+            {
+                dataGridViewEmployee.ItemsSource = context.EmployeeTables.ToList();
+            }
+        }
+
+        private void BtnViewProduct_Click(object sender, RoutedEventArgs e)
+        {
+            showGrid(gridViewProduct);
+        }
+
+        private void Dashboard_Loaded(object sender, RoutedEventArgs e)
+        {
+            dashboardEpander.Header = CurrentUser.getCurrUser;
+        }
+
+        private void GridOrder_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtBlkCurrentUser.Text = CurrentUser.getCurrUsername;
+            txtBlkDate.Text = DateTime.Now.ToString();
+            using (NewBakeryEntities context = new NewBakeryEntities())
+            {
+                var product = from p in context.ProductTables
+                              select p;
+                listBoxProduct.ItemsSource = product.ToList();
+                listBoxProduct.DisplayMemberPath = "productName";
+                listBoxProduct.SelectedValuePath = "productCode";
+            }
+        }
+
+        private void ListBoxProduct_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
         }
     }
 }

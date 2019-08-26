@@ -27,9 +27,25 @@ namespace La_Bakéry
         private void LoginSubmitButton_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = new MainWindow();
-
-            mainWindow.Show();
-            this.Hide();
+            try
+            {
+                using (NewBakeryEntities context = new NewBakeryEntities())
+                {
+                    EmployeeTable employee = context.EmployeeTables.FirstOrDefault(l => l.username == txtBoxUsername.Text && l.password == loginPasswordBox.Password);
+                    if (employee.username == txtBoxUsername.Text.Trim() && employee.password == loginPasswordBox.Password.Trim())
+                    {
+                        CurrentUser.getCurrUser = employee.empFirstName + " " + employee.empLastName;
+                        CurrentUser.getCurrUsername = employee.username;
+                        mainWindow.Show();
+                        this.Hide();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please enter a valid username and password", "Login Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                txtBoxUsername.Focus();
+            }                        
         }
 
         private void LoginPage_Loaded(object sender, RoutedEventArgs e)

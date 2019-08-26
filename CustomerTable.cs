@@ -14,15 +14,16 @@ namespace La_Bakéry
     
     public partial class CustomerTable
     {
-        public int customerId { get; set; }
-        public string firstName { get; set; }
-        public string mInitial { get; set; }
-        public string lastName { get; set; }
-        public string gender { get; set; }
-        public Nullable<int> phoneNumber { get; set; }
+        public int CustomerId { get; set; }
+        public string cusFirstName { get; set; }
+        public string cusMidInitial { get; set; }
+        public string cusLastName { get; set; }
+        public string cusGender { get; set; }
+        public string cusTelephone { get; set; }
+        public string email { get; set; }
         public string poBox { get; set; }
         public string district { get; set; }
         public string parish { get; set; }
-        public System.DateTime dateAdded { get; set; }
+        public Nullable<System.DateTime> dateCreated { get; set; }
     }
 }

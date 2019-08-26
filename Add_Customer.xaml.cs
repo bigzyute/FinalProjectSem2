@@ -23,26 +23,22 @@ namespace La_Bakéry
 
         public Add_Customer()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
-            CustomerTable customer = new CustomerTable();
-            var id = customer.customerId + 1;
-            txtCustID.Text = id.ToString();
         }
 
         private void BtnCustClear_Click(object sender, RoutedEventArgs e)
         {
-            txtCustID.Clear();
             txtCustFirst_Name.Clear();
             txtCustLast_Name.Clear();
             txtCustMid_Initial.Clear();
-            grdbAdd_CusFemale.IsChecked = false;
-            grdbAdd_CusMale.IsChecked = false;
+            CusAddRbFemale.IsChecked = null;
+            CusAddRbMale.IsChecked = null;
             txtCustPhone_Num.Clear();
             txtCustEmail_Add.Clear();
             txtCustPO_Box.Clear();
             txtCustDistrict.Clear();
             txtCustParish.Clear();
-            cbCustSearch.SelectedIndex = -1;
         }
 
         private void BtnExit__Click(object sender, RoutedEventArgs e)
@@ -51,22 +47,36 @@ namespace La_Bakéry
             objMain.Show();
             Hide();
         }
+
         private void BtnAdd_Cust_Click_1(object sender, RoutedEventArgs e)
         {
-            //Input validation
-            string gender;
+            string gender = "F";
             bool validated = false;
+            //Input validation
             if (string.IsNullOrWhiteSpace(txtCustFirst_Name.Text) || string.IsNullOrWhiteSpace(txtCustLast_Name.Text))
             {
                 MessageBox.Show("Please complete the required feilds", "Name Error", MessageBoxButton.OK);
+                txtCustFirst_Name.Focus();
             }
-            else if (grdbAdd_CusFemale.IsChecked == false && grdbAdd_CusMale.IsChecked == false)
+            else if (txtCustFirst_Name.Text.Trim().Length < 3 || txtCustLast_Name.Text.Trim().Length < 3)
+            {
+                MessageBox.Show("Invalid Name, Please put your full name in the required field", "Name Length", MessageBoxButton.OK);
+                txtCustFirst_Name.Focus();
+            }
+            else if (CusAddRbFemale.IsChecked == false && CusAddRbMale.IsChecked == false)
             {
                 MessageBox.Show("Please select a gender.", "Gender Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            else if (!string.IsNullOrWhiteSpace(txtCustEmail_Add.Text) && !this.txtCustEmail_Add.Text.Contains('@') || !this.txtCustEmail_Add.Text.Contains('.'))
+            else if (!this.txtCustEmail_Add.Text.Contains('@') || !this.txtCustEmail_Add.Text.Contains('.'))
             {
                 MessageBox.Show("Please Enter A Valid Email", "Invalid Email", MessageBoxButton.OK);
+                txtCustEmail_Add.Focus();
+            }
+            else if (string.IsNullOrWhiteSpace(txtCustParish.Text))
+            {
+                MessageBox.Show("Please complete the required feild", "  Error", MessageBoxButton.OK);
+                lblEmailErrorIcon.Visibility = Visibility.Visible;
+                txtCustParish.Focus();
             }
             else
             {
@@ -75,68 +85,88 @@ namespace La_Bakéry
 
             if (validated == true) //Assigning radio buttons
             {
-
-                if (grdbAdd_CusFemale.IsChecked == true)
+                if (CusAddRbFemale.IsChecked == true)
                 {
-                    gender = "f";
+                    gender = "F";
                 }
-                else
+                else if (CusAddRbMale.IsChecked == true)
                 {
-                    gender = "m";
+                    gender = "M";
                 }
-
-                using (La_BakeryEntities databaseHandler = new La_BakeryEntities())
+                try
                 {
-                    CustomerTable customer = new CustomerTable
+                    using (NewBakeryEntities context = new NewBakeryEntities())
                     {
-                        firstName = txtCustFirst_Name.Text,
-                        mInitial = txtCustFirst_Name.Text,
-                        lastName = txtCustFirst_Name.Text,
-                        gender = gender,
-                        phoneNumber = Int32.Parse(txtCustFirst_Name.Text),
-                        poBox = txtCustPO_Box.Text,
-                        district = txtCustDistrict.Text,
-                        parish = txtCustDistrict.Text
-                    };
-                    databaseHandler.CustomerTables.Add(customer);
-                    databaseHandler.SaveChanges();
+                        CustomerTable customer = new CustomerTable
+                        {
+
+                            cusFirstName = txtCustFirst_Name.Text,
+                            cusMidInitial = txtCustMid_Initial.Text,
+                            cusLastName = txtCustLast_Name.Text,
+                            cusGender = gender,
+                            cusTelephone = txtCustPhone_Num.Text,
+                            email = txtCustEmail_Add.Text,
+                            poBox = txtCustPO_Box.Text,
+                            district = txtCustDistrict.Text,
+                            parish = txtCustParish.Text,
+                            dateCreated = DateTime.Now
+                        };
+                        context.CustomerTables.Add(customer);
+                        context.SaveChanges();
+
+                        MessageBox.Show("Customer with ID#" + customer.CustomerId + " Succesfully Added!", "Customer Added", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
                 }
+                catch (Exception ex)
+                {
 
-                MessageBox.Show("Employee Succesfully Added!", "Employee Added", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Error Generated. Details: " + ex.ToString(), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                                    
             }
-        }
-
-        private void TxtCustPhone_Num_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TxtCustPhone_Num_LostFocus(object sender, RoutedEventArgs e)
-        {
-          /*  var num = txtCustPhone_Num.Text;
-
-           var regex = (@"\+[0-9]{3}\s+[0-9]{3}\s+[0-9]{4}");
-          //  Match getmatch = phoneNumpattern.Match(txtCustPhone_Num.Text);
-            
-            
-            if (Regex.IsMatch(num, regex))
-            {
-                MessageBox.Show(num + " Great Number accepted");
-            }
-            else
-            {
-                MessageBox.Show("Invalid phone number entered, please try again");
-            }*/
-        }
-
-        private void TxtCustPO_Box_TextChanged(object sender, TextChangedEventArgs e)
-        {
 
         }
 
         private void BtnExit__Click_1(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void TxtCustMid_Initial_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtCustMid_Initial.Text))
+            {
+                txtCustMid_Initial.Text = txtCustMid_Initial.Text.ToUpper(); 
+            }
+        }
+
+        private void TxtCustFirst_Name_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtCustFirst_Name.Text))
+            {
+                txtCustFirst_Name.Text = char.ToUpper(txtCustFirst_Name.Text[0]) + txtCustFirst_Name.Text.Substring(1);
+            }
+        }
+
+        private void TxtCustLast_Name_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtCustLast_Name.Text))
+            {
+                txtCustLast_Name.Text = char.ToUpper(txtCustLast_Name.Text[0]) + txtCustLast_Name.Text.Substring(1);
+            }
+        }
+
+        private void TxtCustEmail_Add_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtCustEmail_Add.Text))
+            {
+                txtCustEmail_Add.Text = txtCustEmail_Add.Text.ToLower();
+            }
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

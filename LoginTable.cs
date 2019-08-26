@@ -12,11 +12,12 @@ namespace La_Bakéry
     using System;
     using System.Collections.Generic;
     
-    public partial class ProductTable
+    public partial class LoginTable
     {
-        public int productCode { get; set; }
-        public string productName { get; set; }
-        public double productCost { get; set; }
-        public Nullable<System.DateTime> dateCreated { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
+        public Nullable<int> employeeId { get; set; }
+    
+        public virtual EmployeeTable EmployeeTable { get; set; }
     }
 }

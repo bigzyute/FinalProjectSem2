@@ -14,18 +14,29 @@ namespace La_Bakéry
     
     public partial class EmployeeTable
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public EmployeeTable()
+        {
+            this.LoginTables = new HashSet<LoginTable>();
+        }
+    
         public int employeeId { get; set; }
-        public string firstName { get; set; }
-        public string middleName { get; set; }
-        public string lastName { get; set; }
-        public System.DateTime dob { get; set; }
+        public string empFirstName { get; set; }
+        public string empMidInit { get; set; }
+        public string empLastName { get; set; }
+        public Nullable<System.DateTime> dob { get; set; }
         public string gender { get; set; }
-        public string maritalStatus { get; set; }
+        public string maritalStat { get; set; }
         public string town { get; set; }
         public string poBox { get; set; }
         public string parish { get; set; }
-        public Nullable<int> telephone { get; set; }
+        public string telephone { get; set; }
         public string email { get; set; }
-        public System.DateTime dateAdded { get; set; }
+        public Nullable<System.DateTime> dateCreated { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<LoginTable> LoginTables { get; set; }
     }
 }

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace La_Bakéry
 {
     /// <summary>
@@ -21,45 +22,46 @@ namespace La_Bakéry
     {
         public Remove_Customer()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            using (La_BakeryEntities databaseHandler = new La_BakeryEntities())
+            try
             {
-                try
+                using (NewBakeryEntities context = new NewBakeryEntities())
                 {
-                    var entity = databaseHandler.CustomerTables.Find(Int32.Parse(txtReCust_ID.Text)); //var blog = context.Blogs.Find(3);
-                    txtReCust_Result.Text = entity.firstName;
+                    var customer = context.CustomerTables.Find(int.Parse(txtReCust_ID.Text));
+                    txtReCust_Result.Text = customer.cusFirstName + " " + customer.cusLastName;
                 }
-                catch (Exception)
-                {
-
-                    MessageBox.Show("Please enter a valid Customer ID", "ID Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No records were found ", "No Records",MessageBoxButton.OK, MessageBoxImage.Asterisk);
             }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            using (La_BakeryEntities databaseHandler = new La_BakeryEntities())
+            try
             {
-                try
+                using (NewBakeryEntities context = new NewBakeryEntities())
                 {
-                    var entity = databaseHandler.CustomerTables.Find(Int32.Parse(txtReCust_ID.Text)); //var blog = context.Blogs.Find(3);
-                    txtReCust_Result.Text = entity.firstName;
-                    MessageBoxResult result = MessageBox.Show("Are you sure you want to delete this Customer?", "Delete Customer", MessageBoxButton.YesNo, MessageBoxImage.Asterisk);
+                    var customer = context.CustomerTables.Find(int.Parse(txtReCust_ID.Text));
+                    var result = MessageBox.Show("Are you sure you want to remove customer " + customer.cusFirstName + " " + customer.cusLastName + "?",
+                        "Remove Customer", MessageBoxButton.YesNo, MessageBoxImage.Question);
                     if (result == MessageBoxResult.Yes)
                     {
-                        databaseHandler.CustomerTables.Remove(entity);
+                        context.CustomerTables.Remove(customer);
+                        context.SaveChanges();
+                        MessageBox.Show("Customer successfully removed. ", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
                 }
-                catch (Exception)
-                {
-
-                    MessageBox.Show("Please enter a valid Customer ID", "ID Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No records were found ", "No Records", MessageBoxButton.OK, MessageBoxImage.Asterisk);
             }
         }
 
