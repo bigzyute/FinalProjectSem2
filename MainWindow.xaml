@@ -92,7 +92,7 @@
 
         </StackPanel>
         <Grid Grid.Column="1">
-            <Grid x:Name="gridOrder" Loaded="GridOrder_Loaded">
+            <Grid x:Name="gridOrder" Loaded="GridOrder_Loaded" Visibility="Hidden">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"/>
                     <ColumnDefinition Width="1.5*"/>
